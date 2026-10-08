@@ -225,13 +225,18 @@
   var rvThanks=$('#reviewThanks'), rvSendBtn=$('#rvSend'), rvConsent=$('#rvConsent'), rvConsentAlert=$('#rvConsentAlert');
   var arrow='<span class="btn__arrow" aria-hidden="true"></span>';
   function rvFlag(el,bad){ var f=el.closest('.f'); if(f) f.classList.toggle('invalid',bad) }
-  rvOpen.addEventListener('click',function(){
-    var open=rvForm.hidden;
+  function rvToggle(open,focus){
     rvForm.hidden=!open;
     rvOpen.setAttribute('aria-expanded',String(open));
     rvOpen.innerHTML=(open?T.rvClose:T.rvOpen)+arrow;
-    if(open) $('#rvName').focus();
+    if(open&&focus) $('#rvName').focus({preventScroll:true});
+  }
+  rvOpen.addEventListener('click',function(){ rvToggle(rvForm.hidden,true) });
+  /* "Leave a Review" links in the nav, drawer and footer open the form on arrival */
+  $$('a[href$="#reviews"]').forEach(function(a){
+    a.addEventListener('click',function(){ if(rvForm.hidden&&!rvThanks.classList.contains('on')) rvToggle(true,false) });
   });
+  if(location.hash==='#reviews') rvToggle(true,false);
   $$('input,textarea',rvForm).forEach(function(el){
     el.addEventListener('input',function(){rvFlag(el,false)});
     el.addEventListener('change',function(){rvFlag(el,false)});

@@ -857,7 +857,7 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 }
 
 /* ── Leave a review ── */
-.review{margin-top:clamp(48px,6vw,72px);padding-top:clamp(34px,4vw,46px);border-top:1px solid var(--rule)}
+.review{margin:0}
 .review__intro{display:grid;grid-template-columns:1fr auto;gap:14px 40px;align-items:end}
 .review__intro h3{grid-column:1/-1;font-size:1.42rem}
 .review__intro p{max-width:62ch;font-size:.94rem;color:var(--text-soft);line-height:1.65}
@@ -877,4 +877,17 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
   .review__intro{grid-template-columns:1fr}
   .review__intro .btn{width:100%}
   .review__form{padding:24px 18px}
+}
+
+/* ── Masthead fit: seven nav links (incl. "Leave a Review") ── */
+@media (min-width:901px){ .brand{flex:none} }
+@media (min-width:1541px){ .masthead__inner{max-width:1440px} }  /* room for the phone number */
+@media (max-width:1280px) and (min-width:901px){
+  .nav{gap:18px}
+  .nav a{font-size:.82rem}
+  .masthead__cta{gap:16px}
+}
+@media (max-width:1240px){
+  .nav{display:none}
+  .toggle{display:flex}
 }

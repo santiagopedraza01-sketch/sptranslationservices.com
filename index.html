@@ -285,7 +285,7 @@
 }
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20261008t">
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
@@ -305,6 +305,7 @@
       <a href="#process">Proceso</a>
       <a href="#settlement">Pago</a>
       <a href="#questions">Preguntas</a>
+      <a href="#reviews">Dejar una opinión</a>
     </nav>
 
     <div class="masthead__cta">
@@ -327,6 +328,7 @@
   <a href="#process">Proceso</a>
   <a href="#settlement">Pago</a>
   <a href="#questions">Preguntas</a>
+  <a href="#reviews">Dejar una opinión</a>
   <a class="btn btn--gold" href="#quote">Solicitar presupuesto<span class="btn__arrow" aria-hidden="true"></span></a>
   <p class="lang" aria-label="Idioma">
     <a class="on" href="index.html" hreflang="es" lang="es" aria-current="true">ES</a>
@@ -701,72 +703,6 @@
         </article>
       </div>
 
-      <!-- ═══ LEAVE A REVIEW — each review is emailed to santiagopedraza01@gmail.com via
-           FormSubmit. Nothing is published automatically: add approved reviews to the
-           testimonials above. ═══ -->
-      <div class="review rise" id="review">
-        <div class="review__intro">
-          <h3 class="h3">¿Ha trabajado con nosotros? Deje su opinión.</h3>
-          <p>Su opinión ayuda a otros clientes a elegir con confianza. Todas las opiniones se revisan antes de publicarse y en el sitio solo aparecen su nombre, la inicial del apellido y su país.</p>
-          <button type="button" class="btn btn--ink" id="reviewOpen" aria-expanded="false" aria-controls="reviewForm">Dejar una opinión<span class="btn__arrow" aria-hidden="true"></span></button>
-        </div>
-
-        <form id="reviewForm" class="fields review__form" action="https://formsubmit.co/ajax/santiagopedraza01@gmail.com" method="POST" novalidate hidden>
-          <div class="f">
-            <label for="rvName">Nombre <span class="star" aria-hidden="true">*</span></label>
-            <input type="text" id="rvName" name="name" autocomplete="name" placeholder="p. ej. Lucía Martínez" required>
-            <span class="alert">Introduzca su nombre.</span>
-          </div>
-          <div class="f">
-            <label for="rvEmail">Correo electrónico <span class="star" aria-hidden="true">*</span> <span class="opt">(no se publica)</span></label>
-            <input type="email" id="rvEmail" name="email" autocomplete="email" placeholder="you@example.com" required>
-            <span class="alert">Introduzca un correo electrónico válido.</span>
-          </div>
-          <div class="f">
-            <label for="rvCountry">País <span class="opt">(opcional)</span></label>
-            <input type="text" id="rvCountry" name="country" autocomplete="country-name" placeholder="p. ej. España">
-          </div>
-          <div class="f">
-            <label for="rvWhat">¿Qué le tradujimos? <span class="opt">(opcional)</span></label>
-            <input type="text" id="rvWhat" name="translated" placeholder="p. ej. Certificado de nacimiento">
-          </div>
-          <fieldset class="f f--wide rate">
-            <legend>Valoración <span class="star" aria-hidden="true">*</span></legend>
-            <div class="rate__stars">
-              <input type="radio" id="rv5" name="rating" value="5"><label for="rv5" title="5 estrellas"><span class="skip">5 estrellas</span>★</label>
-              <input type="radio" id="rv4" name="rating" value="4"><label for="rv4" title="4 estrellas"><span class="skip">4 estrellas</span>★</label>
-              <input type="radio" id="rv3" name="rating" value="3"><label for="rv3" title="3 estrellas"><span class="skip">3 estrellas</span>★</label>
-              <input type="radio" id="rv2" name="rating" value="2"><label for="rv2" title="2 estrellas"><span class="skip">2 estrellas</span>★</label>
-              <input type="radio" id="rv1" name="rating" value="1"><label for="rv1" title="1 estrella"><span class="skip">1 estrella</span>★</label>
-            </div>
-            <span class="alert">Elija una valoración.</span>
-          </fieldset>
-          <div class="f f--wide">
-            <label for="rvText">Su opinión <span class="star" aria-hidden="true">*</span></label>
-            <textarea id="rvText" name="review" placeholder="¿Qué tal fue el servicio? ¿Se aceptó la traducción donde la necesitaba?" required></textarea>
-            <span class="alert">Escriba unas palabras (al menos 20 caracteres).</span>
-          </div>
-          <label class="agree" for="rvConsent">
-            <input type="checkbox" id="rvConsent" name="publish_consent" required>
-            <span>Acepto que SP Translations publique esta opinión en su sitio web con mi nombre, la inicial del apellido y mi país. <span class="star" aria-hidden="true">*</span></span>
-          </label>
-          <span class="alert" id="rvConsentAlert" style="grid-column:1/-1">Confirme que acepta la publicación.</span>
-          <input type="hidden" name="_subject" value="Nueva opinión de cliente — sptranslationservices.com">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;opacity:0">
-          <div id="rvNotice" class="f--wide" aria-live="polite"></div>
-          <div class="submit-zone">
-            <button type="submit" class="btn btn--ink" id="rvSend">Enviar opinión<span class="btn__arrow" aria-hidden="true"></span></button>
-          </div>
-        </form>
-
-        <div class="received" id="reviewThanks" tabindex="-1">
-          <div class="received__rule" aria-hidden="true"></div>
-          <h3 class="h3">Gracias por su opinión.</h3>
-          <p>La hemos recibido y aparecerá en el sitio una vez revisada.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1141,6 +1077,85 @@
   </div>
 </section>
 
+<!-- ═══════════ LEAVE A REVIEW ═══════════ -->
+<section class="section section--warm" id="reviews">
+  <div class="shell spread">
+    <div class="spread__index rise">
+      <span class="mark">09 — Opiniones</span>
+      <p>Comparta su experiencia.</p>
+    </div>
+
+    <div>
+      <!-- ═══ LEAVE A REVIEW — each review is emailed to santiagopedraza01@gmail.com via
+           FormSubmit. Nothing is published automatically: add approved reviews to the
+           testimonials above. ═══ -->
+      <div class="review rise" id="review">
+        <div class="review__intro">
+          <h3 class="h3">¿Ha trabajado con nosotros? Deje su opinión.</h3>
+          <p>Su opinión ayuda a otros clientes a elegir con confianza. Todas las opiniones se revisan antes de publicarse y en el sitio solo aparecen su nombre, la inicial del apellido y su país.</p>
+          <button type="button" class="btn btn--ink" id="reviewOpen" aria-expanded="false" aria-controls="reviewForm">Dejar una opinión<span class="btn__arrow" aria-hidden="true"></span></button>
+        </div>
+
+        <form id="reviewForm" class="fields review__form" action="https://formsubmit.co/ajax/santiagopedraza01@gmail.com" method="POST" novalidate hidden>
+          <div class="f">
+            <label for="rvName">Nombre <span class="star" aria-hidden="true">*</span></label>
+            <input type="text" id="rvName" name="name" autocomplete="name" placeholder="p. ej. Lucía Martínez" required>
+            <span class="alert">Introduzca su nombre.</span>
+          </div>
+          <div class="f">
+            <label for="rvEmail">Correo electrónico <span class="star" aria-hidden="true">*</span> <span class="opt">(no se publica)</span></label>
+            <input type="email" id="rvEmail" name="email" autocomplete="email" placeholder="you@example.com" required>
+            <span class="alert">Introduzca un correo electrónico válido.</span>
+          </div>
+          <div class="f">
+            <label for="rvCountry">País <span class="opt">(opcional)</span></label>
+            <input type="text" id="rvCountry" name="country" autocomplete="country-name" placeholder="p. ej. España">
+          </div>
+          <div class="f">
+            <label for="rvWhat">¿Qué le tradujimos? <span class="opt">(opcional)</span></label>
+            <input type="text" id="rvWhat" name="translated" placeholder="p. ej. Certificado de nacimiento">
+          </div>
+          <fieldset class="f f--wide rate">
+            <legend>Valoración <span class="star" aria-hidden="true">*</span></legend>
+            <div class="rate__stars">
+              <input type="radio" id="rv5" name="rating" value="5"><label for="rv5" title="5 estrellas"><span class="skip">5 estrellas</span>★</label>
+              <input type="radio" id="rv4" name="rating" value="4"><label for="rv4" title="4 estrellas"><span class="skip">4 estrellas</span>★</label>
+              <input type="radio" id="rv3" name="rating" value="3"><label for="rv3" title="3 estrellas"><span class="skip">3 estrellas</span>★</label>
+              <input type="radio" id="rv2" name="rating" value="2"><label for="rv2" title="2 estrellas"><span class="skip">2 estrellas</span>★</label>
+              <input type="radio" id="rv1" name="rating" value="1"><label for="rv1" title="1 estrella"><span class="skip">1 estrella</span>★</label>
+            </div>
+            <span class="alert">Elija una valoración.</span>
+          </fieldset>
+          <div class="f f--wide">
+            <label for="rvText">Su opinión <span class="star" aria-hidden="true">*</span></label>
+            <textarea id="rvText" name="review" placeholder="¿Qué tal fue el servicio? ¿Se aceptó la traducción donde la necesitaba?" required></textarea>
+            <span class="alert">Escriba unas palabras (al menos 20 caracteres).</span>
+          </div>
+          <label class="agree" for="rvConsent">
+            <input type="checkbox" id="rvConsent" name="publish_consent" required>
+            <span>Acepto que SP Translations publique esta opinión en su sitio web con mi nombre, la inicial del apellido y mi país. <span class="star" aria-hidden="true">*</span></span>
+          </label>
+          <span class="alert" id="rvConsentAlert" style="grid-column:1/-1">Confirme que acepta la publicación.</span>
+          <input type="hidden" name="_subject" value="Nueva opinión de cliente — sptranslationservices.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;opacity:0">
+          <div id="rvNotice" class="f--wide" aria-live="polite"></div>
+          <div class="submit-zone">
+            <button type="submit" class="btn btn--ink" id="rvSend">Enviar opinión<span class="btn__arrow" aria-hidden="true"></span></button>
+          </div>
+        </form>
+
+        <div class="received" id="reviewThanks" tabindex="-1">
+          <div class="received__rule" aria-hidden="true"></div>
+          <h3 class="h3">Gracias por su opinión.</h3>
+          <p>La hemos recibido y aparecerá en el sitio una vez revisada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- ═══════════ PIE ═══════════ -->
@@ -1171,6 +1186,7 @@
           <li><a href="#testimony">Testimonios</a></li>
           <li><a href="#settlement">Pago</a></li>
           <li><a href="#questions">Preguntas</a></li>
+          <li><a href="#reviews">Dejar una opinión</a></li>
         </ul>
       </div>
 
@@ -1239,6 +1255,6 @@
   </a>
 </div>
 
-<script src="app.js"></script>
+<script src="app.js?v=20261008t"></script>
 </body>
 </html>
