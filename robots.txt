@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /SANTIAGO-README.md
+
+Sitemap: https://sptranslationservices.com/sitemap.xml

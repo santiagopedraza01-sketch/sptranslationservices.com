@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://sptranslationservices.com/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/"/>
+  </url>
+  <url>
+    <loc>https://sptranslationservices.com/en.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/"/>
+  </url>
+  <url>
+    <loc>https://sptranslationservices.com/traductores.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/traductores.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/translators.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/traductores.html"/>
+  </url>
+  <url>
+    <loc>https://sptranslationservices.com/translators.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/traductores.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/translators.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/traductores.html"/>
+  </url>
+</urlset>
