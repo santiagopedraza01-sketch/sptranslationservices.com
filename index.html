@@ -692,15 +692,12 @@
     <div class="docket rise">
       <div id="notice" aria-live="polite"></div>
 
-      <!-- ═══ CONFIGURACIÓN DEL FORMULARIO — aún no está conectado ═══
-           A) Formspree — cree un formulario en formspree.io y sustituya YOUR_FORM_ID.
-              (La subida de archivos requiere un plan de pago.)
-           B) Cualquier otro gestor — Netlify Forms, Basin, Web3Forms o su propio endpoint:
-              sustituya el atributo action.
-           Mientras no haya endpoint, el formulario valida y confirma localmente sin
-           transmitir nada. Los campos de un .group oculto se desactivan, de modo que
-           solo se envían los datos del servicio elegido. -->
-      <form id="docket" class="fields" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data" novalidate>
+      <!-- ═══ ENVÍO DEL FORMULARIO — las solicitudes llegan a santiagopedraza01@gmail.com a
+           través de FormSubmit (formsubmit.co). El primer envío manda un correo de
+           activación a esa dirección; basta con pulsar su enlace una vez. Los campos de
+           un .group oculto se desactivan, de modo que solo se envían los datos del
+           servicio elegido. -->
+      <form id="docket" class="fields" action="https://formsubmit.co/ajax/santiagopedraza01@gmail.com" method="POST" enctype="multipart/form-data" novalidate>
         <div class="docket__head f--wide">
           <h3 class="h3">Solicitar presupuesto</h3>
           <p>Sin compromiso. La mayoría de los presupuestos se responden en pocas horas laborables.</p>
@@ -872,7 +869,7 @@
           <div class="deposit__rule" aria-hidden="true"></div>
           <b>Adjuntar archivos</b>
           <span>Arrastre aquí los archivos o selecciónelos — PDF, JPG, PNG, DOCX, audio o vídeo, hasta 10&nbsp;MB cada uno</span>
-          <input type="file" id="files" name="documents[]" multiple accept=".pdf,.jpg,.jpeg,.png,.heic,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.srt,.mp3,.wav,.m4a,.mp4,.mov" aria-label="Adjuntar archivos">
+          <input type="file" id="files" name="attachment" multiple accept=".pdf,.jpg,.jpeg,.png,.heic,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.srt,.mp3,.wav,.m4a,.mp4,.mov" aria-label="Adjuntar archivos">
         </div>
         <div class="manifest" id="manifest" aria-live="polite"></div>
 
@@ -888,7 +885,10 @@
         <span class="alert" id="consentAlert" style="grid-column:1/-1">Confirme su consentimiento para continuar.</span>
 
         <!-- trampa antispam — mantener oculta -->
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;opacity:0">
+        <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto — sptranslationservices.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;opacity:0">
 
         <div class="submit-zone">
           <button type="submit" class="btn btn--ink" id="send">Solicitar presupuesto<span class="btn__arrow" aria-hidden="true"></span></button>

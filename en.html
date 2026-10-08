@@ -693,16 +693,12 @@
     <div class="docket rise">
       <div id="notice" aria-live="polite"></div>
 
-      <!-- ═══ FORM SETUP — the form is not yet connected ═══
-           A) Formspree — create a form at formspree.io and replace YOUR_FORM_ID below.
-              (File uploads require a paid Formspree plan.)
-           B) Any other handler — Netlify Forms, Basin, Web3Forms, your own endpoint:
-              replace the action attribute entirely.
-           Until an endpoint is set, the form validates and confirms locally
-           without transmitting anything.
+      <!-- ═══ FORM DELIVERY — submissions are emailed to santiagopedraza01@gmail.com via
+           FormSubmit (formsubmit.co). The first submission sends an activation email
+           to that address; click its link once and every later quote is delivered.
            Fields inside a hidden .group are disabled, so only the details for the
            chosen service are sent. -->
-      <form id="docket" class="fields" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data" novalidate>
+      <form id="docket" class="fields" action="https://formsubmit.co/ajax/santiagopedraza01@gmail.com" method="POST" enctype="multipart/form-data" novalidate>
         <div class="docket__head f--wide">
           <h3 class="h3">Request a quote</h3>
           <p>No obligation. Most quotations are answered within a few working hours.</p>
@@ -874,7 +870,7 @@
           <div class="deposit__rule" aria-hidden="true"></div>
           <b>Attach files</b>
           <span>Drag files here, or select — PDF, JPG, PNG, DOCX, audio or video, up to 10&nbsp;MB each</span>
-          <input type="file" id="files" name="documents[]" multiple accept=".pdf,.jpg,.jpeg,.png,.heic,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.srt,.mp3,.wav,.m4a,.mp4,.mov" aria-label="Attach files">
+          <input type="file" id="files" name="attachment" multiple accept=".pdf,.jpg,.jpeg,.png,.heic,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.srt,.mp3,.wav,.m4a,.mp4,.mov" aria-label="Attach files">
         </div>
         <div class="manifest" id="manifest" aria-live="polite"></div>
 
@@ -890,7 +886,10 @@
         <span class="alert" id="consentAlert" style="grid-column:1/-1">Please confirm your consent to proceed.</span>
 
         <!-- spam trap — keep hidden -->
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;opacity:0">
+        <input type="hidden" name="_subject" value="New quote request — sptranslationservices.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;opacity:0">
 
         <div class="submit-zone">
           <button type="submit" class="btn btn--ink" id="send">Request a quote<span class="btn__arrow" aria-hidden="true"></span></button>

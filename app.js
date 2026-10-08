@@ -9,13 +9,13 @@
     submit:'Solicitar presupuesto',
     failed:'No ha sido posible transmitir su solicitud. Escriba directamente a ',
     failedEnd:' y recibirá respuesta en breve.',
-    noEndpoint:'[Formulario de presupuesto] Sin endpoint configurado: sustituya YOUR_FORM_ID en el action del formulario. Datos recogidos:'
+    noEndpoint:'[Formulario de presupuesto] Sin endpoint configurado. Datos recogidos:'
   } : {
     open:'Open menu', close:'Close menu', sending:'Sending…',
     submit:'Request a quote',
     failed:'Your request could not be transmitted. Please email ',
     failedEnd:' directly and you will have a reply shortly.',
-    noEndpoint:'[Quotation form] No endpoint configured — replace YOUR_FORM_ID in the form action. Captured:'
+    noEndpoint:'[Quotation form] No endpoint configured. Captured:'
   };
   var $=function(s,c){return (c||document).querySelector(s)},
       $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
@@ -187,7 +187,7 @@
     if(!check()) return;
 
     var endpoint=form.getAttribute('action')||'',
-        live=endpoint.indexOf('YOUR_FORM_ID')===-1&&/^https?:\/\//.test(endpoint);
+        live=/^https?:\/\//.test(endpoint);
 
     if(!live){
       console.warn(T.noEndpoint,
@@ -200,7 +200,8 @@
     send.textContent=T.sending;
 
     fetch(endpoint,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}})
-      .then(function(r){ if(!r.ok) throw new Error('Request failed: '+r.status); confirmReceipt(); })
+      .then(function(r){ if(!r.ok) throw new Error('Request failed: '+r.status); return r.json(); })
+      .then(function(d){ if(d&&String(d.success)==='false') throw new Error(d.message||'Rejected'); confirmReceipt(); })
       .catch(function(err){
         console.error(err);
         send.disabled=false;
