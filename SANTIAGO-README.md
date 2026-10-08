@@ -254,7 +254,7 @@ No drop shadows anywhere. Motion is opacity plus a 12px rise, 0.9s, staggered 70
    200 KB, saved beside the HTML. The design greyscales them automatically, so a
    colour original is fine. The design greyscales it, so colour
    grading is not critical; a plain background and direct gaze are.
-5. ~~**WhatsApp number**~~ — **done**: +57 321 854 1666 (`wa.me/573218541666`),
+5. ~~**WhatsApp number**~~ — **done**: +356 79066398 (`wa.me/35679066398`),
    set in all 22 links across the four pages and shown as text in the contact
    panel. Former instructions, should it ever change: the floating launcher (two),
    the intro card, the mobile dock, the direct-line panel in the contact section
