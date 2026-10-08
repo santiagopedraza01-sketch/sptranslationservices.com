@@ -741,17 +741,17 @@
       </div>
 
       <!-- ═══ PAGAR UNA FACTURA ═══
-           Sustituya el action por su página de pago alojada (Stripe Payment Link, Stripe
-           Invoicing, PayPal.Me, Wise). La referencia se envía como ?ref=… para casar el pago.
+           Abre el Payment Link de Stripe. La referencia se envía como ?client_reference_id=…
+           y aparece en el pago dentro del panel de Stripe, para cotejarlo con la factura.
            No añada nunca un campo de número de tarjeta a este sitio (PCI-DSS). -->
       <div class="settle rise">
         <div>
           <h3 class="h3">¿Ya tiene una factura?</h3>
           <p>Introduzca la referencia de su factura para realizar el pago.</p>
         </div>
-        <form class="settle__form" action="https://sptranslationservices.com/pay" method="get" target="_blank" rel="noopener">
+        <form class="settle__form" action="https://buy.stripe.com/9B6fZibLx3Ib8cX597gIo00" method="get" target="_blank" rel="noopener">
           <label class="skip" for="invoiceRef">Referencia de la factura</label>
-          <input type="text" id="invoiceRef" name="ref" placeholder="Referencia de la factura" autocomplete="off" required>
+          <input type="text" id="invoiceRef" name="client_reference_id" pattern="[A-Za-z0-9_\-]{1,200}" title="Solo letras, números, guiones o guiones bajos" placeholder="Referencia de la factura" autocomplete="off" required>
           <button type="submit" class="btn btn--bone">Pagar una factura<span class="btn__arrow" aria-hidden="true"></span></button>
         </form>
       </div>

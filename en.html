@@ -742,17 +742,17 @@
       </div>
 
       <!-- ═══ PAY AN INVOICE ═══
-           Replace the action with your hosted payment page (Stripe Payment Link, Stripe
-           Invoicing, PayPal.Me, Wise). The reference is passed as ?ref=… so the payment
-           can be matched. Never add a card-number field to this site (PCI-DSS). -->
+           Opens the Stripe Payment Link. The reference is sent as ?client_reference_id=…
+           and appears on the payment in the Stripe dashboard, so it can be matched to
+           the invoice. Never add a card-number field to this site (PCI-DSS). -->
       <div class="settle rise">
         <div>
           <h3 class="h3">Already have an invoice?</h3>
           <p>Enter your invoice reference to make a payment.</p>
         </div>
-        <form class="settle__form" action="https://sptranslationservices.com/pay" method="get" target="_blank" rel="noopener">
+        <form class="settle__form" action="https://buy.stripe.com/9B6fZibLx3Ib8cX597gIo00" method="get" target="_blank" rel="noopener">
           <label class="skip" for="invoiceRef">Invoice reference</label>
-          <input type="text" id="invoiceRef" name="ref" placeholder="Invoice reference" autocomplete="off" required>
+          <input type="text" id="invoiceRef" name="client_reference_id" pattern="[A-Za-z0-9_\-]{1,200}" title="Letters, numbers, dashes or underscores only" placeholder="Invoice reference" autocomplete="off" required>
           <button type="submit" class="btn btn--bone">Pay an invoice<span class="btn__arrow" aria-hidden="true"></span></button>
         </form>
       </div>
