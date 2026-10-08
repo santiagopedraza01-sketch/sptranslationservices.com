@@ -208,7 +208,7 @@
         $('#notice').innerHTML='<p style="border:1px solid #C9A08C;background:#FBF3EF;color:#8C3F26;'+
           'padding:14px 16px;font-size:.88rem;line-height:1.6;margin-bottom:22px;border-radius:2px">'+
           T.failed+
-          '<a href="mailto:hello@sptranslationservices.com" style="color:inherit;text-decoration:underline">hello@sptranslationservices.com</a>'+
+          '<a href="mailto:santiagopedraza01@gmail.com" style="color:inherit;text-decoration:underline">santiagopedraza01@gmail.com</a>'+
           T.failedEnd+'</p>';
       });
   });
