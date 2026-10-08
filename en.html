@@ -701,6 +701,73 @@
           </div>
         </article>
       </div>
+
+      <!-- ═══ LEAVE A REVIEW — each review is emailed to santiagopedraza01@gmail.com via
+           FormSubmit. Nothing is published automatically: add approved reviews to the
+           testimonials above. ═══ -->
+      <div class="review rise" id="review">
+        <div class="review__intro">
+          <h3 class="h3">Worked with us? Leave a review.</h3>
+          <p>Your feedback helps other clients choose with confidence. Every review is read before it is published, and only your first name, initial and country appear on the site.</p>
+          <button type="button" class="btn btn--ink" id="reviewOpen" aria-expanded="false" aria-controls="reviewForm">Leave a review<span class="btn__arrow" aria-hidden="true"></span></button>
+        </div>
+
+        <form id="reviewForm" class="fields review__form" action="https://formsubmit.co/ajax/santiagopedraza01@gmail.com" method="POST" novalidate hidden>
+          <div class="f">
+            <label for="rvName">Name <span class="star" aria-hidden="true">*</span></label>
+            <input type="text" id="rvName" name="name" autocomplete="name" placeholder="e.g. Lucía Martínez" required>
+            <span class="alert">Please enter your name.</span>
+          </div>
+          <div class="f">
+            <label for="rvEmail">Email <span class="star" aria-hidden="true">*</span> <span class="opt">(not published)</span></label>
+            <input type="email" id="rvEmail" name="email" autocomplete="email" placeholder="you@example.com" required>
+            <span class="alert">Please enter a valid email address.</span>
+          </div>
+          <div class="f">
+            <label for="rvCountry">Country <span class="opt">(optional)</span></label>
+            <input type="text" id="rvCountry" name="country" autocomplete="country-name" placeholder="e.g. Malta">
+          </div>
+          <div class="f">
+            <label for="rvWhat">What did we translate? <span class="opt">(optional)</span></label>
+            <input type="text" id="rvWhat" name="translated" placeholder="e.g. Birth certificate">
+          </div>
+          <fieldset class="f f--wide rate">
+            <legend>Rating <span class="star" aria-hidden="true">*</span></legend>
+            <div class="rate__stars">
+              <input type="radio" id="rv5" name="rating" value="5"><label for="rv5" title="5 stars"><span class="skip">5 stars</span>★</label>
+              <input type="radio" id="rv4" name="rating" value="4"><label for="rv4" title="4 stars"><span class="skip">4 stars</span>★</label>
+              <input type="radio" id="rv3" name="rating" value="3"><label for="rv3" title="3 stars"><span class="skip">3 stars</span>★</label>
+              <input type="radio" id="rv2" name="rating" value="2"><label for="rv2" title="2 stars"><span class="skip">2 stars</span>★</label>
+              <input type="radio" id="rv1" name="rating" value="1"><label for="rv1" title="1 star"><span class="skip">1 star</span>★</label>
+            </div>
+            <span class="alert">Please choose a rating.</span>
+          </fieldset>
+          <div class="f f--wide">
+            <label for="rvText">Your review <span class="star" aria-hidden="true">*</span></label>
+            <textarea id="rvText" name="review" placeholder="How was the service? Was the translation accepted where you needed it?" required></textarea>
+            <span class="alert">Please write a few words (at least 20 characters).</span>
+          </div>
+          <label class="agree" for="rvConsent">
+            <input type="checkbox" id="rvConsent" name="publish_consent" required>
+            <span>I agree to SP Translations publishing this review on its website with my first name, initial and country. <span class="star" aria-hidden="true">*</span></span>
+          </label>
+          <span class="alert" id="rvConsentAlert" style="grid-column:1/-1">Please confirm you agree to publication.</span>
+          <input type="hidden" name="_subject" value="New client review — sptranslationservices.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;opacity:0">
+          <div id="rvNotice" class="f--wide" aria-live="polite"></div>
+          <div class="submit-zone">
+            <button type="submit" class="btn btn--ink" id="rvSend">Send review<span class="btn__arrow" aria-hidden="true"></span></button>
+          </div>
+        </form>
+
+        <div class="received" id="reviewThanks" tabindex="-1">
+          <div class="received__rule" aria-hidden="true"></div>
+          <h3 class="h3">Thank you for your review.</h3>
+          <p>It has been received and will appear on the site once it has been checked.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

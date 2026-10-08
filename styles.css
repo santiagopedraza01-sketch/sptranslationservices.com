@@ -855,3 +855,26 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
   .docket{padding:24px 18px}
   .fx__select{min-width:0;flex:1}
 }
+
+/* ── Leave a review ── */
+.review{margin-top:clamp(48px,6vw,72px);padding-top:clamp(34px,4vw,46px);border-top:1px solid var(--rule)}
+.review__intro{display:grid;grid-template-columns:1fr auto;gap:14px 40px;align-items:end}
+.review__intro h3{grid-column:1/-1;font-size:1.42rem}
+.review__intro p{max-width:62ch;font-size:.94rem;color:var(--text-soft);line-height:1.65}
+.review__form{margin-top:34px;padding:clamp(24px,3vw,40px);background:var(--white);border:1px solid var(--rule)}
+.review__form[hidden]{display:none}
+.review .received{background:var(--white);border:1px solid var(--rule);margin-top:34px}
+.rate{border:0;padding:0;margin:0}
+.rate legend{padding:0;margin-bottom:8px;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mute);font-weight:500}
+.rate legend .star{color:var(--brass)}
+.rate__stars{display:inline-flex;flex-direction:row-reverse;justify-content:flex-end;gap:2px}
+.rate__stars input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.rate__stars label{cursor:pointer;font-size:1.9rem;line-height:1;color:var(--rule-strong);padding:2px;transition:color .2s var(--ease)}
+.rate__stars input:checked ~ label,
+.rate__stars label:hover,.rate__stars label:hover ~ label{color:var(--brass)}
+.rate__stars input:focus-visible + label{outline:2px solid var(--brass);outline-offset:2px}
+@media (max-width:680px){
+  .review__intro{grid-template-columns:1fr}
+  .review__intro .btn{width:100%}
+  .review__form{padding:24px 18px}
+}

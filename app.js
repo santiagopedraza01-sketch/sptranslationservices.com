@@ -9,13 +9,15 @@
     submit:'Solicitar presupuesto',
     failed:'No ha sido posible transmitir su solicitud. Escriba directamente a ',
     failedEnd:' y recibirá respuesta en breve.',
-    noEndpoint:'[Formulario de presupuesto] Sin endpoint configurado. Datos recogidos:'
+    noEndpoint:'[Formulario de presupuesto] Sin endpoint configurado. Datos recogidos:',
+    rvSend:'Enviar opinión', rvClose:'Cerrar', rvOpen:'Dejar una opinión'
   } : {
     open:'Open menu', close:'Close menu', sending:'Sending…',
     submit:'Request a quote',
     failed:'Your request could not be transmitted. Please email ',
     failedEnd:' directly and you will have a reply shortly.',
-    noEndpoint:'[Quotation form] No endpoint configured. Captured:'
+    noEndpoint:'[Quotation form] No endpoint configured. Captured:',
+    rvSend:'Send review', rvClose:'Close', rvOpen:'Leave a review'
   };
   var $=function(s,c){return (c||document).querySelector(s)},
       $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
@@ -215,6 +217,59 @@
   });
 
 
+  }
+
+  /* ── Leave a review: emailed for approval, never published automatically ── */
+  var rvForm=$('#reviewForm'), rvOpen=$('#reviewOpen');
+  if(rvForm&&rvOpen){
+  var rvThanks=$('#reviewThanks'), rvSendBtn=$('#rvSend'), rvConsent=$('#rvConsent'), rvConsentAlert=$('#rvConsentAlert');
+  var arrow='<span class="btn__arrow" aria-hidden="true"></span>';
+  function rvFlag(el,bad){ var f=el.closest('.f'); if(f) f.classList.toggle('invalid',bad) }
+  rvOpen.addEventListener('click',function(){
+    var open=rvForm.hidden;
+    rvForm.hidden=!open;
+    rvOpen.setAttribute('aria-expanded',String(open));
+    rvOpen.innerHTML=(open?T.rvClose:T.rvOpen)+arrow;
+    if(open) $('#rvName').focus();
+  });
+  $$('input,textarea',rvForm).forEach(function(el){
+    el.addEventListener('input',function(){rvFlag(el,false)});
+    el.addEventListener('change',function(){rvFlag(el,false)});
+  });
+  rvConsent.addEventListener('change',function(){rvConsentAlert.style.display=this.checked?'none':'block'});
+  function rvCheck(){
+    var ok=true, first=null, rated=$('input[name="rating"]:checked',rvForm);
+    [[$('#rvName'),function(v){return v.trim().length>1}],
+     [$('#rvEmail'),function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())}],
+     [$('#rvText'),function(v){return v.trim().length>=20}]].forEach(function(r){
+      var good=r[1](r[0].value); rvFlag(r[0],!good); if(!good){ok=false;first=first||r[0]}
+    });
+    rvFlag($('#rv5'),!rated); if(!rated){ok=false;first=first||$('#rv5')}
+    rvConsentAlert.style.display=rvConsent.checked?'none':'block';
+    if(!rvConsent.checked){ok=false;first=first||rvConsent}
+    if(first){first.focus();first.scrollIntoView({behavior:'smooth',block:'center'})}
+    return ok;
+  }
+  rvForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!rvCheck()) return;
+    rvSendBtn.disabled=true; rvSendBtn.textContent=T.sending;
+    fetch(rvForm.getAttribute('action'),{method:'POST',body:new FormData(rvForm),headers:{Accept:'application/json'}})
+      .then(function(r){ if(!r.ok) throw new Error('Request failed: '+r.status); return r.json(); })
+      .then(function(d){
+        if(d&&String(d.success)==='false') throw new Error(d.message||'Rejected');
+        rvForm.hidden=true; rvOpen.hidden=true;
+        rvThanks.classList.add('on'); rvThanks.focus();
+      })
+      .catch(function(err){
+        console.error(err);
+        rvSendBtn.disabled=false; rvSendBtn.innerHTML=T.rvSend+arrow;
+        $('#rvNotice').innerHTML='<p style="border:1px solid #C9A08C;background:#FBF3EF;color:#8C3F26;'+
+          'padding:14px 16px;font-size:.88rem;line-height:1.6;border-radius:2px">'+T.failed+
+          '<a href="mailto:santiagopedraza01@gmail.com" style="color:inherit;text-decoration:underline">santiagopedraza01@gmail.com</a>'+
+          T.failedEnd+'</p>';
+      });
+  });
   }
 
   /* ── WhatsApp card: opens once on a first visit, then stays dismissed ── */
