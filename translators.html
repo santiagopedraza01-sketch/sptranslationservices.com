@@ -34,26 +34,106 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://sptranslationservices.com/#practice",
-  "name": "SP Translations",
-  "logo": "https://sptranslationservices.com/img/crest-navy.webp",
-  "url": "https://sptranslationservices.com/",
-  "employee": [
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://sptranslationservices.com/#website",
+      "url": "https://sptranslationservices.com/",
+      "name": "SP Translations",
+      "inLanguage": [
+        "es",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://sptranslationservices.com/#practice"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://sptranslationservices.com/translators.html#webpage",
+      "url": "https://sptranslationservices.com/translators.html",
+      "name": "Translators — SP Translations · Certified Translation Services",
+      "description": "The director and translator network of SP Translations: qualifications, specialisation and accountability for every certified translation, Spanish ⇄ English and 120+ languages.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://sptranslationservices.com/#website"
+      },
+      "about": {
+        "@id": "https://sptranslationservices.com/#practice"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://sptranslationservices.com/img/og-image.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://sptranslationservices.com/translators.html#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://sptranslationservices.com/#santiago"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://sptranslationservices.com/translators.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sptranslationservices.com/en.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Translators",
+          "item": "https://sptranslationservices.com/translators.html"
+        }
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://sptranslationservices.com/#practice",
+      "name": "SP Translations",
+      "url": "https://sptranslationservices.com/",
+      "logo": "https://sptranslationservices.com/img/crest-navy.webp",
+      "employee": [
+        {
+          "@id": "https://sptranslationservices.com/#santiago"
+        }
+      ]
+    },
     {
       "@type": "Person",
       "@id": "https://sptranslationservices.com/#santiago",
       "name": "Santiago Pedraza Castillo",
       "jobTitle": "Director · MFEA-Recognised Translator",
-      "knowsLanguage": ["es", "en"],
-      "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Malta", "url": "https://www.um.edu.mt/" },
+      "knowsLanguage": [
+        "es",
+        "en"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Malta",
+        "url": "https://www.um.edu.mt/"
+      },
       "hasCredential": {
         "@type": "EducationalOccupationalCredential",
         "credentialCategory": "degree",
         "educationalLevel": "Master's Degree",
         "name": "MA in Translation and Terminology Studies",
-        "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Malta" }
-      }
+        "recognizedBy": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Malta"
+        }
+      },
+      "worksFor": {
+        "@id": "https://sptranslationservices.com/#practice"
+      },
+      "image": "https://sptranslationservices.com/santiago.jpg",
+      "email": "santiagopedraza01@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/santiago-pedraza-castillo-633403186/"
+      ]
     }
   ]
 }

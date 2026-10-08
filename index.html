@@ -34,11 +34,45 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-<!-- ============ DATOS ESTRUCTURADOS — SUSTITUIR los valores XXX ============ -->
+<!-- ============ DATOS ESTRUCTURADOS ============ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://sptranslationservices.com/#website",
+      "url": "https://sptranslationservices.com/",
+      "name": "SP Translations",
+      "inLanguage": [
+        "es",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://sptranslationservices.com/#practice"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://sptranslationservices.com/#webpage",
+      "url": "https://sptranslationservices.com/",
+      "name": "SP Translations — Servicios de traducción certificada · Español ⇄ Inglés · Más de 120 idiomas",
+      "description": "Traducciones certificadas de documentos oficiales para uso legal, académico y profesional. Español ⇄ inglés y más de 120 idiomas. Traductor reconocido por el MFEA, Malta y todo el mundo.",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://sptranslationservices.com/#website"
+      },
+      "about": {
+        "@id": "https://sptranslationservices.com/#practice"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://sptranslationservices.com/img/og-image.jpg"
+      },
+      "mainEntity": {
+        "@id": "https://sptranslationservices.com/#practice"
+      }
+    },
     {
       "@type": "ProfessionalService",
       "@id": "https://sptranslationservices.com/#practice",
@@ -47,70 +81,187 @@
       "url": "https://sptranslationservices.com/",
       "logo": "https://sptranslationservices.com/img/crest-navy.webp",
       "image": "https://sptranslationservices.com/img/og-image.jpg",
-      "inLanguage": ["es","en"],
+      "inLanguage": [
+        "es",
+        "en"
+      ],
       "email": "santiagopedraza01@gmail.com",
       "telephone": "+356 79066398",
       "priceRange": "$$",
       "paymentAccepted": "Visa, Mastercard, American Express, Maestro, PayPal, Apple Pay, Google Pay, Link, Bank transfer",
       "currenciesAccepted": "EUR, USD, GBP",
-      "address": { "@type": "PostalAddress", "addressLocality": "XXX CITY", "addressCountry": "MT" },
-      "areaServed": { "@type": "Place", "name": "Malta y todo el mundo — entrega digital" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MT"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Malta y todo el mundo — entrega digital"
+      },
       "availableLanguage": [
-        { "@type": "Language", "name": "Spanish", "alternateName": "es" },
-        { "@type": "Language", "name": "English", "alternateName": "en" }
+        {
+          "@type": "Language",
+          "name": "Spanish",
+          "alternateName": "es"
+        },
+        {
+          "@type": "Language",
+          "name": "English",
+          "alternateName": "en"
+        }
       ],
-      "founder": { "@id": "https://sptranslationservices.com/#santiago" },
+      "founder": {
+        "@id": "https://sptranslationservices.com/#santiago"
+      },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "09:00", "closes": "18:00"
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de traducción y lingüísticos",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traducción certificada y de documentos" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traducción audiovisual, subtitulado y transcripción" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Localización de webs, software y contenido digital" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interpretación en línea y presencial" } }
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Traducción certificada y de documentos"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Traducción audiovisual, subtitulado y transcripción"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Localización de webs, software y contenido digital"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Interpretación en línea y presencial"
+            }
+          }
         ]
-      }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "santiagopedraza01@gmail.com",
+        "telephone": "+356 79066398",
+        "availableLanguage": [
+          "Spanish",
+          "English"
+        ]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/santiago-pedraza-castillo-633403186/"
+      ]
     },
     {
       "@type": "Person",
       "@id": "https://sptranslationservices.com/#santiago",
       "name": "Santiago Pedraza Castillo",
       "jobTitle": "Director · Traductor reconocido por el MFEA",
-      "worksFor": { "@id": "https://sptranslationservices.com/#practice" },
+      "worksFor": {
+        "@id": "https://sptranslationservices.com/#practice"
+      },
       "email": "santiagopedraza01@gmail.com",
-      "sameAs": ["https://www.linkedin.com/in/santiago-pedraza-castillo-633403186/"],
-      "knowsLanguage": ["es", "en"],
-      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad de Malta", "url": "https://www.um.edu.mt/" },
+      "sameAs": [
+        "https://www.linkedin.com/in/santiago-pedraza-castillo-633403186/"
+      ],
+      "knowsLanguage": [
+        "es",
+        "en"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidad de Malta",
+        "url": "https://www.um.edu.mt/"
+      },
       "hasCredential": {
         "@type": "EducationalOccupationalCredential",
         "credentialCategory": "degree",
         "educationalLevel": "Master's Degree",
         "name": "Máster en Traducción y Terminología",
-        "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Universidad de Malta" }
-      }
+        "recognizedBy": {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidad de Malta"
+        }
+      },
+      "image": "https://sptranslationservices.com/santiago.jpg"
     },
     {
       "@type": "FAQPage",
       "@id": "https://sptranslationservices.com/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "¿Aceptará la traducción la institución receptora?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Las traducciones las preparan traductores titulados y reconocidos, seleccionados según el idioma, el tipo de documento y los requisitos de la institución receptora. Cada traducción certificada se emite con un certificado firmado y fechado que identifica al traductor responsable y su titulación. Si la institución tiene requisitos específicos de presentación, se revisan antes de preparar el proyecto." } },
-        { "@type": "Question", "name": "¿Cuánto tarda una traducción?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Los documentos estándar de una página se entregan normalmente en 24–48 horas. Los proyectos más extensos o complejos reciben una fecha de entrega en el presupuesto. Hay servicio urgente disponible cuando se necesite." } },
-        { "@type": "Question", "name": "¿Tengo que enviar el documento original?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Normalmente, no. Basta con un escaneo o una fotografía nítida siempre que todo el texto, los sellos y los timbres sean legibles. Si la institución receptora exige el original o una copia física, puede gestionarse." } },
-        { "@type": "Question", "name": "¿Cómo se calcula la tarifa?",
-          "acceptedAnswer": { "@type": "Answer", "text": "La tarifa depende de la combinación de idiomas, el número de palabras, la complejidad, el formato, la calidad del original y el plazo. Requisitos adicionales como la legalización notarial, la gestión de la apostilla o la entrega en papel también pueden influir en el precio final." } },
-        { "@type": "Question", "name": "¿Cómo se tratan mis documentos?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Los documentos se tratan de forma confidencial y solo se comparten con el traductor o los profesionales necesarios para completar el proyecto. Para proyectos corporativos y jurídicos se ofrecen acuerdos de confidencialidad adicionales, incluidos NDA." } },
-        { "@type": "Question", "name": "¿Pueden ayudar con la legalización notarial o la apostilla?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Cuando sea necesario, pueden coordinarse la legalización notarial y los trámites de apostilla según el país de destino y los requisitos del documento. Conviene indicarlo al solicitar el presupuesto." } }
-      ]
+        {
+          "@type": "Question",
+          "name": "¿Aceptará la traducción la institución receptora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las traducciones las preparan traductores titulados y reconocidos, seleccionados según el idioma, el tipo de documento y los requisitos de la institución receptora. Cada traducción certificada se emite con un certificado firmado y fechado que identifica al traductor responsable y su titulación. Si la institución tiene requisitos específicos de presentación, se revisan antes de preparar el proyecto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tarda una traducción?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los documentos estándar de una página se entregan normalmente en 24–48 horas. Los proyectos más extensos o complejos reciben una fecha de entrega en el presupuesto. Hay servicio urgente disponible cuando se necesite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tengo que enviar el documento original?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Normalmente, no. Basta con un escaneo o una fotografía nítida siempre que todo el texto, los sellos y los timbres sean legibles. Si la institución receptora exige el original o una copia física, puede gestionarse."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se calcula la tarifa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La tarifa depende de la combinación de idiomas, el número de palabras, la complejidad, el formato, la calidad del original y el plazo. Requisitos adicionales como la legalización notarial, la gestión de la apostilla o la entrega en papel también pueden influir en el precio final."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se tratan mis documentos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los documentos se tratan de forma confidencial y solo se comparten con el traductor o los profesionales necesarios para completar el proyecto. Para proyectos corporativos y jurídicos se ofrecen acuerdos de confidencialidad adicionales, incluidos NDA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pueden ayudar con la legalización notarial o la apostilla?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cuando sea necesario, pueden coordinarse la legalización notarial y los trámites de apostilla según el país de destino y los requisitos del documento. Conviene indicarlo al solicitar el presupuesto."
+          }
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://sptranslationservices.com/#webpage"
+      }
     }
   ]
 }
