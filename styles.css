@@ -938,3 +938,6 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 .perk__text p{margin-inline:auto}
 @media (max-width:900px){ .perk__text p{margin-inline:0} }
 @media (max-width:430px){ .perk__text p{margin-inline:auto} }
+
+/* iGaming block in services */
+.igaming__lede{max-width:68ch;color:var(--text-soft);line-height:1.7;margin:-8px 0 26px}
