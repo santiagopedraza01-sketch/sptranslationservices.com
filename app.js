@@ -6,10 +6,10 @@
   var ES = document.documentElement.lang === 'es';
   var T = ES ? {
     open:'Abrir menú', close:'Cerrar menú', sending:'Enviando…',
-    submit:'Solicitar presupuesto',
-    failed:'No ha sido posible transmitir su solicitud. Escriba directamente a ',
-    failedEnd:' y recibirá respuesta en breve.',
-    noEndpoint:'[Formulario de presupuesto] Sin endpoint configurado. Datos recogidos:',
+    submit:'Solicitar una cotización',
+    failed:'No hemos podido enviar tu solicitud. Escríbenos directamente a ',
+    failedEnd:' y te responderemos en breve.',
+    noEndpoint:'[Formulario de cotización] Sin endpoint configurado. Datos recogidos:',
     rvSend:'Enviar opinión', rvClose:'Cerrar', rvOpen:'Dejar una opinión'
   } : {
     open:'Open menu', close:'Close menu', sending:'Sending…',
@@ -277,6 +277,36 @@
   });
   }
 
+  /* ── Testimonials: rendered from testimonials.json (edit it with testimonials-admin.html).
+        The HTML already on the page stays as the fallback if the file can't be loaded. ── */
+  var testimony=$('.testimony');
+  if(testimony&&window.fetch){
+    fetch('testimonials.json?t='+Date.now(),{cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function(list){
+        if(!Array.isArray(list)||!list.length) return;
+        var lang=ES?'es':'en', other=ES?'en':'es';
+        function pick(v){ return v&&typeof v==='object' ? (v[lang]||v[other]||'') : (v||''); }
+        function when(m){
+          var d=/^(\d{4})-(\d{2})$/.exec(m||''); if(!d) return '';
+          var t=new Intl.DateTimeFormat(ES?'es-ES':'en-GB',{month:'long',year:'numeric'}).format(new Date(+d[1],+d[2]-1,1));
+          return t.charAt(0).toUpperCase()+t.slice(1);
+        }
+        testimony.innerHTML='';
+        list.forEach(function(t){
+          var quote=pick(t.quote); if(!quote||!t.name) return;
+          var art=document.createElement('article'); art.className='testimony__item';
+          art.innerHTML='<blockquote></blockquote><div class="testimony__attr"><b></b><span></span><em></em></div>';
+          $('blockquote',art).textContent='\u201C'+quote+'\u201D';
+          $('b',art).textContent=t.name;
+          $('span',art).textContent=[pick(t.country),when(t.month)].filter(Boolean).join(' \u00B7 ');
+          var doc=pick(t.document), em=$('em',art); if(doc) em.textContent=doc; else { em.textContent='\u00A0'; em.setAttribute('aria-hidden','true'); }
+          testimony.appendChild(art);
+        });
+      })
+      .catch(function(err){ console.warn('[testimonials] using built-in list:',err); });
+  }
+
   /* ── WhatsApp card: opens once on a first visit, then stays dismissed ── */
   var wa=$('#waCard'), waDismiss=$('#waDismiss'), WA_KEY='wa-card-dismissed';
   if(wa){
@@ -389,9 +419,9 @@
     });
     if(fxNote){
       fxNote.innerHTML = cur === FX.base
-        ? (ES ? '<b>Importes en ' + cur + '.</b> La factura puede emitirse en la moneda que solicite.'
+        ? (ES ? '<b>Importes en ' + cur + '.</b> La factura puede emitirse en la moneda que prefieras.'
               : '<b>Figures in ' + cur + '.</b> Invoices can be issued in the requested currency.')
-        : (ES ? '<b>Conversión orientativa a ' + cur + '.</b> La factura puede emitirse en la moneda que solicite.'
+        : (ES ? '<b>Conversión orientativa a ' + cur + '.</b> La factura puede emitirse en la moneda que prefieras.'
               : '<b>Indicative conversion to ' + cur + '.</b> Invoices can be issued in the requested currency.');
     }
     try{ localStorage.setItem(FX_KEY, cur) }catch(e){}
@@ -416,7 +446,7 @@
      SUSTITUIR / REPLACE the wording below to taste.
      ══════════════════════════════════════════════════════════════════════ */
   var WA_TEXT = {
-    es: 'Hola, les escribo desde la web de SP Translations. Quisiera un presupuesto para una traducción.',
+    es: 'Hola, te escribo desde la web de SP Translations. Me gustaría solicitar una cotización para una traducción.',
     en: "Hello, I'm writing from the SP Translations website. I would like a quote for a translation."
   };
 

@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://sptranslationservices.com/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/en.html"/>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://sptranslationservices.com/en.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/en.html"/>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://sptranslationservices.com/traductores.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/traductores.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/translators.html"/>
@@ -41,7 +41,7 @@
   </url>
   <url>
     <loc>https://sptranslationservices.com/translators.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/traductores.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/translators.html"/>

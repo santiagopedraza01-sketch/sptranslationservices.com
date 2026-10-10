@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Testimonials Manager — SP Translations</title>
+<link rel="icon" href="img/favicon-48.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#111D2C; --navy:#1B2A3E; --bone:#F5F2ED; --bone-warm:#FAF8F4; --white:#FFFFFF;
+    --text:#1A222C; --text-soft:#4A5560; --text-mute:#7A838D; --brass:#8E7243; --brass-light:#C4AC80;
+    --rule:#E1DCD3; --rule-strong:#CFC8BC; --ok:#2F6B45; --bad:#9E4B2F;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bone);color:var(--text);font:15px/1.6 Inter,system-ui,sans-serif}
+  header{background:var(--ink);color:#F5F2ED;padding:22px 16px}
+  header .in,main{max-width:1060px;margin:0 auto}
+  header h1{font:500 1.5rem/1.2 Spectral,serif;margin:0 0 4px}
+  header p{margin:0;color:#B9C0C8;font-size:.9rem}
+  main{padding:28px 16px 80px;display:grid;gap:26px}
+  .card{background:var(--white);border:1px solid var(--rule);padding:24px}
+  h2{font:500 1.25rem/1.3 Spectral,serif;margin:0 0 6px}
+  .hint{color:var(--text-mute);font-size:.86rem;margin:0 0 16px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .wide{grid-column:1/-1}
+  label{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-mute);font-weight:500;margin-bottom:6px}
+  label i{font-style:normal;text-transform:none;letter-spacing:0;opacity:.8}
+  input,textarea,select{width:100%;font:inherit;color:var(--text);background:var(--white);border:1px solid var(--rule-strong);border-radius:2px;padding:10px 12px}
+  textarea{min-height:96px;resize:vertical}
+  input:focus,textarea:focus,select:focus{outline:2px solid var(--brass-light);outline-offset:0;border-color:var(--brass)}
+  .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  button,.btn{font:500 .9rem Inter,sans-serif;border:1px solid var(--ink);background:var(--ink);color:#fff;padding:11px 18px;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+  button.line,.btn.line{background:transparent;color:var(--ink)}
+  button.gold{background:var(--brass-light);border-color:var(--brass-light);color:var(--ink)}
+  button.small{padding:6px 10px;font-size:.8rem}
+  button:disabled{opacity:.45;cursor:default}
+  .list{display:grid;gap:12px}
+  .item{display:grid;grid-template-columns:1fr auto;gap:14px;border:1px solid var(--rule);padding:14px 16px;background:var(--bone-warm)}
+  .item q{display:block;font-family:Spectral,serif;font-size:1.02rem;quotes:"\201C" "\201D"}
+  .item small{color:var(--text-mute)}
+  .item .ctl{display:flex;gap:6px;align-items:flex-start;flex-wrap:wrap;justify-content:flex-end}
+  .steps{margin:0;padding-left:20px}
+  .steps li{margin-bottom:6px}
+  .status{font-size:.88rem;margin-top:12px;min-height:1.4em}
+  .status.ok{color:var(--ok)} .status.bad{color:var(--bad)}
+  .badge{display:inline-block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--brass-light);color:var(--ink);padding:2px 8px;border-radius:2px;margin-left:6px}
+  code{background:var(--bone);padding:1px 5px;border-radius:2px}
+  @media (max-width:700px){ .grid{grid-template-columns:1fr} .item{grid-template-columns:1fr} .item .ctl{justify-content:flex-start} }
+</style>
+</head>
+<body>
+<header>
+  <div class="in">
+    <h1>Testimonials Manager</h1>
+    <p>Add real client reviews to the “Testimonials” section of sptranslationservices.com · Gestor de testimonios</p>
+  </div>
+</header>
+
+<main>
+  <section class="card">
+    <h2>1 · Add a review <span class="hint" style="display:inline">/ Añadir una opinión</span></h2>
+    <p class="hint">Paste the review email you received (“New client review — sptranslationservices.com”) and press <b>Fill from email</b>, or type the details yourself. Only publish reviews the client agreed to publish.</p>
+    <div class="grid">
+      <div class="wide">
+        <label for="paste">Paste review email <i>(optional)</i></label>
+        <textarea id="paste" placeholder="name   Lucía Martínez&#10;country   Spain&#10;translated   Birth certificate&#10;rating   5&#10;review   Excellent service…"></textarea>
+        <div class="btns"><button type="button" class="line" id="fill">Fill from email</button></div>
+      </div>
+      <div>
+        <label for="name">Client name <i>(shown as first name + initial)</i></label>
+        <input id="name" placeholder="Lucía Martínez → Lucía M.">
+      </div>
+      <div>
+        <label for="month">Month</label>
+        <input id="month" type="month">
+      </div>
+      <div>
+        <label for="countryEs">Country — Spanish</label>
+        <input id="countryEs" placeholder="España">
+      </div>
+      <div>
+        <label for="countryEn">Country — English</label>
+        <input id="countryEn" placeholder="Spain">
+      </div>
+      <div>
+        <label for="docEs">Document / service — Spanish</label>
+        <input id="docEs" placeholder="Certificado de nacimiento">
+      </div>
+      <div>
+        <label for="docEn">Document / service — English</label>
+        <input id="docEn" placeholder="Birth certificate">
+      </div>
+      <div class="wide">
+        <label for="quoteEs">Review — Spanish <i>(leave one language blank to show the other on both pages)</i></label>
+        <textarea id="quoteEs"></textarea>
+      </div>
+      <div class="wide">
+        <label for="quoteEn">Review — English</label>
+        <textarea id="quoteEn"></textarea>
+      </div>
+      <div>
+        <label for="rating">Rating</label>
+        <select id="rating"><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select>
+      </div>
+      <div>
+        <label for="pos">Position</label>
+        <select id="pos"><option value="first">First (newest first)</option><option value="last">Last</option></select>
+      </div>
+    </div>
+    <div class="btns"><button type="button" class="gold" id="add">Add to the list</button><button type="button" class="line" id="clear">Clear form</button></div>
+    <p class="status" id="addStatus" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>2 · Current list <span class="badge" id="count">…</span></h2>
+    <p class="hint">This is what the site will show, in this order. Reorder or remove entries here — nothing is published until step 3.</p>
+    <div class="list" id="list"></div>
+    <p class="status" id="loadStatus" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>3 · Publish <span class="hint" style="display:inline">/ Publicar</span></h2>
+    <ol class="steps">
+      <li>Press <b>Copy updated file</b>.</li>
+      <li>Press <b>Open file on GitHub</b> and sign in as <code>santiagopedraza01-sketch</code> if asked.</li>
+      <li>In the GitHub editor, select everything (<b>Cmd/Ctrl + A</b>), paste (<b>Cmd/Ctrl + V</b>), then press <b>Commit changes…</b> → <b>Commit changes</b>.</li>
+      <li>The testimonials on the site update about a minute later.</li>
+    </ol>
+    <div class="btns">
+      <button type="button" id="copy">Copy updated file</button>
+      <a class="btn line" id="gh" href="https://github.com/santiagopedraza01-sketch/sptranslationservices.com/edit/main/testimonials.json" target="_blank" rel="noopener">Open file on GitHub ↗</a>
+      <button type="button" class="line" id="download">Download file</button>
+    </div>
+    <p class="status" id="copyStatus" aria-live="polite"></p>
+    <details style="margin-top:14px"><summary class="hint" style="cursor:pointer;margin:0">Show the file contents</summary>
+      <textarea id="out" readonly style="min-height:220px;margin-top:10px;font:12px/1.5 ui-monospace,Menlo,monospace"></textarea>
+    </details>
+  </section>
+</main>
+
+<script>
+(function(){
+  'use strict';
+  var $=function(s){return document.querySelector(s)};
+  var list=[], dirty=false;
+
+  function shortName(n){
+    n=(n||'').trim().replace(/\s+/g,' ');
+    var parts=n.split(' ');
+    if(parts.length<2||/^[^\s]+ [A-ZÁÉÍÓÚÑ]\.$/.test(n)) return n;
+    return parts[0]+' '+parts[parts.length-1].charAt(0).toUpperCase()+'.';
+  }
+  function pick(v,l){ return v&&typeof v==='object' ? (v[l]||v[l==='es'?'en':'es']||'') : (v||''); }
+  function setStatus(el,msg,ok){ el.textContent=msg; el.className='status '+(ok===false?'bad':ok?'ok':''); }
+  function render(){
+    var box=$('#list'); box.innerHTML='';
+    $('#count').textContent=list.length+' shown';
+    list.forEach(function(t,i){
+      var row=document.createElement('div'); row.className='item';
+      row.innerHTML='<div><q></q><small></small></div><div class="ctl">'+
+        '<button type="button" class="line small" data-a="up">↑</button>'+
+        '<button type="button" class="line small" data-a="down">↓</button>'+
+        '<button type="button" class="line small" data-a="del">Remove</button></div>';
+      row.querySelector('q').textContent=pick(t.quote,'es')||pick(t.quote,'en');
+      row.querySelector('small').textContent=t.name+' · '+[pick(t.country,'es'),t.month,pick(t.document,'es')].filter(Boolean).join(' · ')+(pick(t.quote,'en')&&pick(t.quote,'es')?' · ES + EN':'');
+      row.querySelector('[data-a=up]').disabled=i===0;
+      row.querySelector('[data-a=down]').disabled=i===list.length-1;
+      row.addEventListener('click',function(e){
+        var a=e.target.getAttribute('data-a'); if(!a) return;
+        if(a==='del'&&!confirmRemove(t)) return;
+        if(a==='up') list.splice(i-1,0,list.splice(i,1)[0]);
+        if(a==='down') list.splice(i+1,0,list.splice(i,1)[0]);
+        if(a==='del') list.splice(i,1);
+        dirty=true; render();
+      });
+      box.appendChild(row);
+    });
+    $('#out').value=JSON.stringify(list,null,2)+'\n';
+  }
+  function confirmRemove(t){
+    /* inline two-step confirm instead of a browser dialog */
+    if(t.__arm){ delete t.__arm; return true; }
+    list.forEach(function(x){delete x.__arm}); t.__arm=true;
+    setStatus($('#loadStatus'),'Press “Remove” again to remove '+t.name+'.');
+    return false;
+  }
+
+  fetch('testimonials.json?t='+Date.now(),{cache:'no-store'})
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(function(d){ list=Array.isArray(d)?d:[]; render(); setStatus($('#loadStatus'),'Loaded the testimonials currently on the site.',true); })
+    .catch(function(e){ render(); setStatus($('#loadStatus'),'Could not load testimonials.json ('+e.message+'). You can still add entries and publish.',false); });
+
+  /* Best-effort parse of the FormSubmit email (table copied as text) */
+  $('#fill').addEventListener('click',function(){
+    var txt=$('#paste').value, got=0;
+    function field(key){
+      var m=new RegExp('^\\s*'+key+'\\s*[:\\t ]\\s*(.+)$','im').exec(txt);
+      return m?m[1].trim():'';
+    }
+    var name=field('name'), country=field('country'), what=field('translated'), rating=field('rating'), review='';
+    var rm=/^\s*review\s*[:\t ]\s*([\s\S]+?)(?:\n\s*(?:publish_consent|_honey|email|country|translated|rating|name)\b|$)/im.exec(txt);
+    if(rm) review=rm[1].trim();
+    if(name){$('#name').value=shortName(name);got++}
+    if(country){ $('#countryEn').value=country; $('#countryEs').value=$('#countryEs').value||country; got++ }
+    if(what){ $('#docEn').value=what; $('#docEs').value=$('#docEs').value||what; got++ }
+    if(/^[1-5]$/.test(rating)){$('#rating').value=rating;got++}
+    if(review){
+      var spanish=/[áéíóúñ¿¡]|\b(el|la|los|las|muy|servicio|traducción|gracias)\b/i.test(review);
+      $(spanish?'#quoteEs':'#quoteEn').value=review; got++;
+    }
+    if(!$('#month').value){ var d=new Date(); $('#month').value=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0'); }
+    setStatus($('#addStatus'), got ? 'Filled '+got+' field(s). Check the country and document in both languages, then add.' : 'Nothing recognised — please type the details.', got?true:false);
+  });
+
+  $('#name').addEventListener('blur',function(){ this.value=shortName(this.value) });
+
+  $('#add').addEventListener('click',function(){
+    var name=shortName($('#name').value), qe=$('#quoteEs').value.trim(), qn=$('#quoteEn').value.trim();
+    if(!name||(!qe&&!qn)){ setStatus($('#addStatus'),'A name and the review text (in at least one language) are required.',false); return; }
+    var t={name:name, month:$('#month').value||'', rating:+$('#rating').value,
+      country:{es:$('#countryEs').value.trim(), en:$('#countryEn').value.trim()},
+      document:{es:$('#docEs').value.trim(), en:$('#docEn').value.trim()},
+      quote:{es:qe, en:qn}};
+    if($('#pos').value==='first') list.unshift(t); else list.push(t);
+    dirty=true; render();
+    setStatus($('#addStatus'),'Added '+name+' — now publish it in step 3.',true);
+    $('#clear').click(); $('#addStatus').textContent='Added '+name+' — now publish it in step 3.';
+  });
+  $('#clear').addEventListener('click',function(){
+    ['#paste','#name','#month','#countryEs','#countryEn','#docEs','#docEn','#quoteEs','#quoteEn'].forEach(function(s){$(s).value=''});
+    $('#rating').value='5'; setStatus($('#addStatus'),'');
+  });
+
+  function fileText(){ list.forEach(function(x){delete x.__arm}); return JSON.stringify(list,null,2)+'\n'; }
+  $('#copy').addEventListener('click',function(){
+    var txt=fileText();
+    (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject())
+      .then(function(){ setStatus($('#copyStatus'),'Copied. Now open the file on GitHub, replace everything and commit.',true); })
+      .catch(function(){ var o=$('#out'); o.parentNode.open=true; o.focus(); o.select(); setStatus($('#copyStatus'),'Press Cmd/Ctrl + C to copy the selected text.'); });
+  });
+  $('#download').addEventListener('click',function(){
+    var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([fileText()],{type:'application/json'}));
+    a.download='testimonials.json'; a.click(); setTimeout(function(){URL.revokeObjectURL(a.href)},1000);
+  });
+  window.addEventListener('beforeunload',function(e){ if(dirty){ e.preventDefault(); e.returnValue=''; } });
+  $('#copy').addEventListener('click',function(){ dirty=false; });
+})();
+</script>
+</body>
+</html>
