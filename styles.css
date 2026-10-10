@@ -972,3 +972,54 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
   .testimony{grid-template-columns:1fr}
   .testimony__item,.testimony__item:not(:first-child),.testimony__item:nth-child(n){padding:32px 0 0;border-right:0}
 }
+
+/* ── Cookie consent ── */
+.cc{position:fixed;left:16px;bottom:16px;z-index:1200;width:min(460px,calc(100vw - 32px));background:var(--white);color:var(--text);border:1px solid var(--rule);box-shadow:0 18px 50px rgba(17,29,44,.22);padding:24px 24px 22px;border-radius:4px}
+.cc__title{font-family:var(--serif);font-size:1.3rem;font-weight:500;margin:0 0 10px}
+.cc__body{font-size:.9rem;line-height:1.6;color:var(--text-soft);margin:0}
+.cc__body a,.cc-modal__intro a{color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--brass)}
+.cc__btns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:18px}
+.cc__btn{font:500 .85rem var(--sans,Inter,sans-serif);padding:12px 10px;border:1.5px solid var(--ink);background:var(--white);color:var(--ink);border-radius:3px;cursor:pointer;transition:background .25s,color .25s}
+.cc__btn:hover{background:var(--bone)}
+.cc__btn--solid{background:var(--ink);color:#fff}
+.cc__btn--solid:hover{background:var(--navy)}
+.cc__btn:focus-visible,.cc-switch input:focus-visible+span{outline:2px solid var(--brass);outline-offset:2px}
+.cc-modal{position:fixed;inset:0;z-index:1300;background:rgba(17,29,44,.55);display:grid;place-items:center;padding:16px}
+.cc-modal__box{position:relative;background:var(--white);color:var(--text);width:min(560px,100%);max-height:calc(100vh - 32px);overflow:auto;padding:28px 26px 24px;border-radius:4px;outline:none}
+.cc-modal__box h2{font-family:var(--serif);font-size:1.4rem;font-weight:500;margin:0 0 8px}
+.cc-modal__intro{font-size:.88rem;color:var(--text-soft);line-height:1.6;margin:0 0 8px}
+.cc-modal__x{position:absolute;top:10px;right:12px;width:36px;height:36px;border:0;background:none;font-size:1.6rem;line-height:1;color:var(--text-mute);cursor:pointer}
+.cc-row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:16px 0;border-top:1px solid var(--rule)}
+.cc-row h3{font-size:.95rem;font-weight:600;margin:0 0 4px}
+.cc-row p{font-size:.82rem;line-height:1.55;color:var(--text-mute);margin:0}
+.cc-always{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);white-space:nowrap}
+.cc-switch{position:relative;display:inline-block;width:46px;height:26px;cursor:pointer}
+.cc-switch input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}
+.cc-switch span{position:absolute;inset:0;pointer-events:none;background:var(--rule-strong);border-radius:26px;transition:background .25s}
+.cc-switch span::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .25s}
+.cc-switch input:checked+span{background:var(--ink)}
+.cc-switch input:checked+span::after{transform:translateX(20px)}
+.cc-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.cc-lock,.cc-lock body{overflow:hidden}
+.linkbtn{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:inherit}
+@media (max-width:520px){
+  .cc{left:10px;right:10px;bottom:10px;width:auto;padding:20px 18px 18px}
+  .cc__btns{grid-template-columns:1fr}
+  .cc__btn--solid{order:-1}
+}
+
+/* Policy pages */
+.policy{max-width:760px}
+.policy h2{font-family:var(--serif);font-size:1.45rem;font-weight:500;margin:42px 0 12px}
+.policy h2:first-child{margin-top:0}
+.policy p,.policy li{color:var(--text-soft);line-height:1.75;font-size:.98rem}
+.policy p{margin:0 0 14px}
+.policy ul{padding-left:20px;margin:0 0 14px}
+.policy li{margin-bottom:8px}
+.policy a,.policy__btn{color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--brass)}
+.policy__table{overflow-x:auto;margin:6px 0 16px;border:1px solid var(--rule);background:var(--white)}
+.policy table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:540px}
+.policy th,.policy td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+.policy th{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-mute);font-weight:500;background:var(--bone-warm)}
+.policy tr:last-child td{border-bottom:0}
+.policy code{font-size:.82rem;background:var(--bone);padding:2px 6px;border-radius:2px}

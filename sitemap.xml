@@ -48,4 +48,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/traductores.html"/>
     <image:image><image:loc>https://sptranslationservices.com/santiago.jpg</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://sptranslationservices.com/politica-de-cookies.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/politica-de-cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/politica-de-cookies.html"/>
+  </url>
+  <url>
+    <loc>https://sptranslationservices.com/cookies.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/politica-de-cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/politica-de-cookies.html"/>
+  </url>
 </urlset>

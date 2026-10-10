@@ -19,6 +19,9 @@
     noEndpoint:'[Quotation form] No endpoint configured. Captured:',
     rvSend:'Send review', rvClose:'Close', rvOpen:'Leave a review'
   };
+  /* Preference storage only with cookie consent (see consent.js) */
+  function prefsOK(){ return !window.SPConsent || window.SPConsent.allowed('preferences'); }
+
   var $=function(s,c){return (c||document).querySelector(s)},
       $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
 
@@ -317,7 +320,7 @@
   var wa=$('#waCard'), waDismiss=$('#waDismiss'), WA_KEY='wa-card-dismissed';
   if(wa){
   function stored(key){ try{ return localStorage.getItem(key) }catch(e){ return null } }
-  function store(key,val){ try{ localStorage.setItem(key,val) }catch(e){} }
+  function store(key,val){ if(!prefsOK()) return; try{ localStorage.setItem(key,val) }catch(e){} }
   function closeCard(){ wa.classList.remove('open'); store(WA_KEY,'1') }
   if(!stored(WA_KEY)){
     setTimeout(function(){
@@ -430,7 +433,7 @@
         : (ES ? '<b>Conversión orientativa a ' + cur + '.</b> La factura puede emitirse en la moneda que prefieras.'
               : '<b>Indicative conversion to ' + cur + '.</b> Invoices can be issued in the requested currency.');
     }
-    try{ localStorage.setItem(FX_KEY, cur) }catch(e){}
+    if(prefsOK()){ try{ localStorage.setItem(FX_KEY, cur) }catch(e){} }
   }
 
   if(fxSelect){
