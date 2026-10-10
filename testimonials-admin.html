@@ -63,7 +63,7 @@
 <main>
   <section class="card">
     <h2>1 · Add a review <span class="hint" style="display:inline">/ Añadir una opinión</span></h2>
-    <p class="hint">Paste the review email you received (“New client review — sptranslationservices.com”) and press <b>Fill from email</b>, or type the details yourself. Only publish reviews the client agreed to publish.</p>
+    <p class="hint">Paste the review email you received (“New client review — sptranslationservices.com”) and press <b>Fill from email</b>, or type the details yourself. For a <b>Google review</b>, copy the reviewer’s name and text from <a href="https://www.google.com/maps/place/SP+Translations+services+(traducci%C3%B3n+oficial)/@35.8998782,14.3838353,12z/data=!4m12!1m2!2m1!1stranslation+service!3m8!1s0x130e4fae000b0c03:0x52430e3581f8e42e!8m2!3d35.9557382!4d14.4220846!9m1!1b1!15sChN0cmFuc2xhdGlvbiBzZXJ2aWNlkgEKdHJhbnNsYXRvcuABAA!16s%2Fg%2F11nw7b4r68" target="_blank" rel="noopener">your Google listing</a> and set Source to “Google review”. Only publish reviews the client agreed to publish.</p>
     <div class="grid">
       <div class="wide">
         <label for="paste">Paste review email <i>(optional)</i></label>
@@ -105,6 +105,10 @@
       <div>
         <label for="rating">Rating</label>
         <select id="rating"><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select>
+      </div>
+      <div>
+        <label for="source">Source</label>
+        <select id="source"><option value="website">Website review form</option><option value="google">Google review (shows a “Google review” link)</option></select>
       </div>
       <div>
         <label for="pos">Position</label>
@@ -166,7 +170,7 @@
         '<button type="button" class="line small" data-a="down">↓</button>'+
         '<button type="button" class="line small" data-a="del">Remove</button></div>';
       row.querySelector('q').textContent=pick(t.quote,'es')||pick(t.quote,'en');
-      row.querySelector('small').textContent=t.name+' · '+[pick(t.country,'es'),t.month,pick(t.document,'es')].filter(Boolean).join(' · ')+(pick(t.quote,'en')&&pick(t.quote,'es')?' · ES + EN':'');
+      row.querySelector('small').textContent=t.name+' · '+[pick(t.country,'es'),t.month,pick(t.document,'es')].filter(Boolean).join(' · ')+(pick(t.quote,'en')&&pick(t.quote,'es')?' · ES + EN':'')+(t.source==='google'?' · Google':'');
       row.querySelector('[data-a=up]').disabled=i===0;
       row.querySelector('[data-a=down]').disabled=i===list.length-1;
       row.addEventListener('click',function(e){
@@ -225,6 +229,7 @@
       country:{es:$('#countryEs').value.trim(), en:$('#countryEn').value.trim()},
       document:{es:$('#docEs').value.trim(), en:$('#docEn').value.trim()},
       quote:{es:qe, en:qn}};
+    if($('#source').value==='google') t.source='google';
     if($('#pos').value==='first') list.unshift(t); else list.push(t);
     dirty=true; render();
     setStatus($('#addStatus'),'Added '+name+' — now publish it in step 3.',true);
@@ -232,7 +237,7 @@
   });
   $('#clear').addEventListener('click',function(){
     ['#paste','#name','#month','#countryEs','#countryEn','#docEs','#docEn','#quoteEs','#quoteEn'].forEach(function(s){$(s).value=''});
-    $('#rating').value='5'; setStatus($('#addStatus'),'');
+    $('#rating').value='5'; $('#source').value='website'; setStatus($('#addStatus'),'');
   });
 
   function fileText(){ list.forEach(function(x){delete x.__arm}); return JSON.stringify(list,null,2)+'\n'; }

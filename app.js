@@ -301,6 +301,12 @@
           $('b',art).textContent=t.name;
           $('span',art).textContent=[pick(t.country),when(t.month)].filter(Boolean).join(' \u00B7 ');
           var doc=pick(t.document), em=$('em',art); if(doc) em.textContent=doc; else { em.textContent='\u00A0'; em.setAttribute('aria-hidden','true'); }
+          if(t.source==='google'){
+            var g=document.createElement('a'); g.className='testimony__src';
+            g.href=t.link||(document.querySelector('.gbadge a')||{}).href||'https://www.google.com/maps?cid=5927597157526332462';
+            g.target='_blank'; g.rel='noopener'; g.textContent=ES?'Opinión en Google':'Google review';
+            $('.testimony__attr',art).appendChild(g);
+          }
           testimony.appendChild(art);
         });
       })

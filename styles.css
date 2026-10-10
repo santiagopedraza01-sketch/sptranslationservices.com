@@ -941,3 +941,13 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 
 /* iGaming block in services */
 .igaming__lede{max-width:68ch;color:var(--text-soft);line-height:1.7;margin:-8px 0 26px}
+
+/* Google rating badge (testimonials) */
+.gbadge{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;padding:18px 22px;margin:-10px 0 clamp(30px,4vw,44px);background:var(--white);border:1px solid var(--rule)}
+.gbadge__score{display:flex;align-items:center;gap:12px;font-size:.98rem;color:var(--text)}
+.gbadge__score b{font-weight:600}
+.gbadge__stars{color:#E3A008;letter-spacing:2px;font-size:1.1rem}
+.gbadge__links{display:flex;flex-wrap:wrap;gap:10px}
+.testimony__src{display:inline-block;margin-top:8px;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-mute);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--rule-strong)}
+.testimony__src:hover{color:var(--brass)}
+@media (max-width:680px){ .gbadge__links,.gbadge__links .btn{width:100%} }
