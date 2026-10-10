@@ -951,3 +951,12 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 .testimony__src{display:inline-block;margin-top:8px;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-mute);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--rule-strong)}
 .testimony__src:hover{color:var(--brass)}
 @media (max-width:680px){ .gbadge__links,.gbadge__links .btn{width:100%} }
+
+/* LinkedIn link beside Santiago */
+.li-link{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;text-decoration:underline;text-underline-offset:4px;transition:color .3s var(--ease)}
+.li-link svg{width:15px;height:15px;flex:none}
+.li-link--dark{margin-top:10px;color:var(--on-dark-soft);text-decoration-color:var(--rule-dark)}
+.li-link--dark:hover{color:var(--on-dark)}
+.li-link--light{color:var(--text-soft);text-decoration-color:var(--brass);margin-left:auto}
+.li-link--light:hover{color:var(--brass)}
+.portrait figcaption .li-link span{font-size:inherit;letter-spacing:0;text-transform:none;color:inherit;line-height:inherit}
