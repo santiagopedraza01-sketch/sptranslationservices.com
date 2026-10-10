@@ -316,6 +316,34 @@
       .catch(function(err){ console.warn('[testimonials] using built-in list:',err); });
   }
 
+  /* ── Simple AJAX forms (contact page): <form data-ajax-form action="…formsubmit…"> ── */
+  $$('form[data-ajax-form]').forEach(function(f){
+    var box=f.parentNode, done=$('[data-received]',box), note=$('[data-notice]',f), btn=$('button[type=submit]',f);
+    function check(){
+      var first=null;
+      $$('input,textarea',f).forEach(function(el){
+        if(el.type==='hidden'||el.name==='_honey') return;
+        var bad=!el.checkValidity(), wrap=el.closest('.f');
+        if(wrap) wrap.classList.toggle('invalid',bad);
+        if(el.type==='checkbox'){ var a=$('[data-for="'+el.id+'"]',f); if(a) a.style.display=bad?'block':'none'; }
+        if(bad&&!first) first=el;
+      });
+      if(first){ first.focus(); return false; } return true;
+    }
+    f.addEventListener('input',function(e){ var w=e.target.closest('.f'); if(w&&e.target.checkValidity()) w.classList.remove('invalid'); });
+    f.addEventListener('submit',function(e){
+      e.preventDefault(); if(!check()) return;
+      var label=btn.innerHTML; btn.disabled=true; btn.textContent=T.sending;
+      fetch(f.getAttribute('action'),{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}})
+        .then(function(r){ if(!r.ok) throw new Error('Request failed: '+r.status); return r.json(); })
+        .then(function(d){ if(d&&String(d.success)==='false') throw new Error(d.message||'Rejected');
+          f.style.display='none'; if(done){ done.classList.add('on'); done.focus(); } })
+        .catch(function(err){ console.error(err); btn.disabled=false; btn.innerHTML=label;
+          if(note) note.innerHTML='<p style="border:1px solid #C9A08C;background:#FBF3EF;color:#8C3F26;padding:14px 16px;font-size:.88rem;line-height:1.6;border-radius:2px">'+T.failed+
+            '<a href="mailto:santiagopedraza01@gmail.com" style="color:inherit;text-decoration:underline">santiagopedraza01@gmail.com</a>'+T.failedEnd+'</p>'; });
+    });
+  });
+
   /* ── WhatsApp card: opens once on a first visit, then stays dismissed ── */
   var wa=$('#waCard'), waDismiss=$('#waDismiss'), WA_KEY='wa-card-dismissed';
   if(wa){

@@ -882,7 +882,7 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 /* ── Masthead fit: seven nav links (incl. "Leave a Review") ── */
 @media (min-width:901px){ .brand{flex:none} }
 @media (min-width:1541px){ .masthead__inner{max-width:1440px} }  /* room for the phone number */
-@media (max-width:1280px) and (min-width:901px){
+@media (max-width:1360px) and (min-width:901px){
   .nav{gap:18px}
   .nav a{font-size:.82rem}
   .masthead__cta{gap:16px}
@@ -1023,3 +1023,18 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 .policy th{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-mute);font-weight:500;background:var(--bone-warm)}
 .policy tr:last-child td{border-bottom:0}
 .policy code{font-size:.82rem;background:var(--bone);padding:2px 6px;border-radius:2px}
+
+/* Light variant of the call-to-action note (on bone/warm sections) */
+.process__note--light p{color:var(--text-soft)}
+.process__note--light strong{color:var(--text)}
+
+/* Fix: fees section could overflow on mid-size screens (template issue) */
+.spread > *{min-width:0}
+.fees{grid-template-columns:repeat(3,minmax(0,1fr))}
+.fees__bar > *{min-width:0}
+.fx{flex:0 1 auto;min-width:0}
+.fx__select{min-width:0;max-width:100%}
+.fee__amount{flex-wrap:wrap}
+@media (max-width:900px){ .fees{grid-template-columns:1fr} }
+.assurance a{color:var(--on-dark);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--brass-light)}
+.assurance a:hover{color:var(--brass-light)}

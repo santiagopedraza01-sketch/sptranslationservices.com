@@ -64,4 +64,38 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/cookies.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/politica-de-cookies.html"/>
   </url>
+  <url>
+    <loc>https://sptranslationservices.com/sobre-nosotros.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/sobre-nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/sobre-nosotros.html"/>
+    <image:image><image:loc>https://sptranslationservices.com/santiago.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://sptranslationservices.com/about.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/sobre-nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/sobre-nosotros.html"/>
+    <image:image><image:loc>https://sptranslationservices.com/santiago.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://sptranslationservices.com/contacto.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/contacto.html"/>
+  </url>
+  <url>
+    <loc>https://sptranslationservices.com/contact.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/contacto.html"/>
+  </url>
 </urlset>
