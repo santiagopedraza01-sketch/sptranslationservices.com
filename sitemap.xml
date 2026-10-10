@@ -98,4 +98,36 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/contacto.html"/>
   </url>
+  <url>
+    <loc>https://sptranslationservices.com/privacidad.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://sptranslationservices.com/privacy.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://sptranslationservices.com/condiciones.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/condiciones.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/condiciones.html"/>
+  </url>
+  <url>
+    <loc>https://sptranslationservices.com/terms.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/condiciones.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/condiciones.html"/>
+  </url>
 </urlset>

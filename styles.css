@@ -1038,3 +1038,4 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 @media (max-width:900px){ .fees{grid-template-columns:1fr} }
 .assurance a{color:var(--on-dark);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--brass-light)}
 .assurance a:hover{color:var(--brass-light)}
+.agree__link{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--brass)}
