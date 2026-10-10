@@ -1,53 +1,62 @@
 [
   {
-    "name": "Lucía M.",
-    "month": "2026-03",
+    "name": "Majo H.",
+    "month": "2026-10",
     "rating": 5,
-    "country": {
-      "es": "Reino Unido",
-      "en": "United Kingdom"
-    },
+    "source": "google",
+    "country": {},
     "document": {
-      "es": "Certificados de nacimiento y matrimonio",
-      "en": "Birth & marriage certificates"
+      "es": "Certificado de antecedentes penales",
+      "en": "Background check"
     },
     "quote": {
-      "es": "La cotización llegó el mismo día y las traducciones se entregaron en 48 horas. Se presentaron con mi solicitud de visado sin ningún problema.",
-      "en": "The quotation arrived the same day and the translations were delivered within 48 hours. They were submitted with my visa application without any issues."
+      "en": "Excellent service. I needed a background check translated, and the process was super fast. The website is very intuitive and easy to use. I especially want to highlight their customer service, reliability, and competitive prices. I will definitely use their services again. 100% recommended!",
+      "es": "Excelente servicio. Necesitaba traducir un certificado de antecedentes penales y el proceso fue súper rápido. La web es muy intuitiva y fácil de usar. Quiero destacar especialmente su atención al cliente, su fiabilidad y sus precios competitivos. Sin duda volveré a utilizar sus servicios. ¡100 % recomendado!"
     }
   },
   {
-    "name": "Alejandro A.",
-    "month": "2026-05",
+    "name": "Maria Jose V.",
+    "month": "2026-10",
     "rating": 5,
-    "country": {
-      "es": "Malta",
-      "en": "Malta"
-    },
+    "source": "google",
+    "country": {},
     "document": {
-      "es": "Contratos y poderes notariales",
-      "en": "Contracts & powers of attorney"
+      "es": "Expediente académico universitario",
+      "en": "University transcript"
     },
     "quote": {
-      "es": "La terminología fue coherente en un conjunto extenso de documentos y los certificados tenían el formato correcto. La comunicación fue clara en todo momento.",
-      "en": "Terminology was consistent across a long set of documents and the certificates were correctly formatted. Communication was clear throughout."
+      "en": "Santi helped me translate a university transcript, and the whole process was super easy and professional. He was very helpful, responsive, and made sure everything was clear and accurate. I definitely recommend him! 🤍",
+      "es": "Santi me ayudó a traducir un expediente académico universitario y todo el proceso fue muy fácil y profesional. Fue muy atento, respondió enseguida y se aseguró de que todo quedara claro y preciso. ¡Lo recomiendo sin duda! 🤍"
     }
   },
   {
-    "name": "Guadalupe K.",
-    "month": "2026-07",
+    "name": "Juan Felipe R.",
+    "month": "2026-10",
     "rating": 5,
-    "country": {
-      "es": "España",
-      "en": "Spain"
-    },
+    "source": "google",
+    "country": {},
     "document": {
-      "es": "Certificados de notas",
-      "en": "Academic transcripts"
+      "es": "Traducción y subtitulado de un cortometraje",
+      "en": "Short film translation & subtitling"
     },
     "quote": {
-      "es": "Las tablas de calificaciones se reprodujeron tal como aparecen en el original. La universidad aceptó la traducción sin pedir nada más.",
-      "en": "The grading tables were reproduced as they appear in the original. The university accepted the translation without further requests."
+      "en": "Excellent service. I commissioned them to translate and subtitle a short film and was very satisfied with the result. The work was high quality, fast, and professional. Customer service is excellent; they are always attentive and willing to answer any questions. Furthermore, their prices are very competitive compared to other services on the market. Without a doubt, a very good experience and highly recommended for anyone looking for a reliable, efficient, and high-quality translation and subtitling service.",
+      "es": "Excelente servicio. Les encargué la traducción y el subtitulado de un cortometraje y quedé muy satisfecho con el resultado. El trabajo fue de alta calidad, rápido y profesional. La atención al cliente es excelente; siempre están atentos y dispuestos a resolver cualquier duda. Además, sus precios son muy competitivos en comparación con otros servicios del mercado. Sin duda, una muy buena experiencia y muy recomendable para quien busque un servicio de traducción y subtitulado fiable, eficiente y de alta calidad."
+    }
+  },
+  {
+    "name": "Valeria B.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Certificado de matrimonio (español → portugués)",
+      "en": "Marriage certificate (Spanish → Portuguese)"
+    },
+    "quote": {
+      "en": "Santiago is the best translator and consultant. He helped me translate my marriage certificate from Spanish to Portuguese, and the whole process was excellent. He was very professional, attentive, and meticulous with every detail. The translation was perfect, and he also guided me throughout the entire process. I highly recommend him!",
+      "es": "Santiago es el mejor traductor y asesor. Me ayudó a traducir mi certificado de matrimonio del español al portugués y todo el proceso fue excelente. Fue muy profesional, atento y meticuloso con cada detalle. La traducción quedó perfecta y, además, me guio durante todo el proceso. ¡Lo recomiendo muchísimo!"
     }
   }
 ]

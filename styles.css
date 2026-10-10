@@ -960,3 +960,15 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 .li-link--light{color:var(--text-soft);text-decoration-color:var(--brass);margin-left:auto}
 .li-link--light:hover{color:var(--brass)}
 .portrait figcaption .li-link span{font-size:inherit;letter-spacing:0;text-transform:none;color:inherit;line-height:inherit}
+
+/* Testimonials: two wider columns suit full-length Google reviews */
+.testimony{grid-template-columns:repeat(2,1fr)}
+.testimony__item,.testimony__item:not(:first-child){padding:38px 40px 0;border-right:1px solid var(--rule)}
+.testimony__item:nth-child(3n+1){padding-left:40px}
+.testimony__item:nth-child(3n){border-right:1px solid var(--rule);padding-right:40px}
+.testimony__item:nth-child(odd){padding-left:0}
+.testimony__item:nth-child(even),.testimony__item:last-child{border-right:0;padding-right:0}
+@media (max-width:680px){
+  .testimony{grid-template-columns:1fr}
+  .testimony__item,.testimony__item:not(:first-child),.testimony__item:nth-child(n){padding:32px 0 0;border-right:0}
+}
