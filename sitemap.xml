@@ -4,10 +4,32 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://sptranslationservices.com/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/"/>
     <image:image><image:loc>https://sptranslationservices.com/img/hero-valletta.jpg</image:loc></image:image>
     <image:image><image:loc>https://sptranslationservices.com/img/service-certified.jpg</image:loc></image:image>
@@ -17,11 +39,33 @@
     <image:image><image:loc>https://sptranslationservices.com/santiago.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://sptranslationservices.com/en.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://sptranslationservices.com/en</loc>
+    <lastmod>2026-10-14</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/"/>
     <image:image><image:loc>https://sptranslationservices.com/img/hero-valletta.jpg</image:loc></image:image>
     <image:image><image:loc>https://sptranslationservices.com/img/service-certified.jpg</image:loc></image:image>
@@ -31,103 +75,367 @@
     <image:image><image:loc>https://sptranslationservices.com/santiago.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://sptranslationservices.com/traductores.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://sptranslationservices.com/traductores</loc>
+    <lastmod>2026-10-14</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/traductores.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/translators.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/traductores.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/translators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/traductores"/>
     <image:image><image:loc>https://sptranslationservices.com/santiago.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://sptranslationservices.com/translators.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://sptranslationservices.com/translators</loc>
+    <lastmod>2026-10-14</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/traductores.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/translators.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/traductores.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/traductores"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/translators"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/traductores"/>
     <image:image><image:loc>https://sptranslationservices.com/santiago.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://sptranslationservices.com/politica-de-cookies.html</loc>
-    <lastmod>2026-10-10</lastmod>
-    <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/politica-de-cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/politica-de-cookies.html"/>
-  </url>
-  <url>
-    <loc>https://sptranslationservices.com/cookies.html</loc>
-    <lastmod>2026-10-10</lastmod>
-    <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/politica-de-cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/politica-de-cookies.html"/>
-  </url>
-  <url>
-    <loc>https://sptranslationservices.com/sobre-nosotros.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://sptranslationservices.com/sobre-nosotros</loc>
+    <lastmod>2026-10-14</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/sobre-nosotros.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/sobre-nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/sobre-nosotros"/>
     <image:image><image:loc>https://sptranslationservices.com/santiago.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://sptranslationservices.com/about.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://sptranslationservices.com/about</loc>
+    <lastmod>2026-10-14</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/sobre-nosotros.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/sobre-nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/sobre-nosotros"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/sobre-nosotros"/>
     <image:image><image:loc>https://sptranslationservices.com/santiago.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://sptranslationservices.com/contacto.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://sptranslationservices.com/contacto</loc>
+    <lastmod>2026-10-14</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/contacto.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/contacto"/>
   </url>
   <url>
-    <loc>https://sptranslationservices.com/contact.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://sptranslationservices.com/contact</loc>
+    <lastmod>2026-10-14</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/contacto.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/contacto"/>
   </url>
   <url>
-    <loc>https://sptranslationservices.com/privacidad.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://sptranslationservices.com/privacidad</loc>
+    <lastmod>2026-10-14</lastmod>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/privacidad"/>
   </url>
   <url>
-    <loc>https://sptranslationservices.com/privacy.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://sptranslationservices.com/privacy</loc>
+    <lastmod>2026-10-14</lastmod>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/privacidad"/>
   </url>
   <url>
-    <loc>https://sptranslationservices.com/condiciones.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://sptranslationservices.com/condiciones</loc>
+    <lastmod>2026-10-14</lastmod>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/condiciones.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/condiciones.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/condiciones"/>
   </url>
   <url>
-    <loc>https://sptranslationservices.com/terms.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://sptranslationservices.com/terms</loc>
+    <lastmod>2026-10-14</lastmod>
     <priority>0.2</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/condiciones.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/condiciones.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/condiciones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/condiciones"/>
+  </url>
+  <url>
+    <loc>https://sptranslationservices.com/politica-de-cookies</loc>
+    <lastmod>2026-10-14</lastmod>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/politica-de-cookies"/>
+  </url>
+  <url>
+    <loc>https://sptranslationservices.com/cookies</loc>
+    <lastmod>2026-10-14</lastmod>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-AR" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-PE" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-VE" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-CL" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-EC" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-GT" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-CU" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-BO" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-DO" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-HN" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-SV" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-NI" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-CR" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-PA" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-UY" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-PR" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-GQ" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://sptranslationservices.com/politica-de-cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sptranslationservices.com/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sptranslationservices.com/politica-de-cookies"/>
   </url>
 </urlset>

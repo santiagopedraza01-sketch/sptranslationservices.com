@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /SANTIAGO-README.md
-Disallow: /testimonials-admin.html
+Disallow: /SANTIAGO-README
 
 Sitemap: https://sptranslationservices.com/sitemap.xml

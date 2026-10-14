@@ -9,7 +9,7 @@
   'use strict';
   var KEY='sp-consent', VERSION=1, MAX_AGE=365*24*60*60*1000;
   var ES=document.documentElement.lang==='es';
-  var POLICY=ES?'politica-de-cookies.html':'cookies.html';
+  var POLICY=ES?'/politica-de-cookies':'/cookies';
   var T=ES?{
     title:'Valoramos tu privacidad',
     body:'Usamos cookies y tecnologías similares para que el sitio funcione, recordar tus preferencias y, solo si lo permites, analizar el tráfico y mostrar contenido relevante. Al hacer clic en «Aceptar todo», das tu consentimiento para el uso de cookies.',
