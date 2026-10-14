@@ -1043,3 +1043,14 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 /* Testimonials: "Show all reviews" button under the first six */
 .testimony__item[hidden]{display:none}
 .testimony__more{margin:44px 0 0;text-align:center}
+
+/* Sectors we work in — 12 icon cards inside Services */
+.sectors__lede{max-width:62ch;margin:0 0 clamp(26px,3vw,38px);color:var(--text-mute)}
+.sectors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,3vw,44px) clamp(24px,3vw,44px)}
+.sector{display:grid;grid-template-columns:34px minmax(0,1fr);gap:16px;align-items:start}
+.sector__icon{width:30px;height:30px;fill:none;stroke:var(--brass);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+.sector h4{margin:0 0 6px;font-size:1.02rem;font-weight:500;color:var(--text)}
+.sector p{margin:0;font-size:.92rem;line-height:1.6;color:var(--text-mute)}
+.sector p a{color:var(--brass);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:1040px){ .sectors{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:640px){ .sectors{grid-template-columns:1fr} }
