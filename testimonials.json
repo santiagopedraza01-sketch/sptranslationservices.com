@@ -30,6 +30,36 @@
     }
   },
   {
+    "name": "Scott H.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Documentos de empleados para el registro laboral",
+      "en": "Employee documents for employment registration"
+    },
+    "quote": {
+      "en": "We hired Santiago to translate several documents for our employees, mainly for employment registration in Malta and official certificates. I can confidently say that he went above and beyond to meet our requirements and ensure everything was handled professionally. Well done, Santiago! We’ll definitely be hiring you again in the future. Highly recommended!",
+      "es": "Contratamos a Santiago para traducir varios documentos de nuestros empleados, principalmente para el registro laboral en Malta y certificados oficiales. Puedo decir con total confianza que hizo mucho más de lo necesario para cumplir con nuestros requisitos y asegurarse de que todo se gestionara de forma profesional. ¡Bien hecho, Santiago! Sin duda volveremos a contratarte en el futuro. ¡Muy recomendable!"
+    }
+  },
+  {
+    "name": "R.S. Dennis L.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Localización de web de iGaming (inglés británico → español latinoamericano)",
+      "en": "iGaming website localisation (UK English → Latin American Spanish)"
+    },
+    "quote": {
+      "en": "I needed help translating and culturally adapting an iGaming website from UK English into Latin American Spanish. It was an extensive project, but everything turned out perfectly, from the vocabulary to the formatting.",
+      "es": "Necesitaba ayuda traduciendo y adaptando culturalmente una página de iGaming de inglés UK a español latinoamericano. Fue un proyecto extenso, pero todo salió a la perfección, desde el vocabulario hasta el formatting."
+    }
+  },
+  {
     "name": "Juan Felipe R.",
     "month": "2026-10",
     "rating": 5,
@@ -57,6 +87,270 @@
     "quote": {
       "en": "Santiago is the best translator and consultant. He helped me translate my marriage certificate from Spanish to Portuguese, and the whole process was excellent. He was very professional, attentive, and meticulous with every detail. The translation was perfect, and he also guided me throughout the entire process. I highly recommend him!",
       "es": "Santiago es el mejor traductor y asesor. Me ayudó a traducir mi certificado de matrimonio del español al portugués y todo el proceso fue excelente. Fue muy profesional, atento y meticuloso con cada detalle. La traducción quedó perfecta y, además, me guio durante todo el proceso. ¡Lo recomiendo muchísimo!"
+    }
+  },
+  {
+    "name": "Lisa H.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Partida de nacimiento (español → inglés)",
+      "en": "Birth certificate (Spanish → English)"
+    },
+    "quote": {
+      "en": "I needed a birth certificate translated from Spanish into English for official purposes and the agency handled everything very professionally and in a short period of time. Excellent service and prices, I highly recommend their services :)",
+      "es": "Necesitaba traducir una partida de nacimiento del español al inglés para un trámite oficial y la agencia lo gestionó todo de forma muy profesional y en muy poco tiempo. Excelente servicio y precios, ¡recomiendo mucho sus servicios! :)"
+    }
+  },
+  {
+    "name": "Laura Melissa B.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Traducción jurada de una carta de residencia",
+      "en": "Sworn translation of a residency letter"
+    },
+    "quote": {
+      "en": "I recently used their translation services for a sworn residency letter and the whole process was seamless. They took care of the translation and the apostille details, which saved me so much stress during my residency application. Great quality and very professional!",
+      "es": "Hace poco utilicé sus servicios para la traducción jurada de una carta de residencia y todo el proceso fue impecable. Se encargaron de la traducción y de los detalles de la apostilla, lo que me ahorró muchísimo estrés durante mi solicitud de residencia. ¡Gran calidad y muy profesionales!"
+    }
+  },
+  {
+    "name": "Javier Andrés P.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Título universitario para su convalidación en Malta",
+      "en": "Bachelor’s diploma for validation in Malta"
+    },
+    "quote": {
+      "en": "Excellent translation services!!! I hired him to translate my documents so I could validate my bachelor's diploma in Malta, and the quality was high, the service professional and thoughtful, and the prices reasonable… Highly recommend!",
+      "es": "¡¡¡Excelente servicio de traducción!!! Lo contraté para traducir mis documentos y poder convalidar mi título universitario en Malta, y la calidad fue alta, el servicio profesional y atento, y los precios razonables… ¡Lo recomiendo mucho!"
+    }
+  },
+  {
+    "name": "Karina V.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Subtítulos de un vídeo para una empresa de recursos humanos",
+      "en": "Video subtitles for an HR company"
+    },
+    "quote": {
+      "en": "We needed to make subtitles for a video from my human resources company and the subtitles were well done and everything was delivered on the agreed time. Communication was easy throughout the process and the final result looked very professional! Would definitely recommend ❤️",
+      "es": "Necesitábamos subtitular un vídeo de mi empresa de recursos humanos; los subtítulos quedaron muy bien y todo se entregó en el plazo acordado. La comunicación fue fácil durante todo el proceso y el resultado final quedó muy profesional. ¡Sin duda lo recomiendo! ❤️"
+    }
+  },
+  {
+    "name": "Luis C.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Contenido web al español latinoamericano",
+      "en": "Website content into Latin American Spanish"
+    },
+    "quote": {
+      "en": "I needed website content adapted into Latin American Spanish. I was impressed by the professionalism of the team. Everything read naturally. Thanks to the team for the good price and support",
+      "es": "Necesitaba adaptar el contenido de una web al español latinoamericano. Me impresionó la profesionalidad del equipo. Todo se leía con naturalidad. Gracias al equipo por el buen precio y el apoyo."
+    }
+  },
+  {
+    "name": "Dennis C.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Traducción certificada de documentos personales",
+      "en": "Certified translation of personal documents"
+    },
+    "quote": {
+      "en": "I needed a certified translation of some personal documents for use in Malta. Santiago was extremely helpful, explained the process clearly and delivered everything in less than 6 hours.",
+      "es": "Necesitaba una traducción certificada de unos documentos personales para usarlos en Malta. Santiago me ayudó muchísimo, me explicó el proceso con claridad y me entregó todo en menos de 6 horas."
+    }
+  },
+  {
+    "name": "Gabriela C.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Documentos legales para migración",
+      "en": "Legal documents for immigration"
+    },
+    "quote": {
+      "en": "I had to translate some legal documents for migration purposes and everything went smooth, Santiago was very professional and always willing to provide an excellent customer service",
+      "es": "Tuve que traducir unos documentos legales para un trámite migratorio y todo salió sin problemas. Santiago fue muy profesional y siempre estuvo dispuesto a ofrecer una excelente atención al cliente."
+    }
+  },
+  {
+    "name": "Florencia P.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Extractos bancarios",
+      "en": "Bank statements"
+    },
+    "quote": {
+      "en": "I have translated bank statements with them and the accuracy and formatting really surprised me. So well done and professional, thanks!",
+      "es": "Traduje extractos bancarios con ellos y la precisión y el formato me sorprendieron de verdad. ¡Muy bien hecho y muy profesional, gracias!"
+    }
+  },
+  {
+    "name": "Maria Clover C.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Expediente académico para una solicitud universitaria",
+      "en": "Academic records for a university application"
+    },
+    "quote": {
+      "en": "I needed my academic records translated for a university application and I am impressed by how fast and well done the translation was sent to me. I recommend it so much",
+      "es": "Necesitaba traducir mi expediente académico para una solicitud universitaria y me impresionó lo rápido y lo bien hecha que me enviaron la traducción. Lo recomiendo muchísimo."
+    }
+  },
+  {
+    "name": "Javier P.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Subtitulación de cortometrajes",
+      "en": "Subtitling of short films"
+    },
+    "quote": {
+      "en": "The best price I found on the market for subtitling some short films, thank you!",
+      "es": "¡El mejor precio que encontré en el mercado para la subtitulación de unos cortometrajes, gracias!"
+    }
+  },
+  {
+    "name": "Certificados Tradición",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Traducciones juradas",
+      "en": "Sworn translations"
+    },
+    "quote": {
+      "en": "Santiago advised me throughout the entire process of some sworn translations. I would definitely choose them again, excellent.",
+      "es": "Santiago me asesoró durante todo el proceso de unas traducciones juradas. Sin duda los volvería a escoger, excelente."
+    }
+  },
+  {
+    "name": "Jimmy T.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Documentos jurídicos",
+      "en": "Legal documents"
+    },
+    "quote": {
+      "en": "It was my first time requesting a translation of legal documents and the experience was flawless. 100% recommended",
+      "es": "Fue mi primera vez solicitando la traducción de unos documentos jurídicos y la experiencia fue impecable. 100 % recomendado."
+    }
+  },
+  {
+    "name": "Isabela P.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Documentos legales para migración",
+      "en": "Legal documents for immigration"
+    },
+    "quote": {
+      "en": "Excellent service, they translated some legal documents for me to submit to immigration and everything went perfectly, and the best price I found online",
+      "es": "Excelente servicio, me tradujeron unos documentos legales para presentar en migración y todo salió perfecto, y el mejor precio que encontré online."
+    }
+  },
+  {
+    "name": "Adrián C.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Documentos civiles",
+      "en": "Civil documents"
+    },
+    "quote": {
+      "en": "Very good service for the translation of some civil documents. The whole process was super organised and the service was very professional.",
+      "es": "Muy buen servicio para la traducción de unos documentos civiles. Toda la gestión súper organizada y la atención fue muy profesional."
+    }
+  },
+  {
+    "name": "Juliana R.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Documento de empresa de varias páginas",
+      "en": "Multi-page company document"
+    },
+    "quote": {
+      "en": "The director Santiago translated a multi-page document for the company I work with. We were very satisfied with his service.",
+      "es": "El director, Santiago, tradujo un documento de varias páginas para la empresa en la que trabajo. Quedamos muy satisfechos con su servicio."
+    }
+  },
+  {
+    "name": "María José F.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {
+      "es": "Proyecto de contenidos (Malta → EE. UU.)",
+      "en": "Content project (Malta → USA)"
+    },
+    "quote": {
+      "en": "Many thanks to the team. All the way from Malta to the USA they supported our content project with so much efficiency",
+      "es": "Muchas gracias al equipo. Desde Malta hasta Estados Unidos apoyaron nuestro proyecto de contenidos con muchísima eficiencia."
+    }
+  },
+  {
+    "name": "Andrés B.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {},
+    "quote": {
+      "en": "Excellent service. Thank you for your professionalism, prompt attention, and high quality work. Amazing price and time delivery!",
+      "es": "Excelente servicio. Gracias por su profesionalidad, su atención rápida y su trabajo de gran calidad. ¡Precio y plazo de entrega increíbles!"
+    }
+  },
+  {
+    "name": "Sebastián P.",
+    "month": "2026-10",
+    "rating": 5,
+    "source": "google",
+    "country": {},
+    "document": {},
+    "quote": {
+      "en": "Quick responses, very competitive prices and no complications in anything, I appreciated how easy the whole process was",
+      "es": "Respuestas rápidas, precios muy competitivos y ninguna complicación. Agradecí lo fácil que fue todo el proceso."
     }
   }
 ]

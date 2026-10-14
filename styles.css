@@ -1039,3 +1039,7 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 .assurance a{color:var(--on-dark);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--brass-light)}
 .assurance a:hover{color:var(--brass-light)}
 .agree__link{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--brass)}
+
+/* Testimonials: "Show all reviews" button under the first six */
+.testimony__item[hidden]{display:none}
+.testimony__more{margin:44px 0 0;text-align:center}

@@ -295,6 +295,8 @@
           var t=new Intl.DateTimeFormat(ES?'es-ES':'en-GB',{month:'long',year:'numeric'}).format(new Date(+d[1],+d[2]-1,1));
           return t.charAt(0).toUpperCase()+t.slice(1);
         }
+        var SHOW=6, n=0, old=testimony.parentNode.querySelector('.testimony__more');
+        if(old) old.remove();
         testimony.innerHTML='';
         list.forEach(function(t){
           var quote=pick(t.quote); if(!quote||!t.name) return;
@@ -310,8 +312,20 @@
             g.target='_blank'; g.rel='noopener'; g.textContent=ES?'Opinión en Google':'Google review';
             $('.testimony__attr',art).appendChild(g);
           }
+          if(n++>=SHOW) art.hidden=true;
           testimony.appendChild(art);
         });
+        /* Only the first few show at first; the rest open with "Show all reviews" */
+        if(n>SHOW){
+          var more=document.createElement('p'); more.className='testimony__more';
+          var btn=document.createElement('button'); btn.type='button'; btn.className='btn btn--line btn--sm';
+          btn.textContent=ES?'Ver las '+n+' opiniones':'Show all '+n+' reviews';
+          btn.addEventListener('click',function(){
+            Array.prototype.forEach.call(testimony.children,function(a){ a.hidden=false; });
+            more.remove();
+          });
+          more.appendChild(btn); testimony.parentNode.insertBefore(more,testimony.nextSibling);
+        }
       })
       .catch(function(err){ console.warn('[testimonials] using built-in list:',err); });
   }
