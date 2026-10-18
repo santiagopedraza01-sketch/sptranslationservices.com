@@ -1094,3 +1094,36 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 @media (max-width:1040px){ .types,.related{grid-template-columns:1fr 1fr} }
 @media (max-width:680px){ .types,.related{grid-template-columns:1fr} }
 .svc__more{margin-top:20px;align-self:flex-start}
+
+/* ═══ Site search (search.js) ═══ */
+.search-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;flex:none;border:1px solid var(--rule-dark);border-radius:50%;background:none;color:var(--on-dark);cursor:pointer;padding:0;transition:border-color .3s var(--ease),color .3s var(--ease)}
+.search-btn:hover,.search-btn:focus-visible{border-color:var(--brass-light);color:var(--brass-light)}
+.search-btn svg{width:17px;height:17px}
+@media (max-width:430px){ .search-btn{width:34px;height:34px} .search-btn svg{width:16px;height:16px} }
+.srch-lock,.srch-lock body{overflow:hidden}
+.srch{position:fixed;inset:0;z-index:1000;display:none;background:rgba(10,18,28,.62);backdrop-filter:blur(3px);padding:clamp(16px,9vh,110px) 16px 16px;overflow-y:auto}
+.srch.is-open{display:block}
+.srch__box{max-width:720px;margin:0 auto;background:var(--bone);border:1px solid var(--rule);box-shadow:0 30px 80px rgba(0,0,0,.28)}
+.srch__form{display:flex;align-items:center;gap:14px;padding:18px 20px;border-bottom:1px solid var(--rule)}
+.srch__form svg{width:22px;height:22px;flex:none;color:var(--brass)}
+.srch__input{flex:1;min-width:0;border:0;background:none;font-family:var(--serif);font-size:clamp(1.15rem,2.4vw,1.4rem);color:var(--text);outline:none;padding:4px 0}
+.srch__input::-webkit-search-cancel-button{-webkit-appearance:none}
+.srch__x{flex:none;border:1px solid var(--rule);background:none;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-mute);padding:6px 9px;cursor:pointer}
+.srch__x:hover{color:var(--text);border-color:var(--text-mute)}
+.srch__status{padding:14px 20px 0;font-size:.88rem;color:var(--text-mute);line-height:2}
+.srch__status:empty{display:none}
+.srch__chip{border:1px solid var(--rule);background:var(--bone-warm);padding:3px 10px;font-size:.82rem;color:var(--text-soft);cursor:pointer;margin:2px 2px 0 0}
+.srch__chip:hover{border-color:var(--brass);color:var(--text)}
+.srch__list{padding:8px 0 10px}
+.srch__list:empty{display:none}
+.srch__list a{display:block;padding:12px 20px;border-left:2px solid transparent;outline:none}
+.srch__list a:hover,.srch__list a:focus{background:var(--bone-warm);border-left-color:var(--brass)}
+.srch__list b{display:block;font-weight:500;font-size:.98rem;color:var(--text);line-height:1.4}
+.srch__list b span{color:var(--brass);padding:0 2px}
+.srch__list a > span{display:block;margin-top:4px;font-size:.86rem;line-height:1.55;color:var(--text-soft)}
+.srch__list mark{background:rgba(196,168,120,.32);color:var(--text);padding:0 1px}
+.srch__list em{display:block;margin-top:4px;font-style:normal;font-size:.72rem;letter-spacing:.06em;color:var(--text-mute)}
+.srch__sep{padding:14px 20px 4px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);border-top:1px solid var(--rule);margin-top:6px}
+/* Spanish header is longer; tighten spacing so nav, search, language and CTA fit on one line */
+@media (min-width:1241px){ html[lang="es"] .masthead__cta{gap:14px} }
+@media (max-width:1360px) and (min-width:1241px){ html[lang="es"] .nav{gap:15px} html[lang="es"] .masthead__cta{gap:11px} }
