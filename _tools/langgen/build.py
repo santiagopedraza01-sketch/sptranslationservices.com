@@ -101,6 +101,13 @@ def pagehead(crumbs, h1, lede):
   </div>
 </section>
 '''
+def steps_html(items):
+    li = '\n'.join(f'''        <li class="step rise">
+          <span class="step__num">{i+1:02d}</span>
+          <h3 class="h3">{h}</h3>
+          <p>{p}</p>
+        </li>''' for i, (h, p) in enumerate(items))
+    return f'      <ol class="steps">\n{li}\n      </ol>'
 def standards(items):
     r = ['I', 'II', 'III']
     return '      <div class="standards rise">\n' + '\n'.join(f'<div class="standards__item"><span class="standards__num">{r[i]}</span><h3 class="h3">{h}</h3><p>{p}</p></div>' for i, (h, p) in enumerate(items)) + '\n      </div>'
@@ -241,8 +248,9 @@ def hub_page(lang):
              faq_ld(slug, faqs), crumbs_ld(slug, [(T[lang]['home'], HOME[lang]), (T[lang]['hub'], f'{D}/{slug}')])]
     page(lang, slug, other, title, desc, graph, main)
 
-made = []
-for lang in ('en', 'es'):
-    hub_page(lang); made.append(HUB[lang])
-    for L in LANGS: made.append(lang_page(L, lang))
-print(len(made), 'pages:', ' '.join(made))
+if __name__ == '__main__':
+    made = []
+    for lang in ('en', 'es'):
+        hub_page(lang); made.append(HUB[lang])
+        for L in LANGS: made.append(lang_page(L, lang))
+    print(len(made), 'pages:', ' '.join(made))
