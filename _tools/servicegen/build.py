@@ -78,8 +78,8 @@ def museum(lang):
                  ]))
     s3 = section('bone', 'languages', ('Languages' if en else 'Idiomas'), ('For the visitors you welcome.' if en else 'Para los visitantes que recibes.'),
                  ('In the languages your visitors speak.' if en else 'En los idiomas de tus visitantes.'),
-                 prose([('Spanish and English are handled in-house. We also translate museum and heritage content into Italian, French, German and the other languages we work in regularly, and into more than 120 languages through our professional translator network.' if en else
-                         'El español y el inglés los trabajamos en nuestro equipo. También traducimos contenido de museos y patrimonio al italiano, francés, alemán y los demás idiomas con los que trabajamos habitualmente, y a más de 120 idiomas a través de nuestra red profesional de traductores.')],
+                 prose([('We translate museum and heritage content in all our core languages, including Spanish, Italian, French, German and Maltese, each into and out of English, and in more than 120 languages through our professional translator network.' if en else
+                         'Traducimos contenido de museos y patrimonio en todos nuestros idiomas principales, como español, italiano, francés, alemán y maltés, cada uno desde y hacia el inglés, y en más de 120 idiomas a través de nuestra red profesional de traductores.')],
                        (('/languages', 'See all our languages →') if en else ('/idiomas', 'Ver todos nuestros idiomas →'))))
     faqs = [
         (('What files can you work with?', 'Word, Excel and PDF, or text exported from your exhibition design files. We return the translation ready for your designer and flag any line that runs longer than the space allows.') if en else
@@ -91,10 +91,10 @@ def museum(lang):
         (('How are museum projects priced?', 'Usually per word, quoted once we have seen the texts. Send a sample or the full list of panels and labels, and we confirm the price and delivery date in your quotation.') if en else
          ('¿Cómo se presupuestan los proyectos para museos?', 'Normalmente por palabra, con cotización tras ver los textos. Envía una muestra o la lista completa de paneles y cartelas, y te confirmamos precio y plazo en la cotización.')),
     ]
-    rel = ([('languages', 'Our languages', 'Spanish, English and twelve more core languages, plus 120+ through our network.'),
+    rel = ([('languages', 'Our languages', 'Our 14 core languages, plus 120+ through our network.'),
             ('content-writing-services', 'Content writing', 'Original content in 14 languages for websites, blogs and campaigns.'),
             ('website-translation-services', 'Website translation & localisation', 'Websites, apps and multilingual SEO.')] if en else
-           [('idiomas', 'Nuestros idiomas', 'Español, inglés y doce idiomas principales más, además de más de 120 a través de nuestra red.'),
+           [('idiomas', 'Nuestros idiomas', 'Nuestros 14 idiomas principales, además de más de 120 a través de nuestra red.'),
             ('redaccion-de-contenidos', 'Redacción de contenidos', 'Contenido original en 14 idiomas para webs, blogs y campañas.'),
             ('traduccion-de-paginas-web', 'Traducción de páginas web', 'Webs, apps y SEO multilingüe.')])
     crumb = 'Museum translation' if en else 'Traducción para museos'

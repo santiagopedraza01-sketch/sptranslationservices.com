@@ -214,10 +214,10 @@ def hub_page(lang):
     desc = ('Certified translation in Malta in 14 core languages, including Spanish, English, Italian, French, German, Polish, Romanian, Russian, Portuguese, Turkish, Greek, Dutch, Serbian and Maltese, plus 120+ more through our translator network.' if en else
             'Traducción certificada en Malta en 14 idiomas principales, como español, inglés, italiano, francés, alemán, polaco, rumano, ruso, portugués, turco, griego, neerlandés, serbio y maltés, y más de 120 a través de nuestra red de traductores.')
     h1 = 'Our languages' if en else 'Nuestros idiomas'
-    lede = ('Spanish ⇄ English in-house, twelve more languages we work in regularly, and more than 120 others through our professional translator network.' if en else
-            'Español ⇄ inglés en nuestro equipo, doce idiomas más con los que trabajamos habitualmente y más de 120 a través de nuestra red profesional de traductores.')
+    lede = ('Fourteen core languages, including English, Spanish, Italian, French and German, and more than 120 others through our professional translator network.' if en else
+            'Catorce idiomas principales, como inglés, español, italiano, francés y alemán, y más de 120 idiomas más a través de nuestra red profesional de traductores.')
     cards = [(('Spain · Latin America · UK' if en else 'España · Latinoamérica · Reino Unido'), ('Spanish ⇄ English' if en else 'Español ⇄ inglés'), f'/{cert}',
-              ('Our principal pair, handled in-house: certified translations in both directions.' if en else 'Nuestra combinación principal, en nuestro equipo: traducciones certificadas en ambos sentidos.'),
+              ('Certified Spanish translations into and out of English.' if en else 'Traducciones certificadas del español al inglés y del inglés al español.'),
               (['English → Spanish', 'Spanish → English'] if en else ['Inglés → español', 'Español → inglés']))]
     for L in LANGS:
         name = L['en'] if en else L['es']; low = name if en else name.lower()
@@ -239,8 +239,8 @@ def hub_page(lang):
                    f'</p>\n        <p><a href="{home}#quote">' + ('Request a quote →' if en else 'Solicitar una cotización →') + '</a></p>\n      </div>')
     faqs = [((('Are all languages certified the same way?', 'Yes. Whatever the language, every official translation is signed, dated and stamped by a professional, accredited translator.') if en else
               ('¿Todas las traducciones se certifican igual?', 'Sí. Sea cual sea el idioma, cada traducción oficial la firma, fecha y sella un traductor profesional acreditado.'))),
-            (('Can you translate other language pairs?', 'Our core languages are translated into and out of English, and Spanish ⇄ English is our principal pair. Tell us the pair you need and we confirm availability in your quotation.') if en else
-             ('¿Pueden traducir otras combinaciones de idiomas?', 'Nuestros idiomas principales se traducen desde y hacia el inglés, y español ⇄ inglés es nuestra combinación principal. Dinos la combinación que necesitas y te confirmamos la disponibilidad en la cotización.'))]
+            (('Can you translate other language pairs?', 'Our core languages are translated into and out of English. Tell us the pair you need and we confirm availability in your quotation.') if en else
+             ('¿Pueden traducir otras combinaciones de idiomas?', 'Nuestros idiomas principales se traducen desde y hacia el inglés. Dinos la combinación que necesitas y te confirmamos la disponibilidad en la cotización.'))]
     main = pagehead([(T[lang]['home'], home), (T[lang]['hub'], None)], h1, lede) + s1 + more + faq(faqs, lang) + '\n' + start_section(lang) + '\n'
     graph = [{'@type': 'CollectionPage', '@id': f'{D}/{slug}#webpage', 'url': f'{D}/{slug}', 'name': title, 'description': desc, 'inLanguage': lang,
               'isPartOf': {'@id': f'{D}/#website'}, 'about': {'@id': f'{D}/#practice'}, 'breadcrumb': {'@id': f'{D}/{slug}#breadcrumb'},
