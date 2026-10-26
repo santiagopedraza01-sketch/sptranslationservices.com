@@ -1183,3 +1183,13 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 .langs__foot{margin-top:16px;font-size:.92rem;line-height:1.6;color:var(--text-soft)}
 .langs__foot strong{color:var(--text);font-weight:500}
 .hero__langs a{color:var(--on-dark);text-decoration:underline;text-decoration-color:var(--brass-light);text-underline-offset:3px;white-space:nowrap}
+
+/* Language pages: original-language document names, hub cards */
+.orig{display:block;margin-top:2px;font-size:.84rem;color:var(--text-mute);font-style:italic}
+.type h3 a{color:inherit;text-decoration:none;background-image:linear-gradient(var(--brass),var(--brass));background-size:0 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .4s var(--ease)}
+.type h3 a:hover{background-size:100% 1px}
+.langs__list a{color:inherit;text-decoration:none;display:block}
+.langs__list li:has(a){padding:0}
+.langs__list li a{padding:6px 13px}
+.langs__list li:has(a):hover{border-color:var(--brass)}
+.langs__foot a{color:var(--text);text-decoration:underline;text-decoration-color:var(--brass);text-underline-offset:3px;white-space:nowrap}
