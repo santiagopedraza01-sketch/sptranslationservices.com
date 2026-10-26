@@ -221,7 +221,7 @@ def hub_page(lang):
               (['English → Spanish', 'Spanish → English'] if en else ['Inglés → español', 'Español → inglés']))]
     for L in LANGS:
         name = L['en'] if en else L['es']; low = name if en else name.lower()
-        cards.append((L['where_en'] if en else L['where_es'][0].upper() + L['where_es'][1:], name, f'/{L["slug_en"] if en else L["slug_es"]}',
+        cards.append((L['where_en'] if en else L['where_es'][0].upper() + L['where_es'][1:], (f'{name} ⇄ English' if en else f'{name} ⇄ inglés'), f'/{L["slug_en"] if en else L["slug_es"]}',
                       (f'Certified {name} translations into and out of English.' if en else f'Traducciones certificadas del {low} al inglés y del inglés al {low}.'),
                       ([f'{name} → English', f'English → {name}'] if en else [f'{name} → inglés', f'Inglés → {low}'])))
     cards_html = '      <div class="types rise">\n' + '\n'.join(f'''          <article class="type">

@@ -92,10 +92,10 @@ def museum(lang):
          ('¿Cómo se presupuestan los proyectos para museos?', 'Normalmente por palabra, con cotización tras ver los textos. Envía una muestra o la lista completa de paneles y cartelas, y te confirmamos precio y plazo en la cotización.')),
     ]
     rel = ([('languages', 'Our languages', 'Spanish, English and twelve more core languages, plus 120+ through our network.'),
-            ('content-writing-services', 'Content writing', 'Original content in English and Spanish for websites, blogs and campaigns.'),
+            ('content-writing-services', 'Content writing', 'Original content in 14 languages for websites, blogs and campaigns.'),
             ('website-translation-services', 'Website translation & localisation', 'Websites, apps and multilingual SEO.')] if en else
            [('idiomas', 'Nuestros idiomas', 'Español, inglés y doce idiomas principales más, además de más de 120 a través de nuestra red.'),
-            ('redaccion-de-contenidos', 'Redacción de contenidos', 'Contenido original en inglés y español para webs, blogs y campañas.'),
+            ('redaccion-de-contenidos', 'Redacción de contenidos', 'Contenido original en 14 idiomas para webs, blogs y campañas.'),
             ('traduccion-de-paginas-web', 'Traducción de páginas web', 'Webs, apps y SEO multilingüe.')])
     crumb = 'Museum translation' if en else 'Traducción para museos'
     main = pagehead([(('Home' if en else 'Inicio'), home), (crumb, None)], h1, lede) + s1 + s2 + s3 + faq(faqs, lang) + related(lang, rel) + '\n' + start_section(lang) + '\n'
@@ -107,13 +107,13 @@ def museum(lang):
 W = {'en': 'content-writing-services', 'es': 'redaccion-de-contenidos'}
 def writing(lang):
     en = lang == 'en'; slug, other = W[lang], W['es' if en else 'en']; home = '/' if en else '/es'
-    title = ('Content Writing Services in English and Spanish | SP Translations' if en else
-             'Redacción de contenidos en español e inglés | SP Translations')
-    desc = ('Content writing services in English and Spanish: website copy, blog posts and SEO articles, marketing and brand copy, and product descriptions, written from scratch for your audience and market.' if en else
-            'Servicios de redacción de contenidos en español e inglés: textos para webs, artículos de blog y SEO, textos de marketing y marca, y descripciones de productos, escritos desde cero para tu público y tu mercado.')
+    title = ('Content Writing Services in 14 Languages | SP Translations' if en else
+             'Redacción de contenidos en 14 idiomas | SP Translations')
+    desc = ('Content writing services in 14 languages, including English, Spanish, Italian, French and German: website copy, blog posts and SEO articles, marketing and brand copy, and product descriptions, written from scratch for your audience and market.' if en else
+            'Servicios de redacción de contenidos en 14 idiomas, como español, inglés, italiano, francés y alemán: textos para webs, artículos de blog y SEO, textos de marketing y marca, y descripciones de productos, escritos desde cero para tu público y tu mercado.')
     h1 = 'Content writing services' if en else 'Redacción de contenidos'
-    lede = ('Original content in English and Spanish for websites, blogs, brands and campaigns, written by people who know both languages, both markets and how content is found online.' if en else
-            'Contenido original en español e inglés para webs, blogs, marcas y campañas, escrito por profesionales que conocen ambos idiomas, ambos mercados y cómo se encuentra el contenido en internet.')
+    lede = ('Original content for websites, blogs, brands and campaigns in English, Spanish, Italian, French, German and nine more languages, written by native writers who know the market and how content is found online.' if en else
+            'Contenido original para webs, blogs, marcas y campañas en español, inglés, italiano, francés, alemán y nueve idiomas más, escrito por redactores nativos que conocen el mercado y cómo se encuentra el contenido en internet.')
     cards = types([
         (('Web' if en else 'Web'), ('Website copy' if en else 'Textos para webs'),
          ('Home, about and service pages that explain what you do clearly and lead visitors to get in touch.' if en else 'Páginas de inicio, de empresa y de servicios que explican con claridad lo que haces y llevan al visitante a contactarte.'),
@@ -130,9 +130,9 @@ def writing(lang):
         (('Products' if en else 'Productos'), ('Product and service descriptions' if en else 'Descripciones de productos y servicios'),
          ('Descriptions for online shops, catalogues and brochures that are accurate, consistent and persuasive.' if en else 'Descripciones para tiendas online, catálogos y folletos, precisas, coherentes y persuasivas.'),
          (['E-commerce product pages', 'Catalogues and brochures', 'Company profiles'] if en else ['Fichas de producto de e-commerce', 'Catálogos y folletos', 'Presentaciones de empresa'])),
-        (('Bilingual' if en else 'Bilingüe'), ('Bilingual content' if en else 'Contenido bilingüe'),
-         ('One brief, written natively in both English and Spanish, so each version reads as an original rather than a translation.' if en else 'Un solo briefing, escrito de forma nativa en español e inglés, para que cada versión se lea como un original y no como una traducción.'),
-         (['English and Spanish from one brief', 'Spain or Latin American Spanish', 'Consistent message in both'] if en else ['Español e inglés desde un briefing', 'Español de España o de Latinoamérica', 'Mismo mensaje en ambos idiomas'])),
+        (('Multilingual' if en else 'Multilingüe'), ('Multilingual content' if en else 'Contenido multilingüe'),
+         ('One brief, written natively in each language you need, so every version reads as an original rather than a translation.' if en else 'Un solo briefing, escrito de forma nativa en cada idioma que necesites, para que cada versión se lea como un original y no como una traducción.'),
+         (['Several languages from one brief', 'Spain or Latin American Spanish', 'Consistent message in every language'] if en else ['Varios idiomas desde un briefing', 'Español de España o de Latinoamérica', 'Mismo mensaje en todos los idiomas'])),
     ])
     s1 = section('bone', 'what', ('What we write' if en else 'Qué escribimos'), ('Written from scratch.' if en else 'Escrito desde cero.'),
                  ('Content written for your audience, in their language.' if en else 'Contenido escrito para tu público, en su idioma.'), cards)
@@ -144,24 +144,24 @@ def writing(lang):
                       ('Briefing', 'Cuéntanos tu público, objetivos, tono, palabras clave y ejemplos que te gusten. Confirmamos alcance, precio y plazo.')),
                      (('Outline', 'For longer pieces we agree the structure and headings first, so the content goes in the right direction from the start.') if en else
                       ('Esquema', 'Para piezas largas acordamos primero la estructura y los encabezados, para que el contenido vaya en la dirección correcta desde el principio.')),
-                     (('Writing', 'The content is written from scratch in English or Spanish, in your brand’s voice.') if en else
-                      ('Redacción', 'El contenido se escribe desde cero en español o en inglés, con la voz de tu marca.')),
+                     (('Writing', 'The content is written from scratch by a native writer of each language, in your brand’s voice.') if en else
+                      ('Redacción', 'Un redactor nativo de cada idioma escribe el contenido desde cero, con la voz de tu marca.')),
                      (('Review and delivery', 'We revise based on your feedback and deliver ready to publish, with headings, meta title and meta description where needed.') if en else
                       ('Revisión y entrega', 'Revisamos según tus comentarios y entregamos el texto listo para publicar, con encabezados, meta título y meta descripción cuando hace falta.')),
                  ]))
     s3 = section('bone', 'seo', ('SEO' if en else 'SEO'), ('Found and read.' if en else 'Encontrado y leído.'),
                  ('Written for people and for search engines.' if en else 'Escrito para personas y para buscadores.'),
-                 prose([('Good content answers the question the reader typed. We research the terms people use in each market, which are often different in English and Spanish, or between Spain and Latin America, and use them naturally in titles, headings and copy, without stuffing keywords.' if en else
-                         'Un buen contenido responde a la pregunta que escribió el lector. Investigamos los términos que se usan en cada mercado, que a menudo cambian entre el inglés y el español, o entre España y Latinoamérica, y los usamos con naturalidad en títulos, encabezados y textos, sin forzar palabras clave.'),
+                 prose([('Good content answers the question the reader typed. We research the terms people use in each market, which often differ from one language to another, and even between Spain and Latin America, and use them naturally in titles, headings and copy, without stuffing keywords.' if en else
+                         'Un buen contenido responde a la pregunta que escribió el lector. Investigamos los términos que se usan en cada mercado, que a menudo cambian de un idioma a otro, e incluso entre España y Latinoamérica, y los usamos con naturalidad en títulos, encabezados y textos, sin forzar palabras clave.'),
                         ('Already have content in one language? We can also <a href="/website-translation-services">translate and localise it</a> instead.' if en else
                          '¿Ya tienes contenido en un idioma? También podemos <a href="/traduccion-de-paginas-web">traducirlo y localizarlo</a>.')]))
     faqs = [
-        (('Which languages do you write in?', 'English and Spanish. For Spanish we write for Spain or for Latin America, or for a specific country if your audience is there.') if en else
-         ('¿En qué idiomas redactan?', 'En español y en inglés. En español escribimos para España o para Latinoamérica, o para un país concreto si tu público está allí.')),
+        (('Which languages do you write in?', 'All our core languages: English, Spanish, Italian, French, German, Polish, Romanian, Russian, Portuguese, Turkish, Greek, Dutch, Serbian and Maltese. For Spanish we write for Spain or for Latin America, or for a specific country if your audience is there.') if en else
+         ('¿En qué idiomas redactan?', 'En todos nuestros idiomas principales: español, inglés, italiano, francés, alemán, polaco, rumano, ruso, portugués, turco, griego, neerlandés, serbio y maltés. En español escribimos para España o para Latinoamérica, o para un país concreto si tu público está allí.')),
         (('Is the content original?', 'Yes. Every piece is written from scratch for your brief and is never copied from other sites.') if en else
          ('¿El contenido es original?', 'Sí. Cada pieza se escribe desde cero según tu briefing y nunca se copia de otras webs.')),
-        (('Can you write the same content in English and Spanish?', 'Yes. From one brief we write both versions natively, so each reads as an original rather than a translation, with the same message.') if en else
-         ('¿Pueden escribir el mismo contenido en español e inglés?', 'Sí. A partir de un briefing escribimos ambas versiones de forma nativa, para que cada una se lea como un original y no como una traducción, con el mismo mensaje.')),
+        (('Can you write the same content in several languages?', 'Yes. From one brief we write each version natively, so every language reads as an original rather than a translation, with the same message.') if en else
+         ('¿Pueden escribir el mismo contenido en varios idiomas?', 'Sí. A partir de un briefing escribimos cada versión de forma nativa, para que cada idioma se lea como un original y no como una traducción, con el mismo mensaje.')),
         (('How is content writing priced?', 'Per word or per piece, depending on the project. Send us your brief and we confirm the price and delivery date in your quotation.') if en else
          ('¿Cómo se presupuesta la redacción?', 'Por palabra o por pieza, según el proyecto. Envíanos tu briefing y te confirmamos precio y plazo en la cotización.')),
     ]
@@ -173,8 +173,8 @@ def writing(lang):
             ('traduccion-igaming', 'Traducción para iGaming', 'Contenido de casino, apuestas y afiliación.')])
     crumb = 'Content writing' if en else 'Redacción de contenidos'
     main = pagehead([(('Home' if en else 'Inicio'), home), (crumb, None)], h1, lede) + s1 + s2 + s3 + faq(faqs, lang) + related(lang, rel) + '\n' + start_section(lang) + '\n'
-    catalog = (['Website copywriting', 'Blog posts and articles', 'SEO content writing', 'Marketing and brand copy', 'Product and service descriptions', 'Bilingual English and Spanish content'] if en else
-               ['Redacción de textos para webs', 'Artículos y posts de blog', 'Redacción de contenido SEO', 'Textos de marketing y marca', 'Descripciones de productos y servicios', 'Contenido bilingüe en español e inglés'])
+    catalog = (['Website copywriting', 'Blog posts and articles', 'SEO content writing', 'Marketing and brand copy', 'Product and service descriptions', 'Multilingual content in 14 languages'] if en else
+               ['Redacción de textos para webs', 'Artículos y posts de blog', 'Redacción de contenido SEO', 'Textos de marketing y marca', 'Descripciones de productos y servicios', 'Contenido multilingüe en 14 idiomas'])
     page(lang, slug, other, title, desc, service_graph(slug, lang, title, desc, h1, ('Content writing' if en else 'Redacción de contenidos'), catalog, faqs, crumb), main)
 
 if __name__ == '__main__':
