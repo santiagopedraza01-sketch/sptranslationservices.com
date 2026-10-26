@@ -601,14 +601,12 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 .colophon__base{margin-top:clamp(46px,5vw,66px);padding-block:24px;border-top:1px solid var(--rule-dark);display:flex;flex-wrap:wrap;gap:12px 30px;align-items:center;justify-content:space-between;font-size:.78rem;color:var(--on-dark-mute)}
 .colophon__base nav{display:flex;flex-wrap:wrap;gap:26px}
 
-/* ═══════════ STICKY MOBILE CTA ═══════════ */
+/* ═══════════ STICKY MOBILE CTA (always on screen on phones) ═══════════ */
 .dock{
   position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;align-items:center;gap:12px;
   padding:12px var(--gutter) calc(12px + env(safe-area-inset-bottom));
   background:var(--ink);border-top:1px solid var(--rule-dark);
-  transform:translateY(105%);transition:transform .6s var(--ease);
 }
-.dock.on{transform:none}
 .dock .btn{flex:1;padding:15px 20px}
 
 
