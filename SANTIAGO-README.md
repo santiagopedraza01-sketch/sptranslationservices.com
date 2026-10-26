@@ -6,9 +6,9 @@ Pages, GitHub Pages, cPanel. Upload all six files to the same folder.
 
 | File                | Language | URL                          |
 |---------------------|----------|------------------------------|
-| `index.html`        | Spanish  | `yourdomain.com/`            |
+| `es.html`           | Spanish  | `yourdomain.com/es`          |
 | `traductores.html`  | Spanish  | `yourdomain.com/traductores.html` |
-| `en.html`           | English  | `yourdomain.com/en.html`     |
+| `index.html`        | English  | `yourdomain.com/` (home — English is the default language; `en.html` only redirects old /en links here) |
 | `translators.html`  | English  | `yourdomain.com/translators.html` |
 | `styles.css`        | shared   | every page                   |
 | `app.js`            | shared   | every page                   |
@@ -238,8 +238,8 @@ No drop shadows anywhere. Motion is opacity plus a 12px rise, 0.9s, staggered 70
 
 1. **Domain** — replace every `YOURDOMAIN.com` (canonical, Open Graph, JSON-LD,
    email addresses, footer, form error message).
-2. **All four pages** — every replacement below applies to `index.html`,
-   `traductores.html`, `en.html` and `translators.html`. A find-and-replace over
+2. **All four pages** — every replacement below applies to `es.html`,
+   `traductores.html`, `index.html` and `translators.html`. A find-and-replace over
    all four is the safe way; the placeholder strings are identical in each.
 3. **Company name** — the wordmark currently reads *Santiago Pedraza Castillo*
    with the role line *Traductor certificado* / *Certified Translator*. If the
@@ -303,7 +303,7 @@ No drop shadows anywhere. Motion is opacity plus a 12px rise, 0.9s, staggered 70
     (ATA, ITI, CIOL, MAEC…) or delete the row if none is held.
 16. **Social image** — add `og-image.jpg` (1200×630) and a real `favicon.ico`.
 
-Search `index.html` for `SUSTITUIR` and `en.html` for `REPLACE` — every
+Search `es.html` for `SUSTITUIR` and `index.html` for `REPLACE` — every
 placeholder is commented in the language of its page.
 
 Fee figures are formatted by the browser for each page's language — `0,14 EUR` in

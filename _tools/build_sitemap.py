@@ -51,10 +51,11 @@ def urlset(entries):
     out.append('</urlset>')
     return '\n'.join(out) + '\n'
 
-pages = sorted(f for f in glob.glob('*.html') if f != 'testimonials-admin.html')
+pages = sorted(f for f in glob.glob('*.html') if f != 'testimonials-admin.html'
+               and 'name="robots" content="noindex' not in open(f, encoding='utf-8').read())   # skips the /en redirect
 info = [page_info(f) for f in pages]
 is_guide = lambda e: re.search(r'/(guide|guia)-', e['loc'])
-homes = [f'{BASE}/', f'{BASE}/en']
+homes = [f'{BASE}/', f'{BASE}/es']
 order = lambda e: (e['loc'] not in homes, homes.index(e['loc']) if e['loc'] in homes else 0, e['born'], e['loc'])
 groups = {'page-sitemap.xml': sorted([e for e in info if not is_guide(e)], key=order),
           'post-sitemap.xml': sorted([e for e in info if is_guide(e)], key=order)}

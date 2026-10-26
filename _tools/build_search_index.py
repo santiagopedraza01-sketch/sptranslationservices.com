@@ -20,6 +20,7 @@ entries = []
 for f in sorted(glob.glob('*.html')):
     if f in SKIP: continue
     s = open(f, encoding='utf-8').read()
+    if 'name="robots" content="noindex' in s: continue      # the /en redirect
     lang = re.search(r'<html lang="(\w+)"', s).group(1)
     url = re.search(r'<link rel="canonical" href="([^"]+)"', s).group(1)
     path = url.replace(BASE, '') or '/'
