@@ -29,9 +29,11 @@
 
   /* ── Masthead state + mobile dock ── */
   var masthead=$('#masthead'), dock=$('#dock');
+  /* The home hero has its own quote button, so the dock waits until it scrolls away; on other pages it shows straight away */
+  var dockAt=document.querySelector('.hero') ? 640 : -1;
   function onScroll(){
     masthead.classList.toggle('settled', window.scrollY>20);
-    if(dock) dock.classList.toggle('on', window.scrollY>640);
+    if(dock) dock.classList.toggle('on', window.scrollY>dockAt);
   }
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();

@@ -126,23 +126,23 @@ def lang_page(L, lang):
     mt = L['code'] == 'mt'
     if en:
         title = f'{name} Translation Services in Malta — Certified {name} ⇄ English | SP Translations'
-        desc = f'{name} translation in Malta: certified {name} ⇄ English and {name} ⇄ Spanish translations of civil, academic, legal and company documents, signed, dated and stamped by an accredited translator.'
+        desc = f'{name} translation in Malta: certified {name} ⇄ English translations of civil, academic, legal and company documents, signed, dated and stamped by an accredited translator.'
         h1 = f'{name} translation services in Malta'
-        lede = f'Certified {name} ⇄ English and {name} ⇄ Spanish translations for documents from {L["where_en"]}, ordered online and signed, dated and stamped by a professional, accredited translator.'
+        lede = f'Certified {name} ⇄ English translations for documents from {L["where_en"]}, ordered online and signed, dated and stamped by a professional, accredited translator.'
     else:
-        title = f'Traducción de {low} en Malta — Traducción certificada {low} ⇄ inglés y español | SP Translations'
-        desc = f'Traducción de {low} en Malta: traducciones certificadas {low} ⇄ inglés y {low} ⇄ español de documentos civiles, académicos, legales y de empresa, firmadas, fechadas y selladas por un traductor acreditado.'
+        title = f'Traducción de {low} en Malta — Traducción certificada {low} ⇄ inglés | SP Translations'
+        desc = f'Traducción de {low} en Malta: traducciones certificadas {low} ⇄ inglés de documentos civiles, académicos, legales y de empresa, firmadas, fechadas y selladas por un traductor acreditado.'
         h1 = f'Traducción de {low} en Malta'
-        lede = f'Traducciones certificadas {low} ⇄ inglés y {low} ⇄ español para documentos {"de " + L["where_es"] if not L["where_es"].startswith("los ") else "de " + L["where_es"]}, con solicitud online, firmadas, fechadas y selladas por un traductor profesional acreditado.'
-    pairs = ([f'{name} → English', f'English → {name}', f'{name} → Spanish', f'Spanish → {name}'] if en else
-             [f'{name} → inglés', f'Inglés → {low}', f'{name} → español', f'Español → {low}'])
+        lede = f'Traducciones certificadas {low} ⇄ inglés para documentos {"de " + L["where_es"] if not L["where_es"].startswith("los ") else "de " + L["where_es"]}, con solicitud online, firmadas, fechadas y selladas por un traductor profesional acreditado.'
+    pairs = ([f'{name} → English', f'English → {name}'] if en else
+             [f'{name} → inglés', f'Inglés → {low}'])
     who = L['who_en'] if en else L['who_es']
     s1 = section('bone', 'pairs', T[lang]['pairs'], (f'Into and out of {name}.' if en else f'Desde y hacia el {low}.'),
                  (f'{name} translation for life and work in Malta.' if en else f'Traducción de {low} para vivir y trabajar en Malta.'),
                  f'      <div class="prose rise" style="margin-bottom:clamp(30px,4vw,46px)">\n        <p>{who}</p>\n      </div>\n' +
                  block('Language pairs we translate' if en else 'Combinaciones que traducimos', lst(pairs),
-                       (f'Spanish ⇄ English is our principal pair, handled in-house. {name} translations are carried out by professional native-speaker translators.' if en else
-                        f'Español ⇄ inglés es nuestra combinación principal y la trabajamos internamente. Las traducciones de {low} las realizan traductores profesionales nativos.')))
+                       (f'{name} translations are carried out by professional native-speaker translators.' if en else
+                        f'Las traducciones de {low} las realizan traductores profesionales nativos.')))
     docs = [f'{e if en else s} <em class="orig" lang="{L["code"]}">{o}</em>' for e, s, o in L['docs']]
     s2 = section('warm', 'documents', T[lang]['docs'], ('From certificates to company papers.' if en else 'De certificados a documentos de empresa.'),
                  (f'{name} documents we translate.' if en else f'Documentos en {low} que traducimos.'),
@@ -169,8 +169,8 @@ def lang_page(L, lang):
         apo_a = (f'{ce_cap} is a party to the Hague Apostille Convention, so a public document from {ce} that will be used in Malta is normally legalised with an apostille issued in {ce}. Check the receiving authority’s requirements; we translate the apostille too.' if en else
                  f'{L["es_subj"]} del Convenio de La Haya sobre la apostilla, así que un documento público {L["es_from"]} que se vaya a usar en Malta normalmente se legaliza con una apostilla emitida allí. Confirma los requisitos de la institución que lo recibe; también traducimos la apostilla.')
     faqs = [
-        ((f'Do you translate {name} into both English and Spanish?', f'Yes. We translate {name} into English and Spanish, and English or Spanish into {name}. Translations are carried out by professional native-speaker translators, and every official translation is signed, dated and stamped by a professional, accredited translator.') if en else
-         (f'¿Traducen del {low} al inglés y al español?', f'Sí. Traducimos del {low} al inglés y al español, y del inglés o el español al {low}. Las traducciones las realizan traductores profesionales nativos, y cada traducción oficial la firma, fecha y sella un traductor profesional acreditado.')),
+        ((f'Do you translate both {name} to English and English to {name}?', f'Yes. We translate {name} into English and English into {name}. Translations are carried out by professional native-speaker translators, and every official translation is signed, dated and stamped by a professional, accredited translator.') if en else
+         (f'¿Traducen del {low} al inglés y del inglés al {low}?', f'Sí. Traducimos del {low} al inglés y del inglés al {low}. Las traducciones las realizan traductores profesionales nativos, y cada traducción oficial la firma, fecha y sella un traductor profesional acreditado.')),
         ((f'Will my {name} translation be accepted in Malta?' if not mt else 'Will my translation be accepted abroad?',
           'Official translations are signed, dated and stamped by a professional, accredited translator, which is what most authorities, employers, banks and universities ask for. If an institution has its own requirements, send them with your documents and we prepare the translation accordingly.') if en else
          ((f'¿Aceptarán mi traducción de {low} en Malta?' if not mt else '¿Aceptarán mi traducción en el extranjero?'),
@@ -179,10 +179,10 @@ def lang_page(L, lang):
         ((f'How much does {an} {name} translation cost, and how long does it take?', 'Every document is quoted individually, based on its length, layout and language pair, and the delivery date is confirmed in your quotation before you pay. Priority service is available, subject to availability.') if en else
          (f'¿Cuánto cuesta una traducción de {low} y cuánto tarda?', 'Cada documento se cotiza de forma individual según su extensión, formato y combinación de idiomas, y la fecha de entrega se confirma en la cotización antes de pagar. Hay servicio urgente según disponibilidad.')),
     ]
-    rel = ([(hub, 'All our languages', 'Spanish, English and twelve more, plus 120+ through our network.'),
+    rel = ([(hub, 'All our languages', 'Our 14 core languages, plus 120+ through our network.'),
             (cert, 'Certified translations in Malta', 'Official documents for the Public Registry, JobsPlus, courts, banks and employers.'),
             ('guide-malta-residency-documents', 'Documents for a Malta residence application', 'Which personal documents usually need translating, and how to prepare them.')] if en else
-           [(hub, 'Todos nuestros idiomas', 'Español, inglés y doce más, además de más de 120 a través de nuestra red.'),
+           [(hub, 'Todos nuestros idiomas', 'Nuestros 14 idiomas principales, además de más de 120 a través de nuestra red.'),
             (cert, 'Traducciones certificadas en Malta', 'Documentos oficiales para el Public Registry, JobsPlus, tribunales, bancos y empleadores.'),
             ('guia-documentos-residencia-malta', 'Documentos para la residencia en Malta', 'Qué documentos personales suelen necesitar traducción y cómo prepararlos.')])
     main = (pagehead([(T[lang]['home'], home), (T[lang]['hub'], f'/{hub}'), (name, None)], h1, lede) + s1 + s2 + s3 + faq(faqs, lang) + related(lang, rel) + '\n' + start_section(lang) + '\n')
@@ -191,7 +191,7 @@ def lang_page(L, lang):
          'isPartOf': {'@id': f'{D}/#website'}, 'about': {'@id': f'{D}/#practice'}, 'breadcrumb': {'@id': f'{D}/{slug}#breadcrumb'}, 'mainEntity': {'@id': f'{D}/{slug}#service'}},
         {'@type': 'Service', '@id': f'{D}/{slug}#service', 'name': h1, 'serviceType': (f'{name} translation' if en else f'Traducción de {low}'), 'description': desc,
          'url': f'{D}/{slug}', 'provider': {'@id': f'{D}/#practice'}, 'areaServed': ['Malta', 'European Union'],
-         'availableLanguage': [{'@type': 'Language', 'name': L['en'], 'alternateName': L['code']}, {'@type': 'Language', 'name': 'English', 'alternateName': 'en'}, {'@type': 'Language', 'name': 'Spanish', 'alternateName': 'es'}],
+         'availableLanguage': [{'@type': 'Language', 'name': L['en'], 'alternateName': L['code']}, {'@type': 'Language', 'name': 'English', 'alternateName': 'en'}],
          'offers': {'@type': 'Offer', 'url': f'{HOME[lang]}#quote', 'priceCurrency': 'EUR', 'availability': 'https://schema.org/InStock'}},
         faq_ld(slug, faqs),
         crumbs_ld(slug, [(T[lang]['home'], HOME[lang]), (T[lang]['hub'], f'{D}/{hub}'), (name, f'{D}/{slug}')]),
@@ -215,8 +215,8 @@ def hub_page(lang):
     for L in LANGS:
         name = L['en'] if en else L['es']; low = name if en else name.lower()
         cards.append((L['where_en'] if en else L['where_es'][0].upper() + L['where_es'][1:], name, f'/{L["slug_en"] if en else L["slug_es"]}',
-                      (f'Certified {name} translations into and out of English and Spanish.' if en else f'Traducciones certificadas del {low} al inglés y al español, y viceversa.'),
-                      ([f'{name} ⇄ English', f'{name} ⇄ Spanish'] if en else [f'{name} ⇄ inglés', f'{name} ⇄ español'])))
+                      (f'Certified {name} translations into and out of English.' if en else f'Traducciones certificadas del {low} al inglés y del inglés al {low}.'),
+                      ([f'{name} → English', f'English → {name}'] if en else [f'{name} → inglés', f'Inglés → {low}'])))
     cards_html = '      <div class="types rise">\n' + '\n'.join(f'''          <article class="type">
             <span class="type__tag">{tag}</span>
             <h3><a href="{u}">{h}</a></h3>
@@ -232,8 +232,8 @@ def hub_page(lang):
                    f'</p>\n        <p><a href="{home}#quote">' + ('Request a quote →' if en else 'Solicitar una cotización →') + '</a></p>\n      </div>')
     faqs = [((('Are all languages certified the same way?', 'Yes. Whatever the language, every official translation is signed, dated and stamped by a professional, accredited translator.') if en else
               ('¿Todas las traducciones se certifican igual?', 'Sí. Sea cual sea el idioma, cada traducción oficial la firma, fecha y sella un traductor profesional acreditado.'))),
-            (('Can you translate between two languages other than English and Spanish?', 'Often, yes. Most of our work goes into or out of English or Spanish, but tell us the pair you need and we confirm availability in your quotation.') if en else
-             ('¿Pueden traducir entre dos idiomas que no sean inglés ni español?', 'A menudo sí. La mayor parte de nuestro trabajo es desde o hacia el inglés o el español, pero dinos la combinación que necesitas y te confirmamos la disponibilidad en la cotización.'))]
+            (('Can you translate other language pairs?', 'Our core languages are translated into and out of English, and Spanish ⇄ English is our principal pair. Tell us the pair you need and we confirm availability in your quotation.') if en else
+             ('¿Pueden traducir otras combinaciones de idiomas?', 'Nuestros idiomas principales se traducen desde y hacia el inglés, y español ⇄ inglés es nuestra combinación principal. Dinos la combinación que necesitas y te confirmamos la disponibilidad en la cotización.'))]
     main = pagehead([(T[lang]['home'], home), (T[lang]['hub'], None)], h1, lede) + s1 + more + faq(faqs, lang) + '\n' + start_section(lang) + '\n'
     graph = [{'@type': 'CollectionPage', '@id': f'{D}/{slug}#webpage', 'url': f'{D}/{slug}', 'name': title, 'description': desc, 'inLanguage': lang,
               'isPartOf': {'@id': f'{D}/#website'}, 'about': {'@id': f'{D}/#practice'}, 'breadcrumb': {'@id': f'{D}/{slug}#breadcrumb'},

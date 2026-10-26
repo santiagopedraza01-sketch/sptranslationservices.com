@@ -1,10 +1,10 @@
-"""Content for the language pages. One entry per language, English and Spanish."""
+"""Content for the language pages (each language ⇄ English). One entry per language, with English and Spanish page text."""
 LANGS = [
  dict(code='it', en='Italian', es='Italiano', slug_en='italian-translation-malta', slug_es='traduccion-italiano-malta',
   country_en='Italy', country_es='Italia', es_subj='Italia forma parte', es_from='de Italia',
   where_en='Italy, Switzerland and San Marino', where_es='Italia, Suiza y San Marino',
-  who_en='Italians are one of the largest foreign communities in Malta, and Italian is widely used in business on the island. We translate Italian civil, academic and company documents for residence, work, study and marriage in Malta, and documents going the other way for Maltese and Spanish-speaking clients dealing with Italy.',
-  who_es='Los italianos son una de las comunidades extranjeras más numerosas de Malta, y el italiano se usa mucho en los negocios de la isla. Traducimos documentos civiles, académicos y de empresa en italiano para residencia, trabajo, estudios y matrimonio en Malta, y también en sentido contrario para clientes malteses e hispanohablantes que tratan con Italia.',
+  who_en='Italians are one of the largest foreign communities in Malta, and Italian is widely used in business on the island. We translate Italian civil, academic and company documents for residence, work, study and marriage in Malta, and English documents into Italian for clients in Malta dealing with Italy.',
+  who_es='Los italianos son una de las comunidades extranjeras más numerosas de Malta, y el italiano se usa mucho en los negocios de la isla. Traducimos documentos civiles, académicos y de empresa en italiano para residencia, trabajo, estudios y matrimonio en Malta, y documentos en inglés al italiano para clientes en Malta que tratan con Italia.',
   docs=[('Birth certificate','Certificado de nacimiento','certificato di nascita'),('Marriage certificate','Certificado de matrimonio',"estratto dell'atto di matrimonio"),
         ('Criminal record certificate','Certificado de antecedentes penales','certificato del casellario giudiziale'),('Certificate of residence','Certificado de residencia','certificato di residenza'),
         ('Degree certificate','Título universitario','diploma di laurea'),('Company registry extract','Extracto del registro mercantil','visura camerale')],
@@ -124,8 +124,8 @@ LANGS = [
  dict(code='mt', en='Maltese', es='Maltés', slug_en='maltese-translation-malta', slug_es='traduccion-maltes-malta',
   country_en='Malta', country_es='Malta', es_subj=None, es_from='de Malta',
   where_en='Malta', where_es='Malta',
-  who_en='Maltese is an official language of Malta, alongside English. We translate Maltese court, notarial and public documents into English and Spanish for use abroad, and English or Spanish documents into Maltese when an authority asks for it.',
-  who_es='El maltés es lengua oficial de Malta junto con el inglés. Traducimos al inglés y al español documentos judiciales, notariales y públicos en maltés para usarlos en el extranjero, y documentos en inglés o español al maltés cuando una autoridad lo pide.',
+  who_en='Maltese is an official language of Malta, alongside English. We translate Maltese court, notarial and public documents into English for use abroad, and English documents into Maltese when an authority asks for it.',
+  who_es='El maltés es lengua oficial de Malta junto con el inglés. Traducimos al inglés documentos judiciales, notariales y públicos en maltés para usarlos en el extranjero, y documentos en inglés al maltés cuando una autoridad lo pide.',
   docs=[('Birth certificate','Certificado de nacimiento','ċertifikat tat-twelid'),('Marriage certificate','Certificado de matrimonio','ċertifikat taż-żwieġ'),
         ('Police conduct certificate','Certificado de conducta policial','ċertifikat tal-kondotta'),('Court judgment','Sentencia judicial','sentenza'),
         ('Notarial deed','Escritura notarial','att nutarili'),('Government Gazette notice','Anuncio de la Gaceta del Gobierno','Gazzetta tal-Gvern')],
