@@ -1172,3 +1172,14 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 }
 @media (max-width:340px){ .masthead .brand__name{font-size:.58rem;letter-spacing:.06em} .masthead .brand{gap:6px} }
 @media (max-width:340px){ .masthead .brand__name{font-size:.54rem;letter-spacing:.04em} .masthead .search-btn{width:30px;height:30px} .masthead .lang a{padding:4px 5px} .toggle{width:30px} }
+
+/* Languages we work in most often (home services and certified pages) */
+.langs{margin-bottom:clamp(34px,4vw,52px);padding:clamp(22px,2.6vw,32px);border:1px solid var(--rule);background:var(--bone)}
+.section--bone .langs{background:var(--bone-warm)}
+.langs__h{font-family:var(--serif);font-weight:400;font-size:1.25rem;color:var(--text);margin-bottom:16px}
+.langs__list{display:flex;flex-wrap:wrap;gap:8px}
+.langs__list li{padding:6px 13px;border:1px solid var(--rule);font-size:.88rem;color:var(--text);background:var(--bone)}
+.langs__list li.is-main{border-color:var(--brass);color:var(--brass);font-weight:500}
+.langs__foot{margin-top:16px;font-size:.92rem;line-height:1.6;color:var(--text-soft)}
+.langs__foot strong{color:var(--text);font-weight:500}
+.hero__langs a{color:var(--on-dark);text-decoration:underline;text-decoration-color:var(--brass-light);text-underline-offset:3px;white-space:nowrap}
