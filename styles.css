@@ -1127,3 +1127,48 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 /* Spanish header is longer; tighten spacing so nav, search, language and CTA fit on one line */
 @media (min-width:1241px){ html[lang="es"] .masthead__cta{gap:14px} }
 @media (max-width:1360px) and (min-width:1241px){ html[lang="es"] .nav{gap:15px} html[lang="es"] .masthead__cta{gap:11px} }
+
+/* Language switcher in the header: a globe and a two-way pill so the
+   ES / EN option is easy to spot */
+.masthead .lang{gap:2px;padding:3px;border:1px solid rgba(196,172,128,.6);border-radius:999px;font-size:.76rem;letter-spacing:.12em;background:rgba(17,29,44,.35)}
+.masthead .lang::before{content:"";width:15px;height:15px;margin:0 3px 0 7px;flex:none;background:var(--brass-light);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.6'%3E%3Ccircle cx='12' cy='12' r='9.2'/%3E%3Cpath d='M2.8 12h18.4M12 2.8c2.6 2.6 3.9 5.6 3.9 9.2s-1.3 6.6-3.9 9.2c-2.6-2.6-3.9-5.6-3.9-9.2S9.4 5.4 12 2.8z'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.6'%3E%3Ccircle cx='12' cy='12' r='9.2'/%3E%3Cpath d='M2.8 12h18.4M12 2.8c2.6 2.6 3.9 5.6 3.9 9.2s-1.3 6.6-3.9 9.2c-2.6-2.6-3.9-5.6-3.9-9.2S9.4 5.4 12 2.8z'/%3E%3C/svg%3E") center/contain no-repeat}
+.masthead .lang i{display:none}
+.masthead .lang a{padding:5px 10px;border-radius:999px;color:var(--on-dark);line-height:1.2;transition:background .3s var(--ease),color .3s var(--ease)}
+.masthead .lang a:hover{background:rgba(242,239,233,.1)}
+.masthead .lang a.on{background:var(--brass-light);color:var(--ink)}
+@media (max-width:430px){
+  .masthead .lang{gap:0;font-size:.7rem;letter-spacing:.08em}
+  .masthead .lang::before{display:none}
+  .masthead .lang a{padding:5px 8px}
+}
+
+/* Hero: "120+ languages" badge under the heading */
+.hero__langs{display:inline-flex;align-items:center;gap:14px;margin-top:26px;padding:12px 20px 12px 14px;border:1px solid rgba(196,172,128,.55);background:rgba(17,29,44,.45);max-width:100%}
+.hero__langs svg{width:34px;height:34px;flex:none;color:var(--brass-light)}
+.hero__langs b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.3rem,2vw,1.6rem);line-height:1.1;color:var(--brass-light)}
+.hero__langs span{display:block;margin-top:3px;font-size:.88rem;line-height:1.45;color:var(--on-dark-soft)}
+.hero__langs + .divider{margin-top:26px}
+.hero__langs > span{margin-top:0}
+
+/* Spanish header: room for the language pill (Spanish nav labels are longer) */
+@media (min-width:1241px){ html[lang="es"] .nav{gap:18px} html[lang="es"] .masthead__cta{gap:10px} html[lang="es"] .masthead__inner{gap:20px} }
+@media (max-width:1360px) and (min-width:1241px){
+  html[lang="es"] .nav{gap:12px} html[lang="es"] .masthead__cta{gap:8px} html[lang="es"] .masthead__inner{gap:16px}
+  html[lang="es"] .masthead .lang a{padding:5px 7px}
+}
+@media (max-width:430px){
+  .masthead__cta{gap:8px}
+  .masthead .lang{padding:2px}
+  .masthead .lang a{padding:4px 7px}
+}
+@media (max-width:560px){ .masthead .lang::before{display:none} }
+@media (max-width:430px){ .masthead .lang{font-size:.66rem} .masthead .lang a{padding:4px 6px} }
+@media (max-width:380px){
+  .masthead .brand img,.masthead.settled .brand img{height:32px}
+  .masthead .brand__name{font-size:.64rem;letter-spacing:.1em}
+  .masthead__inner{gap:8px} .masthead__cta{gap:6px}
+}
+@media (max-width:340px){ .masthead .brand__name{font-size:.58rem;letter-spacing:.06em} .masthead .brand{gap:6px} }
+@media (max-width:340px){ .masthead .brand__name{font-size:.54rem;letter-spacing:.04em} .masthead .search-btn{width:30px;height:30px} .masthead .lang a{padding:4px 5px} .toggle{width:30px} }
