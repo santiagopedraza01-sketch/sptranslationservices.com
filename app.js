@@ -10,14 +10,16 @@
     failed:'No hemos podido enviar tu solicitud. Escríbenos directamente a ',
     failedEnd:' y te responderemos en breve.',
     noEndpoint:'[Formulario de cotización] Sin endpoint configurado. Datos recogidos:',
-    rvSend:'Enviar opinión', rvClose:'Cerrar', rvOpen:'Dejar una opinión'
+    rvSend:'Enviar opinión', rvClose:'Cerrar', rvOpen:'Dejar una opinión',
+    tooBig:'Los archivos adjuntos superan los 10 MB en total. Envía menos archivos o escríbenos a '
   } : {
     open:'Open menu', close:'Close menu', sending:'Sending…',
     submit:'Request a quote',
     failed:'Your request could not be transmitted. Please email ',
     failedEnd:' directly and you will have a reply shortly.',
     noEndpoint:'[Quotation form] No endpoint configured. Captured:',
-    rvSend:'Send review', rvClose:'Close', rvOpen:'Leave a review'
+    rvSend:'Send review', rvClose:'Close', rvOpen:'Leave a review',
+    tooBig:'The attached files are over 10 MB in total. Please send fewer files, or email them to '
   };
   /* Preference storage only with cookie consent (see consent.js) */
   function prefsOK(){ return !window.SPConsent || window.SPConsent.allowed('preferences'); }
@@ -114,22 +116,23 @@
 
   /* ── Attachments ── */
   var deposit=$('#deposit'), files=$('#files'), manifest=$('#manifest'),
-      LIMIT=10*1024*1024; /* 10 MB per file — match to your form handler's limit */
+      LIMIT=10*1024*1024; /* FormSubmit accepts 10 MB for all files together */
   function size(b){
     if(b<1024) return b+' B';
     if(b<1048576) return Math.round(b/1024)+' KB';
     return (b/1048576).toFixed(1)+' MB';
   }
+  function total(){ var t=0; Array.prototype.forEach.call(files.files,function(f){t+=f.size}); return t; }
   function listFiles(){
     manifest.innerHTML='';
+    var over=total()>LIMIT;
     Array.prototype.forEach.call(files.files,function(f){
       var row=document.createElement('div');
       row.className='manifest__item';
       row.innerHTML='<i aria-hidden="true"></i><b></b><small></small>';
       $('b',row).textContent=f.name;
-      var big=f.size>LIMIT;
-      $('small',row).textContent = big ? size(f.size)+' — exceeds limit' : size(f.size);
-      if(big) $('small',row).style.color='#9E4B2F';
+      $('small',row).textContent=size(f.size);
+      if(over) $('small',row).style.color='#9E4B2F';
       manifest.appendChild(row);
     });
   }
@@ -186,6 +189,11 @@
     received.scrollIntoView({behavior:'smooth',block:'center'});
   }
 
+  if(/[?&]sent=1\b/.test(location.search)){
+    confirmReceipt();
+    if(history.replaceState) history.replaceState(null,'',location.pathname+'#quote');
+  }
+
   form.addEventListener('submit',function(e){
     e.preventDefault();
     if(!check()) return;
@@ -197,6 +205,36 @@
       console.warn(T.noEndpoint,
         Object.fromEntries(new FormData(form).entries()));
       confirmReceipt();
+      return;
+    }
+
+    /* Attachments only reach the inbox with a normal form post, not FormSubmit's /ajax/
+       endpoint. So when files are attached the page posts the form itself: each file gets
+       its own field, and FormSubmit sends the visitor back here (_next) to the thank-you. */
+    if(files&&files.files.length){
+      if(total()>LIMIT){
+        $('#notice').innerHTML='<p style="border:1px solid #C9A08C;background:#FBF3EF;color:#8C3F26;padding:14px 16px;font-size:.88rem;line-height:1.6;margin-bottom:22px;border-radius:2px">'+T.tooBig+
+          '<a href="mailto:santiagopedraza01@gmail.com" style="color:inherit;text-decoration:underline">santiagopedraza01@gmail.com</a>.</p>';
+        deposit.scrollIntoView({behavior:'smooth',block:'center'});
+        return;
+      }
+      send.disabled=true;
+      send.textContent=T.sending;
+      var back=location.origin+location.pathname+'?sent=1#quote', next=$('input[name="_next"]',form);
+      if(!next){ next=document.createElement('input'); next.type='hidden'; next.name='_next'; form.appendChild(next); }
+      next.value=back;
+      try{
+        if(files.files.length>1&&window.DataTransfer){
+          Array.prototype.forEach.call(files.files,function(f,i){
+            var one=document.createElement('input'), dt=new DataTransfer();
+            dt.items.add(f); one.type='file'; one.name='attachment'+(i+1); one.hidden=true; one.files=dt.files;
+            form.appendChild(one);
+          });
+          files.disabled=true;
+        }
+      }catch(err){ console.error(err); }
+      form.setAttribute('action',endpoint.replace('/ajax/','/'));
+      form.submit();
       return;
     }
 
