@@ -491,7 +491,7 @@
     try{
       return new Intl.NumberFormat(ES ? 'es-ES' : 'en-GB', {
         style:'currency', currency:cur, currencyDisplay:'code',
-        minimumFractionDigits:digits, maximumFractionDigits:digits
+        minimumFractionDigits:0, maximumFractionDigits:digits   /* 0.1, not 0.10 */
       }).format(v);
     }catch(e){
       return v + ' ' + cur;
