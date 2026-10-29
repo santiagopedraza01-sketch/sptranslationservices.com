@@ -1320,3 +1320,24 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
   .igflow__links path{animation:none}.igflow__links .pulse{display:none}
   .dev::after{display:none}
 }
+
+/* ── iGaming: two-column content types and the numbered "why choose us" list ── */
+.types--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.why{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--rule)}
+.why__item{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:clamp(22px,2.4vw,30px) clamp(18px,2.2vw,30px) clamp(22px,2.4vw,30px) 0;border-bottom:1px solid var(--rule)}
+.why__item:nth-child(even){padding-left:clamp(18px,2.2vw,30px);padding-right:0;border-left:1px solid var(--rule)}
+.why__num{font-family:var(--serif);font-size:1.05rem;color:var(--brass);line-height:1.5}
+.why h3{font-size:1.08rem;color:var(--text);margin-bottom:8px}
+.why p{font-size:.93rem;line-height:1.65;color:var(--text-soft)}
+.why a{color:var(--brass);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:680px){
+  .types--2{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr}
+  .why__item,.why__item:nth-child(even){padding-left:0;padding-right:0;border-left:0}
+}
+/* .standards on light sections */
+.section--bone .standards,.section--warm .standards{border-top-color:var(--rule)}
+.section--bone .standards__item,.section--warm .standards__item{border-color:var(--rule)}
+.section--bone .standards__num,.section--warm .standards__num{color:var(--brass)}
+.section--bone .standards__item h3,.section--warm .standards__item h3{color:var(--text)}
+.section--bone .standards__item p,.section--warm .standards__item p{color:var(--text-soft)}
