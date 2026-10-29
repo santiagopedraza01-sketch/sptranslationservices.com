@@ -1204,7 +1204,8 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 .client blockquote{margin:clamp(26px,3.4vw,44px) 0 0;flex:1;font-family:var(--serif);font-size:1.08rem;line-height:1.7;color:var(--text)}
 .client blockquote p{margin:0}
 .client__logo{margin-top:clamp(28px,3.4vw,44px);display:flex;align-items:center;justify-content:space-between;gap:16px}
-.client__logo img{display:block;height:30px;width:auto;max-width:70%}
+.client__brand{display:flex;align-items:center;gap:12px;font:600 1.12rem/1 var(--sans);letter-spacing:-.01em;color:#161616}
+.client__brand img{display:block;width:40px;height:auto}
 .client__in{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;color:var(--text-mute);text-decoration:none}
 .client__in svg{width:16px;height:16px}
 .client__in:hover,.client__in:focus-visible{color:var(--text)}
