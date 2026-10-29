@@ -1344,3 +1344,12 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 .section--bone .standards__num,.section--warm .standards__num{color:var(--brass)}
 .section--bone .standards__item h3,.section--warm .standards__item h3{color:var(--text)}
 .section--bone .standards__item p,.section--warm .standards__item p{color:var(--text-soft)}
+
+/* ── Interior hero with a faint photo (iGaming): image sits right, dissolves into the navy ── */
+.pagehead__bg{position:absolute;top:0;right:0;width:72%;height:100%;object-fit:cover;object-position:60% 55%;pointer-events:none;
+  opacity:.2;filter:saturate(.7) contrast(1.05);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 55%),linear-gradient(180deg,#000 60%,transparent);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 55%),linear-gradient(180deg,#000 60%,transparent);mask-composite:intersect}
+.pagehead--photo::before{z-index:1}
+.pagehead--photo .pagehead__inner{z-index:2}
+@media (max-width:900px){ .pagehead__bg{width:100%;opacity:.14;-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.9),transparent 92%);mask-image:linear-gradient(180deg,rgba(0,0,0,.9),transparent 92%)} }
