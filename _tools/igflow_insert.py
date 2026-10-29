@@ -27,7 +27,8 @@ def block(lang):
     paths = ''.join(f'<path d="M0 {y} C55 {y} 55 180 110 180"/>' for y in ys)
     pulses = ''.join(f'<path class="pulse" d="M0 {y} C55 {y} 55 180 110 180"/>' for y in ys)
     games = ''.join(f'<div class="dev__game"><span class="dev__art">{g}</span><span class="dev__stars">★★★★<i>★</i></span><span class="dev__ln"></span><span class="dev__ln dev__ln--s"></span><span class="dev__play" data-k="play">Play</span></div>' for g in GAMES)
-    return f'''<!-- igflow:start — animated hero visual (igflow.js; regenerate with _tools/igflow_insert.py) -->
+    return f'''<!-- igflow:start — animated visual below the hero (igflow.js; regenerate with _tools/igflow_insert.py) -->
+<section class="section section--ink igflow-section" id="flow">
   <div class="shell">
     <div class="igflow" data-igflow role="group" aria-label="{t['label']}">
       <ul class="igflow__sources" role="list">{srcs}</ul>
@@ -53,16 +54,16 @@ def block(lang):
       </div>
     </div>
   </div>
-  <!-- igflow:end -->
+</section>
+<!-- igflow:end -->
 '''
 for f, lang in [('igaming-translation-services.html','en'), ('traduccion-igaming.html','es')]:
     s = open(f, encoding='utf-8').read()
     s = re.sub(r'<!-- igflow:start.*?<!-- igflow:end -->\n', '', s, flags=re.S)
     s = s.replace('<section class="pagehead pagehead--flow" id="top">', '<section class="pagehead" id="top">', 1)
     i = s.index('<section class="pagehead" id="top">')
-    j = s.index('</section>', i)
+    j = s.index('</section>', i) + len('</section>\n')
     s = s[:j] + block(lang) + s[j:]
-    s = s.replace('<section class="pagehead" id="top">', '<section class="pagehead pagehead--flow" id="top">', 1)
     if 'src="igflow.js' not in s:
         s = re.sub(r'(<script src="app\.js\?v=[^"]+"></script>)', r'\1\n<script src="igflow.js?v=20261029a" defer></script>', s, count=1)
     open(f, 'w', encoding='utf-8').write(s)

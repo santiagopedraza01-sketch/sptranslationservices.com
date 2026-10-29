@@ -1212,10 +1212,10 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 
 /* ═══════════ iGAMING HERO FLOW (igflow.js) ═══════════
    Client types → SP Translations → a mock lobby that changes language. */
-.pagehead--flow{padding-bottom:clamp(56px,6vw,92px)}
-.pagehead--flow::after{content:"";position:absolute;inset:auto -10% -40% 40%;height:80%;pointer-events:none;
+.igflow-section{position:relative;overflow:hidden;padding-block:clamp(56px,7vw,104px);border-top:1px solid var(--rule-dark)}
+.igflow-section::after{content:"";position:absolute;inset:auto -10% -40% 40%;height:80%;pointer-events:none;
   background:radial-gradient(closest-side,rgba(196,172,128,.13),transparent 70%)}
-.igflow{position:relative;margin-top:clamp(44px,6vw,78px);display:grid;align-items:center;
+.igflow{position:relative;z-index:1;display:grid;align-items:center;
   grid-template-columns:minmax(200px,250px) 110px 230px 80px minmax(0,1fr)}
 .igflow__sources{list-style:none;margin:0;padding:0;height:360px;display:grid;grid-template-rows:repeat(4,1fr);gap:12px}
 .igflow__src{display:flex;align-items:center;gap:14px;padding:0 18px;border-radius:14px;
