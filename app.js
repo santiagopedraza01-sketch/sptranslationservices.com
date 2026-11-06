@@ -11,7 +11,7 @@
     failedEnd:' y te responderemos en breve.',
     noEndpoint:'[Formulario de cotización] Sin endpoint configurado. Datos recogidos:',
     rvSend:'Enviar opinión', rvClose:'Cerrar', rvOpen:'Dejar una opinión',
-    tooBig:'Los archivos adjuntos superan los 10 MB en total. Envía menos archivos o escríbenos a '
+    tooBig:'Los archivos adjuntos superan los {mb} MB en total. Envía menos archivos o escríbenos a '
   } : {
     open:'Open menu', close:'Close menu', sending:'Sending…',
     submit:'Request a quote',
@@ -19,13 +19,47 @@
     failedEnd:' directly and you will have a reply shortly.',
     noEndpoint:'[Quotation form] No endpoint configured. Captured:',
     rvSend:'Send review', rvClose:'Close', rvOpen:'Leave a review',
-    tooBig:'The attached files are over 10 MB in total. Please send fewer files, or email them to '
+    tooBig:'The attached files are over {mb} MB in total. Please send fewer files, or email them to '
   };
   /* Preference storage only with cookie consent (see consent.js) */
   function prefsOK(){ return !window.SPConsent || window.SPConsent.allowed('preferences'); }
 
   var $=function(s,c){return (c||document).querySelector(s)},
       $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  /* ── Form delivery. A Google Apps Script web app (…script.google.com/macros/…/exec, see
+        _tools/forms-apps-script.gs) gets the fields as JSON and the files as base64; any other
+        action URL gets a FormData post as before. Resolves on success, rejects otherwise. ── */
+  var GAS=/^https:\/\/script\.google(usercontent)?\.com\//;
+  function readFile(f){
+    return new Promise(function(ok,fail){
+      var r=new FileReader();
+      r.onload=function(){ ok({name:f.name,type:f.type,size:f.size,data:String(r.result).split(',')[1]||''}); };
+      r.onerror=function(){ fail(r.error); };
+      r.readAsDataURL(f);
+    });
+  }
+  function submitForm(form){
+    var url=form.getAttribute('action')||'', fd=new FormData(form);
+    if(!GAS.test(url)){
+      return fetch(url,{method:'POST',body:fd,headers:{Accept:'application/json'}})
+        .then(function(r){ if(!r.ok) throw new Error('Request failed: '+r.status); return r.json(); })
+        .then(function(d){ if(d&&String(d.success)==='false') throw new Error(d.message||'Rejected'); });
+    }
+    var fields={}, jobs=[];
+    fd.forEach(function(v,k){
+      if(typeof v!=='string'){ if(v&&v.size) jobs.push(readFile(v)); return; }
+      fields[k]=k in fields ? fields[k]+', '+v : v;
+    });
+    return Promise.all(jobs).then(function(files){
+      var ctl=window.AbortController?new AbortController():null,
+          timer=ctl&&setTimeout(function(){ ctl.abort(); }, files.length?120000:30000);
+      /* sent as text/plain so the browser makes a simple request (no CORS preflight) */
+      return fetch(url,{method:'POST',body:JSON.stringify({form:form.id,page:location.href,lang:ES?'es':'en',fields:fields,files:files}),signal:ctl&&ctl.signal})
+        .then(function(r){ clearTimeout(timer); if(!r.ok) throw new Error('Request failed: '+r.status); return r.json(); })
+        .then(function(d){ if(!d||d.ok!==true) throw new Error((d&&d.error)||'Rejected'); });
+    });
+  }
 
   var yearEl=$('#year'); if(yearEl) yearEl.textContent=new Date().getFullYear();
 
@@ -116,7 +150,7 @@
 
   /* ── Attachments ── */
   var deposit=$('#deposit'), files=$('#files'), manifest=$('#manifest'),
-      LIMIT=10*1024*1024; /* FormSubmit accepts 10 MB for all files together */
+      LIMIT=(GAS.test(($('#docket')||{getAttribute:function(){return ''}}).getAttribute('action')||'')?20:10)*1024*1024; /* all files together: 20 MB on the Google endpoint, 10 MB on FormSubmit */
   function size(b){
     if(b<1024) return b+' B';
     if(b<1048576) return Math.round(b/1024)+' KB';
@@ -208,16 +242,16 @@
       return;
     }
 
-    /* Attachments only reach the inbox with a normal form post, not FormSubmit's /ajax/
+    if(files&&files.files.length&&total()>LIMIT){
+      $('#notice').innerHTML='<p style="border:1px solid #C9A08C;background:#FBF3EF;color:#8C3F26;padding:14px 16px;font-size:.88rem;line-height:1.6;margin-bottom:22px;border-radius:2px">'+T.tooBig.replace('{mb}',LIMIT/1048576)+
+        '<a href="mailto:santiagopedraza01@gmail.com" style="color:inherit;text-decoration:underline">santiagopedraza01@gmail.com</a>.</p>';
+      deposit.scrollIntoView({behavior:'smooth',block:'center'});
+      return;
+    }
+    /* FormSubmit only: attachments reach the inbox with a normal form post, not its /ajax/
        endpoint. So when files are attached the page posts the form itself: each file gets
        its own field, and FormSubmit sends the visitor back here (_next) to the thank-you. */
-    if(files&&files.files.length){
-      if(total()>LIMIT){
-        $('#notice').innerHTML='<p style="border:1px solid #C9A08C;background:#FBF3EF;color:#8C3F26;padding:14px 16px;font-size:.88rem;line-height:1.6;margin-bottom:22px;border-radius:2px">'+T.tooBig+
-          '<a href="mailto:santiagopedraza01@gmail.com" style="color:inherit;text-decoration:underline">santiagopedraza01@gmail.com</a>.</p>';
-        deposit.scrollIntoView({behavior:'smooth',block:'center'});
-        return;
-      }
+    if(files&&files.files.length&&!GAS.test(endpoint)){
       send.disabled=true;
       send.textContent=T.sending;
       var back=location.origin+location.pathname+'?sent=1#quote', next=$('input[name="_next"]',form);
@@ -241,9 +275,8 @@
     send.disabled=true;
     send.textContent=T.sending;
 
-    fetch(endpoint,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}})
-      .then(function(r){ if(!r.ok) throw new Error('Request failed: '+r.status); return r.json(); })
-      .then(function(d){ if(d&&String(d.success)==='false') throw new Error(d.message||'Rejected'); confirmReceipt(); })
+    submitForm(form)
+      .then(confirmReceipt)
       .catch(function(err){
         console.error(err);
         send.disabled=false;
@@ -299,10 +332,8 @@
     e.preventDefault();
     if(!rvCheck()) return;
     rvSendBtn.disabled=true; rvSendBtn.textContent=T.sending;
-    fetch(rvForm.getAttribute('action'),{method:'POST',body:new FormData(rvForm),headers:{Accept:'application/json'}})
-      .then(function(r){ if(!r.ok) throw new Error('Request failed: '+r.status); return r.json(); })
-      .then(function(d){
-        if(d&&String(d.success)==='false') throw new Error(d.message||'Rejected');
+    submitForm(rvForm)
+      .then(function(){
         rvForm.hidden=true; rvOpen.hidden=true;
         rvThanks.classList.add('on'); rvThanks.focus();
       })
@@ -385,9 +416,8 @@
     f.addEventListener('submit',function(e){
       e.preventDefault(); if(!check()) return;
       var label=btn.innerHTML; btn.disabled=true; btn.textContent=T.sending;
-      fetch(f.getAttribute('action'),{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}})
-        .then(function(r){ if(!r.ok) throw new Error('Request failed: '+r.status); return r.json(); })
-        .then(function(d){ if(d&&String(d.success)==='false') throw new Error(d.message||'Rejected');
+      submitForm(f)
+        .then(function(){
           f.style.display='none'; if(done){ done.classList.add('on'); done.focus(); } })
         .catch(function(err){ console.error(err); btn.disabled=false; btn.innerHTML=label;
           if(note) note.innerHTML='<p style="border:1px solid #C9A08C;background:#FBF3EF;color:#8C3F26;padding:14px 16px;font-size:.88rem;line-height:1.6;border-radius:2px">'+T.failed+

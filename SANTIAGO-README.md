@@ -275,9 +275,8 @@ No drop shadows anywhere. Motion is opacity plus a 12px rise, 0.9s, staggered 70
    real exchange rates in `FX.rates`. See **Currency** above.
 9. **Testimony** — all three quotes are placeholders. Replace with real client
    feedback you have permission to publish.
-10. **Form endpoint** — create a form at formspree.io (or similar) and replace
-   `YOUR_FORM_ID` in the form `action`. File uploads need a paid Formspree plan.
-   Until then the form validates and confirms locally without transmitting.
+10. **Form endpoint** — the quote, review and contact forms post to a Google Apps
+   Script web app running on your Google account (see **Form delivery** below).
 11. **Payment page** — create a hosted payment page and replace the
    `https://YOURDOMAIN.com/pay` link in the Payment section:
    - Stripe → Payment links (recommended: cards, wallets, Link, one link, no code)
@@ -358,5 +357,39 @@ Terms such as *apostilla*, *poder notarial*, *antecedentes penales* and
 - Submit to Google Search Console and check the International Targeting report
   for hreflang errors once both URLs are live.
 - Validate the structured data at https://search.google.com/test/rich-results
-- `LIMIT` in the script sets the 10 MB per-file warning — match it to your form
-  handler's actual limit.
+- `LIMIT` in app.js sets the attachment limit (all files together): 20 MB on the
+  Google endpoint, 10 MB if the forms ever go back to FormSubmit.
+
+
+## Form delivery (Google Apps Script)
+
+The quote, review and contact forms send to a small script in your Google account,
+`_tools/forms-apps-script.gs`. For every request it:
+
+- emails you (santiagopedraza01@gmail.com) with all the details. **Reply** goes straight to the client.
+- saves attached files to Google Drive, in **SP Translations — Form uploads**. They are also
+  attached to the email when they fit, and always linked.
+- logs a row in the Google Sheet **SP Translations — Form log**, a backup of every request
+  in case an email ever goes astray.
+
+### Set it up (once, about 5 minutes)
+
+1. Sign in to Google as **santiagopedraza01@gmail.com** and open https://script.google.com.
+2. **New project**. Name it "SP Translations forms".
+3. Delete the sample code, paste the whole of `_tools/forms-apps-script.gs`, and press **Save**.
+4. In the function menu at the top choose **setup**, press **Run**, then **Review permissions**
+   → choose your account → **Advanced** → **Go to SP Translations forms (unsafe)** → **Allow**.
+   (Google shows "unsafe" for any script you write yourself; it only runs on your account.)
+   You get a "Form endpoint ready" email.
+5. **Deploy** → **New deployment** → gear icon → **Web app**.
+   Execute as: **Me**. Who has access: **Anyone**. → **Deploy**.
+6. Copy the **Web app URL** (it ends in `/exec`) and send it to your web developer. It
+   replaces the FormSubmit address in the forms' `action` on index.html, es.html,
+   contact.html and contacto.html.
+
+Opening the URL in a browser shows "SP Translations form endpoint is running."
+
+### Changing the script later
+
+Edit and save, then **Deploy → Manage deployments → pencil icon → Version: New version →
+Deploy**. That keeps the same URL; a *new deployment* would create a different one.
