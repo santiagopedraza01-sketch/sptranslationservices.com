@@ -1504,12 +1504,12 @@
     <div class="docket rise" id="quote">
       <div id="notice" aria-live="polite"></div>
 
-      <!-- ═══ FORM DELIVERY — submissions are emailed to santiagopedraza01@gmail.com via
-           FormSubmit (formsubmit.co). The first submission sends an activation email
-           to that address; click its link once and every later quote is delivered.
+      <!-- ═══ FORM DELIVERY — submissions go to a Google Apps Script web app on
+           santiagopedraza01@gmail.com (_tools/forms-apps-script.gs, set-up in SANTIAGO-README.md):
+           emailed to Santiago, files saved to Google Drive, every request logged in a Google Sheet.
            Fields inside a hidden .group are disabled, so only the details for the
            chosen service are sent. -->
-      <form id="docket" class="fields" action="https://formsubmit.co/ajax/santiagopedraza01@gmail.com" method="POST" enctype="multipart/form-data" novalidate>
+      <form id="docket" class="fields" action="https://script.google.com/macros/s/AKfycbwzGFO8Jw9XlznfaGPDihN784U9JyrNGZq9HHhdiTKF1wD74J8fa7vyZVBhJ5JsFfK95Q/exec" method="POST" novalidate>
         <div class="docket__head f--wide">
           <h3 class="h3">Request a quote</h3>
           <p>No obligation. Most quotations are answered within a few working hours.</p>
@@ -1710,7 +1710,7 @@
         <div class="deposit" id="deposit">
           <div class="deposit__rule" aria-hidden="true"></div>
           <b>Attach files</b>
-          <span>Drag files here, or select — PDF, JPG, PNG, DOCX, audio or video, up to 10&nbsp;MB in total</span>
+          <span>Drag files here, or select — PDF, JPG, PNG, DOCX, audio or video, up to 20&nbsp;MB in total</span>
           <input type="file" id="files" name="attachment" multiple accept=".pdf,.jpg,.jpeg,.png,.heic,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.srt,.mp3,.wav,.m4a,.mp4,.mov" aria-label="Attach files">
         </div>
         <div class="manifest" id="manifest" aria-live="polite"></div>
@@ -1730,8 +1730,6 @@
 
         <!-- spam trap — keep hidden -->
         <input type="hidden" name="_subject" value="New quote request — sptranslationservices.com">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;opacity:0">
 
         <div class="submit-zone">
@@ -1759,7 +1757,7 @@
 
     <div>
       <!-- ═══ LEAVE A REVIEW — each review is emailed to santiagopedraza01@gmail.com via
-           FormSubmit. Nothing is published automatically: add approved reviews to the
+           the Google form endpoint. Nothing is published automatically: add approved reviews to the
            testimonials above. ═══ -->
       <div class="review rise" id="review">
         <div class="review__intro">
@@ -1768,7 +1766,7 @@
           <button type="button" class="btn btn--ink" id="reviewOpen" aria-expanded="false" aria-controls="reviewForm">Leave a review<span class="btn__arrow" aria-hidden="true"></span></button>
         </div>
 
-        <form id="reviewForm" class="fields review__form" action="https://formsubmit.co/ajax/santiagopedraza01@gmail.com" method="POST" novalidate hidden>
+        <form id="reviewForm" class="fields review__form" action="https://script.google.com/macros/s/AKfycbwzGFO8Jw9XlznfaGPDihN784U9JyrNGZq9HHhdiTKF1wD74J8fa7vyZVBhJ5JsFfK95Q/exec" method="POST" novalidate hidden>
           <div class="f">
             <label for="rvName">Name <span class="star" aria-hidden="true">*</span></label>
             <input type="text" id="rvName" name="name" autocomplete="name" placeholder="e.g. Lucía Martínez" required>
@@ -1809,8 +1807,6 @@
           </label>
           <span class="alert" id="rvConsentAlert" style="grid-column:1/-1">Please confirm you agree to publication.</span>
           <input type="hidden" name="_subject" value="New client review — sptranslationservices.com">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;opacity:0">
           <div id="rvNotice" class="f--wide" aria-live="polite"></div>
           <div class="submit-zone">

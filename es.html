@@ -1503,12 +1503,12 @@
     <div class="docket rise" id="quote">
       <div id="notice" aria-live="polite"></div>
 
-      <!-- ═══ ENVÍO DEL FORMULARIO — las solicitudes llegan a santiagopedraza01@gmail.com a
-           través de FormSubmit (formsubmit.co). El primer envío manda un correo de
-           activación a esa dirección; basta con pulsar su enlace una vez. Los campos de
-           un .group oculto se desactivan, de modo que solo se envían los datos del
-           servicio elegido. -->
-      <form id="docket" class="fields" action="https://formsubmit.co/ajax/santiagopedraza01@gmail.com" method="POST" enctype="multipart/form-data" novalidate>
+      <!-- ═══ ENVÍO DEL FORMULARIO — las solicitudes van a una aplicación web de Google Apps Script
+           en santiagopedraza01@gmail.com (_tools/forms-apps-script.gs, ver SANTIAGO-README.md):
+           se envían por correo a Santiago, los archivos se guardan en Google Drive y cada
+           solicitud queda registrada en una hoja de Google. Los campos de un .group oculto
+           se desactivan, de modo que solo se envían los datos del servicio elegido. -->
+      <form id="docket" class="fields" action="https://script.google.com/macros/s/AKfycbwzGFO8Jw9XlznfaGPDihN784U9JyrNGZq9HHhdiTKF1wD74J8fa7vyZVBhJ5JsFfK95Q/exec" method="POST" novalidate>
         <div class="docket__head f--wide">
           <h3 class="h3">Solicita una cotización</h3>
           <p>Sin compromiso. La mayoría de las cotizaciones se responden en pocas horas laborables.</p>
@@ -1709,7 +1709,7 @@
         <div class="deposit" id="deposit">
           <div class="deposit__rule" aria-hidden="true"></div>
           <b>Adjuntar archivos</b>
-          <span>Arrastra aquí los archivos o selecciónalos — PDF, JPG, PNG, DOCX, audio o vídeo, hasta 10&nbsp;MB en total</span>
+          <span>Arrastra aquí los archivos o selecciónalos — PDF, JPG, PNG, DOCX, audio o vídeo, hasta 20&nbsp;MB en total</span>
           <input type="file" id="files" name="attachment" multiple accept=".pdf,.jpg,.jpeg,.png,.heic,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.srt,.mp3,.wav,.m4a,.mp4,.mov" aria-label="Adjuntar archivos">
         </div>
         <div class="manifest" id="manifest" aria-live="polite"></div>
@@ -1729,8 +1729,6 @@
 
         <!-- trampa antispam — mantener oculta -->
         <input type="hidden" name="_subject" value="Nueva solicitud de cotización — sptranslationservices.com">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;opacity:0">
 
         <div class="submit-zone">
@@ -1758,7 +1756,7 @@
 
     <div>
       <!-- ═══ LEAVE A REVIEW — each review is emailed to santiagopedraza01@gmail.com via
-           FormSubmit. Nothing is published automatically: add approved reviews to the
+           the Google form endpoint. Nothing is published automatically: add approved reviews to the
            testimonials above. ═══ -->
       <div class="review rise" id="review">
         <div class="review__intro">
@@ -1767,7 +1765,7 @@
           <button type="button" class="btn btn--ink" id="reviewOpen" aria-expanded="false" aria-controls="reviewForm">Dejar una opinión<span class="btn__arrow" aria-hidden="true"></span></button>
         </div>
 
-        <form id="reviewForm" class="fields review__form" action="https://formsubmit.co/ajax/santiagopedraza01@gmail.com" method="POST" novalidate hidden>
+        <form id="reviewForm" class="fields review__form" action="https://script.google.com/macros/s/AKfycbwzGFO8Jw9XlznfaGPDihN784U9JyrNGZq9HHhdiTKF1wD74J8fa7vyZVBhJ5JsFfK95Q/exec" method="POST" novalidate hidden>
           <div class="f">
             <label for="rvName">Nombre <span class="star" aria-hidden="true">*</span></label>
             <input type="text" id="rvName" name="name" autocomplete="name" placeholder="p. ej. Lucía Martínez" required>
@@ -1808,8 +1806,6 @@
           </label>
           <span class="alert" id="rvConsentAlert" style="grid-column:1/-1">Confirma que aceptas la publicación.</span>
           <input type="hidden" name="_subject" value="Nueva opinión de cliente — sptranslationservices.com">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:0;height:0;opacity:0">
           <div id="rvNotice" class="f--wide" aria-live="polite"></div>
           <div class="submit-zone">
