@@ -444,6 +444,17 @@
     }).observe(hv);
   }
 
+  /* ── Language fields: a datalist only suggests options matching what is already typed, so on
+        click/focus the field is cleared to show the whole list, and the old value returns on blur
+        if nothing was chosen. ── */
+  $$('input[list="languages"]').forEach(function(el){
+    var kept='';
+    function open(){ if(el.value){ kept=el.value; el.placeholder=kept; el.value=''; } }
+    el.addEventListener('focus',open);
+    el.addEventListener('mousedown',function(){ if(document.activeElement===el) open(); });
+    el.addEventListener('blur',function(){ if(!el.value.trim()&&kept){ el.value=kept; } kept=''; });
+  });
+
   /* ── Filter chips (blog): <div data-filter-group> buttons with data-filter, items with data-cat ── */
   $$('[data-filter-group]').forEach(function(g){
     var list=g.parentNode.querySelector('[data-filter-list]'); if(!list) return;
