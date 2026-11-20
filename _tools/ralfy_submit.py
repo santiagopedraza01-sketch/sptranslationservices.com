@@ -17,6 +17,7 @@ import json, os, re, subprocess, sys, time, urllib.request, urllib.error
 API = 'https://api.ralfyindex.com'
 BASE = 'https://sptranslationservices.com'
 SKIP = {'testimonials-admin.html'}
+UA = 'Mozilla/5.0 (compatible; sptranslationservices-deploy/1.0; +https://sptranslationservices.com)'   # the API's firewall rejects default Python user agents
 
 def page_file(path):
     return (path.endswith('.html') and '/' not in path and path not in SKIP) or re.fullmatch(r'blog/(.+/)?index\.html', path)
@@ -58,7 +59,7 @@ def live(u, tries=6):
     return False
 
 def call(endpoint, body):
-    req = urllib.request.Request(API + endpoint, data=json.dumps(body).encode(), headers={'Content-Type': 'application/json'}, method='POST')
+    req = urllib.request.Request(API + endpoint, data=json.dumps(body).encode(), headers={'Content-Type': 'application/json', 'User-Agent': UA}, method='POST')
     try:
         with urllib.request.urlopen(req, timeout=60) as r: return json.load(r)
     except urllib.error.HTTPError as e:
