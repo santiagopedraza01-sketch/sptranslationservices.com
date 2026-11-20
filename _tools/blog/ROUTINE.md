@@ -27,7 +27,11 @@ article that targets real search demand and leads readers to our services.
 4. Verify every fact (fees, dates, requirements) against official or primary sources; hedge anything
    unconfirmed. Never invent facts, statistics, quotes, clients or testimonials.
 5. Write `_tools/blog/posts/<slug>.json` (English; add "es" when the audience is Spanish-speaking),
-   then run:
+   then generate the hero image (Higgsfield; needs HF_KEY in the environment) with a concrete,
+   on-topic scene: `python3 _tools/gen_image.py <slug> "<scene description>"` (no text, logos,
+   flags, readable stamps or faces; the house style is added automatically). Open the image file
+   and check it looks right before continuing; regenerate once with a better prompt if not, and
+   if image generation fails, publish without an image rather than block the article. Then run:
    `python3 _tools/build_post.py <slug> && python3 _tools/build_blog.py && python3 _tools/build_search_index.py`
 6. Checks — all must pass before publishing:
    - `grep -ri "identit" blog/` and `grep -ri "certificate of accuracy\|certificado de exactitud" blog/` find nothing

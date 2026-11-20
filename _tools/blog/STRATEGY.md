@@ -39,6 +39,9 @@ jump the queue: publish within the run, factual and calm, with the deadline in t
   MFHEA/MQRIC, Jobsplus, Skills Pass, EU portals, embassy sites, reputable press for news).
   Hedge anything not confirmed ("at the time of writing", "check with the receiving institution").
   Never invent fees, dates, deadlines, statistics, quotes or case studies. List the sources checked.
+- Hero image: generated per article with `_tools/gen_image.py` (Higgsfield, Recraft V4.1 Pro) — a
+  realistic, on-topic scene in the site's navy/brass palette, never text, flags, logos, readable
+  official stamps or recognisable people.
 - Structure: key-facts box → sections with descriptive H2s (each with an id) → practical checklist or
   table → FAQ (4–6 real questions) → sources → related links. Internal links: the money page, 2+
   related posts/pages. One clear CTA (built into the template).
