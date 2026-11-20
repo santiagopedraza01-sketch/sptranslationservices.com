@@ -9,7 +9,7 @@ _tools/blog/posts/<slug>.json ("hero_image"), so build_post.py shows it faded be
 Credentials are never stored in the repo:
 - Higgsfield (https://higgsfield.ai, model Recraft V4.1 Pro, 2K, 16:9): a key ID + secret from
   console.higgsfield.ai. Read from HF_KEY ("KEY_ID:KEY_SECRET"), or HF_API_KEY_ID + HF_API_KEY_SECRET,
-  or on this Mac from the keychain: service "higgsfield.io", accounts "api-key-id" and "api-key".
+  or on this Mac from the keychain: service "higgsfield.io", accounts "key-id" and "api-key".
   Model override: HF_IMAGE_MODEL (an endpoint id such as "higgsfield-ai/soul/cinema").
 - Gemini: GEMINI_API_KEY, or ~/.config/sp-translations/gemini-key. Needs billing on the key's project.
 
@@ -46,7 +46,7 @@ PALETTE = [[17, 29, 44], [27, 42, 62], [142, 114, 67], [196, 172, 128], [245, 24
 def hf_auth():
     combo = os.environ.get('HF_KEY', '')
     kid, sec = (combo.split(':', 1) + [''])[:2] if combo else (os.environ.get('HF_API_KEY_ID', ''), os.environ.get('HF_API_KEY_SECRET', ''))
-    kid = kid or keychain('higgsfield.io', 'api-key-id'); sec = sec or keychain('higgsfield.io', 'api-key')
+    kid = kid or keychain('higgsfield.io', 'key-id') or keychain('higgsfield.io', 'api-key-id'); sec = sec or keychain('higgsfield.io', 'api-key')
     if not (kid and sec): sys.exit('Higgsfield needs a key ID and secret: set HF_KEY="ID:SECRET" or add both to the keychain (see the docstring).')
     return {'Authorization': f'Key {kid}:{sec}'}
 
