@@ -73,7 +73,7 @@ jump the queue: publish within the run, factual and calm, with the deadline in t
 3. Pick the top-scoring topic not yet covered (check `published.md` to avoid cannibalising).
 4. Verify every fact against primary sources. If a key fact can't be verified, choose another topic.
 5. Write `_tools/blog/posts/<slug>.json` (see `_tools/build_post.py` for the format), then run:
-   `python3 _tools/build_post.py <slug> && python3 _tools/build_blog.py && python3 _tools/build_search_index.py`
+   `python3 _tools/build_post.py <slug> && python3 _tools/build_blog.py && python3 _tools/apply_heroes.py && python3 _tools/build_search_index.py`
 6. Check: valid JSON-LD, no broken internal links, no "Identità", no "certificate of accuracy".
 7. Commit "Blog: <title>", rebuild the sitemap (`python3 _tools/build_sitemap.py`), commit
    "Sitemap: refresh last-modified times", then `git push origin main && git push origin main:staging`.

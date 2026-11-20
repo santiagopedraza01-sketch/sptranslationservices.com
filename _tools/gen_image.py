@@ -93,16 +93,16 @@ def gemini(prompt):
             if d: return base64.b64decode(d['data']), model
     sys.exit('Gemini returned no image.')
 
-def save(raw, slug):
+def save(raw, slug, outdir='img/blog'):
     from PIL import Image
     im = Image.open(io.BytesIO(raw)).convert('RGB')
     w, h = im.size; target = 16 / 9
     if w / h > target: nw = int(h * target); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
     elif w / h < target: nh = int(w / target); im = im.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
-    os.makedirs('img/blog', exist_ok=True)
-    im.resize((2000, 1125), Image.LANCZOS).save(f'img/blog/{slug}.jpg', quality=74, optimize=True, progressive=True)
-    im.resize((1000, 562), Image.LANCZOS).save(f'img/blog/{slug}-sm.jpg', quality=72, optimize=True, progressive=True)
-    return f'img/blog/{slug}.jpg'
+    os.makedirs(outdir, exist_ok=True)
+    im.resize((2000, 1125), Image.LANCZOS).save(f'{outdir}/{slug}.jpg', quality=74, optimize=True, progressive=True)
+    im.resize((1000, 562), Image.LANCZOS).save(f'{outdir}/{slug}-sm.jpg', quality=72, optimize=True, progressive=True)
+    return f'{outdir}/{slug}.jpg'
 
 if __name__ == '__main__':
     args = [a for a in sys.argv[1:] if not a.startswith('--')]

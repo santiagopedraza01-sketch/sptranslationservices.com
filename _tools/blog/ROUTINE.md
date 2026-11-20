@@ -32,7 +32,7 @@ article that targets real search demand and leads readers to our services.
    flags, readable stamps or faces; the house style is added automatically). Open the image file
    and check it looks right before continuing; regenerate once with a better prompt if not, and
    if image generation fails, publish without an image rather than block the article. Then run:
-   `python3 _tools/build_post.py <slug> && python3 _tools/build_blog.py && python3 _tools/build_search_index.py`
+   `python3 _tools/build_post.py <slug> && python3 _tools/build_blog.py && python3 _tools/apply_heroes.py && python3 _tools/build_search_index.py`
 6. Checks — all must pass before publishing:
    - `grep -ri "identit" blog/` and `grep -ri "certificate of accuracy\|certificado de exactitud" blog/` find nothing
    - every JSON-LD block in the new page parses; title ≤ 60 chars before " | SP Translations";

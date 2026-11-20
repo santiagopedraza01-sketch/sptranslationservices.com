@@ -411,3 +411,13 @@ Ralfy's instant mode (faster, uses more credits).
 **Submit everything or a list by hand:** GitHub → **Actions → Submit pages to Ralfy Index → Run
 workflow**, mode `all` (every sitemap URL) or `urls` (paste URLs). Each run's log lists what was
 submitted and the credits left.
+
+
+## Hero images
+
+Every page except the home pages has a faint photo behind its headline. The images are generated
+with Higgsfield (Recraft V4.1 Pro) from the scene descriptions in `_tools/heroes.json`, and blog posts
+get their own image when they are written (`_tools/gen_image.py`). To change one, edit its prompt,
+delete `img/hero/<name>.jpg` and `-sm.jpg`, then run `python3 _tools/apply_heroes.py --generate`.
+After rebuilding pages with the language, service or blog generators, run
+`python3 _tools/apply_heroes.py` to put the images back (it makes no API calls).

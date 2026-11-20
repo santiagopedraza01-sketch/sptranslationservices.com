@@ -1424,3 +1424,7 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 .sources li{padding:10px 0;border-bottom:1px solid var(--rule);font-size:.9rem}
 .sources a{color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--brass)}
 @media (max-width:900px){ .toc{position:static} }
+
+/* Interior heroes with a faint generated image (_tools/apply_heroes.py) — layout unchanged */
+.pagehead--bg::before{z-index:1}
+.pagehead--bg .pagehead__inner{z-index:2}
