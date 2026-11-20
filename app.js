@@ -457,7 +457,7 @@
 
   /* ── Filter chips (blog): <div data-filter-group> buttons with data-filter, items with data-cat ── */
   $$('[data-filter-group]').forEach(function(g){
-    var list=g.parentNode.querySelector('[data-filter-list]'); if(!list) return;
+    var list=(g.closest('section')||g.parentNode).querySelector('[data-filter-list]'); if(!list) return;
     g.addEventListener('click',function(e){
       var b=e.target.closest('[data-filter]'); if(!b) return;
       var f=b.getAttribute('data-filter');

@@ -55,7 +55,10 @@ def posts(lang):
         mod = (re.search(r'"dateModified": "([^"]+)"', s) or [None, pub])[1][:10]
         sec = re.search(r'"articleSection": "([^"]+)"', s)     # posts built by build_post.py name their category
         cat = sec.group(1) if sec else next((c for k, c in CATEGORIES[lang] if k in url), CATEGORIES[lang][-1][1])
-        out.append(dict(url=url, path=url.replace(BASE, ''), title=text(re.search(r'<h1[^>]*>(.*?)</h1>', main, re.S).group(1)),
+        en_alt = re.search(r'<link rel="alternate" hreflang="en" href="([^"]+)"', s)
+        key = (en_alt.group(1) if en_alt else url).rstrip('/').rsplit('/', 1)[-1]
+        card = f'img/blog/cards/{key}.jpg' if os.path.exists(f'img/blog/cards/{key}.jpg') else None
+        out.append(dict(card=card, url=url, path=url.replace(BASE, ''), title=text(re.search(r'<h1[^>]*>(.*?)</h1>', main, re.S).group(1)),
                         desc=html.unescape(re.search(r'<meta name="description" content="([^"]*)"', s).group(1)),
                         pub=pub, mod=mod, cat=cat, mins=max(2, round(len(text(main).split()) / 220))))
     # newest first; posts published the same day keep the order of ORDER (same in both languages)
@@ -93,14 +96,15 @@ def build(lang):
     slug = lambda c: re.sub(r'[^a-z]+', '-', c.lower().replace('ó', 'o').replace('í', 'i')).strip('-')
 
     def card(p, big=False):
-        return (f'<article class="post{" post--featured" if big else ""}" data-cat="{slug(p["cat"])}">'
-                f'<a href="{p["path"]}">'
-                + (f'<span class="post__flag">{t["featured"]}</span>' if big else '') +
-                f'<span class="post__meta"><span class="post__cat">{html.escape(p["cat"])}</span>'
-                f'<time datetime="{p["pub"]}">{t["date"](p["pub"], M)}</time><span>{p["mins"]} {t["min"]}</span></span>'
-                f'<b class="post__title">{html.escape(p["title"])}</b>'
-                f'<span class="post__desc">{html.escape(p["desc"])}</span>'
-                f'<em class="post__more">{t["read"]}<span class="btn__arrow" aria-hidden="true"></span></em></a></article>')
+        img = (f'<img src="/{p["card"].replace(".jpg", "-sm.jpg")}" srcset="/{p["card"].replace(".jpg", "-sm.jpg")} 600w, /{p["card"]} 1200w" '
+               f'sizes="(max-width:760px) 100vw, (max-width:1100px) 50vw, 33vw" alt="" width="1200" height="800" loading="lazy">') if p.get('card') else ''
+        return (f'<article class="bcard" data-cat="{slug(p["cat"])}"><a href="{p["path"]}">'
+                f'<span class="bcard__media">{img}<span class="bcard__cat">{html.escape(p["cat"])}</span></span>'
+                f'<span class="bcard__body"><time datetime="{p["pub"]}">{t["date"](p["pub"], M)}</time>'
+                f'<b class="bcard__title">{html.escape(p["title"])}</b>'
+                f'<span class="bcard__desc">{html.escape(p["desc"])}</span></span>'
+                f'<span class="bcard__foot"><span class="bcard__by"><img src="/santiago.jpg" alt="" width="28" height="28" loading="lazy">Santiago Pedraza Castillo</span>'
+                f'<span>{p["mins"]} {t["min"]}</span></span></a></article>')
 
     chips = ''.join([f'<button type="button" class="chip on" data-filter="all" aria-pressed="true">{t["all"]}</button>'] +
                     [f'<button type="button" class="chip" data-filter="{slug(c)}" aria-pressed="false">{html.escape(c)}</button>' for c in cats])
@@ -156,18 +160,14 @@ def build(lang):
   </div>
 </section>
 
-<section class="section section--bone" id="articles">
-  <div class="shell spread">
-    <div class="spread__index rise">
+<section class="section section--bone blogroll" id="articles">
+  <div class="shell">
+    <div class="blogroll__head rise">
       <span class="mark">{t['mark']}</span>
-      <p>{t['side']}</p>
+      <div class="chips" role="group" aria-label="{t['all']}" data-filter-group>{chips}</div>
     </div>
-    <div>
-      <div class="chips rise" role="group" aria-label="{t['all']}" data-filter-group>{chips}</div>
-      <div class="posts rise" data-filter-list>
-        {card(P[0], True)}
-        {''.join(card(p) for p in P[1:])}
-      </div>
+    <div class="bcards rise" data-filter-list>
+      {''.join(card(p) for p in P)}
     </div>
   </div>
 </section>

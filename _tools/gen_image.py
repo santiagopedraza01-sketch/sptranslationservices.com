@@ -3,6 +3,8 @@
 Run from the site root:
   python3 _tools/gen_image.py <slug> "<prompt>"            (Higgsfield, default)
   python3 _tools/gen_image.py <slug> "<prompt>" --gemini   (Google Gemini instead)
+  python3 _tools/gen_image.py <slug> "<prompt>" --card     (bright 3:2 blog-card thumbnail → img/blog/cards/<slug>.jpg;
+                                                             use the English slug — the Spanish version shares it)
 Saves img/blog/<slug>.jpg (2000×1125) and img/blog/<slug>-sm.jpg (1000×562), and records the image in
 _tools/blog/posts/<slug>.json ("hero_image"), so build_post.py shows it faded behind the headline.
 
@@ -23,6 +25,10 @@ STYLE = ('Editorial photograph for the hero of a professional translation agency
          'wide 16:9 composition with quieter empty space on the left for a headline. '
          'No text, no lettering, no logos, no flags, no official seals or stamps that could be read, '
          'no recognisable real people or faces. Subject: ')
+CARD_STYLE = ('Bright, premium editorial photograph used as a blog article thumbnail for a high-end translation agency. '
+              'Warm natural daylight, shallow depth of field, clean and uncluttered, cohesive palette of warm wood, cream paper, '
+              'deep navy and brushed brass accents, subject centred. No text or lettering, no logos, no flags, no readable stamps, '
+              'no recognisable people or faces. Subject: ')
 UA = 'Mozilla/5.0 (compatible; sptranslationservices-images/1.0)'
 
 def http(url, body=None, headers=None, method=None, timeout=120):
@@ -50,9 +56,9 @@ def hf_auth():
     if not (kid and sec): sys.exit('Higgsfield needs a key ID and secret: set HF_KEY="ID:SECRET" or add both to the keychain (see the docstring).')
     return {'Authorization': f'Key {kid}:{sec}'}
 
-def higgsfield(prompt):
+def higgsfield(prompt, card=False):
     auth = hf_auth()
-    body = {'prompt': STYLE + prompt, 'aspect_ratio': '16:9'}
+    body = {'prompt': (CARD_STYLE if card else STYLE) + prompt, 'aspect_ratio': '3:2' if card else '16:9'}
     if 'recraft' in HF_MODEL: body.update(resolution='2k', output_format='jpg', colors=[{'rgb': c} for c in PALETTE])
     else: body.update(resolution='1080p', batch_size=1)
     try:
@@ -93,6 +99,17 @@ def gemini(prompt):
             if d: return base64.b64decode(d['data']), model
     sys.exit('Gemini returned no image.')
 
+def save_card(raw, key):
+    from PIL import Image
+    im = Image.open(io.BytesIO(raw)).convert('RGB')
+    w, h = im.size; t = 1.5
+    if w / h > t: nw = int(h * t); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
+    elif w / h < t: nh = int(w / t); im = im.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
+    os.makedirs('img/blog/cards', exist_ok=True)
+    im.resize((1200, 800), Image.LANCZOS).save(f'img/blog/cards/{key}.jpg', quality=78, optimize=True, progressive=True)
+    im.resize((600, 400), Image.LANCZOS).save(f'img/blog/cards/{key}-sm.jpg', quality=76, optimize=True, progressive=True)
+    return f'img/blog/cards/{key}.jpg'
+
 def save(raw, slug, outdir='img/blog'):
     from PIL import Image
     im = Image.open(io.BytesIO(raw)).convert('RGB')
@@ -108,6 +125,9 @@ if __name__ == '__main__':
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     if len(args) < 2: sys.exit(__doc__)
     slug, prompt = args[0], args[1]
+    if '--card' in sys.argv:   # blog card thumbnail: img/blog/cards/<english-slug>.jpg, used by build_blog.py
+        raw, model = higgsfield(prompt, card=True)
+        print(save_card(raw, slug), 'from', model); sys.exit(0)
     raw, model = (gemini if '--gemini' in sys.argv else higgsfield)(prompt)
     path = save(raw, slug)
     src = f'_tools/blog/posts/{slug}.json'
