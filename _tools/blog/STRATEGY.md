@@ -59,7 +59,7 @@ jump the queue: publish within the run, factual and calm, with the deadline in t
   "issued, signed, dated and stamped by a professional, accredited translator".
 - We are a generic agency for all languages (14 core languages + 120 via network). Do not position
   as Spanish-first. Santiago's own pair (Spanish ⇄ English) may appear in his bio only.
-- Prices: certified civil documents from €30/page; academic & legal from €0.1/word; priority +30%.
+- Prices: certified civil documents from €25/page; academic & legal from €0.1/word; priority +30%.
 - Do not claim certifications (ISO etc.), years of experience, client names or statistics we have not
   been given. No fake testimonials.
 - British English for EN; neutral Spanish (tú) for ES, consistent with the site.
