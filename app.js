@@ -425,6 +425,25 @@
     });
   });
 
+  /* ── Home hero video: only on wide screens, without reduced motion or data saving; paused off screen ── */
+  var hv=$('.hero__video');
+  if(hv&&window.matchMedia){
+    var wide=matchMedia('(min-width:901px)'), still=matchMedia('(prefers-reduced-motion: reduce)'),
+        saver=navigator.connection&&navigator.connection.saveData;
+    function startHero(){
+      if(hv.getAttribute('src')||!wide.matches||still.matches||saver) return;
+      hv.src=innerWidth>=1100?hv.getAttribute('data-src'):hv.getAttribute('data-src-small');
+      hv.addEventListener('playing',function(){ hv.classList.add('on'); },{once:true});
+      var p=hv.play(); if(p&&p.catch) p.catch(function(){});
+    }
+    if(document.readyState==='complete') startHero(); else addEventListener('load',startHero);
+    if(wide.addEventListener) wide.addEventListener('change',startHero);
+    if('IntersectionObserver' in window) new IntersectionObserver(function(en){
+      if(!hv.getAttribute('src')) return;
+      if(en[0].isIntersecting){ var p=hv.play(); if(p&&p.catch) p.catch(function(){}); } else hv.pause();
+    }).observe(hv);
+  }
+
   /* ── Filter chips (blog): <div data-filter-group> buttons with data-filter, items with data-cat ── */
   $$('[data-filter-group]').forEach(function(g){
     var list=g.parentNode.querySelector('[data-filter-list]'); if(!list) return;

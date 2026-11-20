@@ -41,7 +41,7 @@
 <meta property="og:title" content="SP Translations — Servicios de traducción certificada en Malta">
 <meta property="og:description" content="Servicios de traducción certificada en Malta de una agencia de traducción reconocida por MFEA: documentos oficiales, legales, académicos y de empresa en más de 120 idiomas, como inglés, español, italiano, francés, alemán y maltés. Solicitud y entrega online.">
 <meta property="og:url" content="https://sptranslationservices.com/es">
-<meta property="og:image" content="https://sptranslationservices.com/img/og-image.jpg">
+<meta property="og:image" content="https://sptranslationservices.com/img/og-home-es.jpg">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#111D2C">
@@ -670,7 +670,7 @@
 }
 </script>
 
-<link rel="stylesheet" href="styles.css?v=20261120b">
+<link rel="stylesheet" href="styles.css?v=20261120c">
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
@@ -730,53 +730,38 @@
 <main id="main">
 
 <!-- ═══════════ PORTADA ═══════════ -->
-<section class="hero" id="top">
-  <!-- Perfil de La Valeta — licencia Unsplash (Nick Fewings). Sustitúyalo libremente: 2000 × 1125, menos de 400 KB. -->
-  <img class="hero__bg" src="img/hero-valletta.jpg" alt="" width="2000" height="1125" fetchpriority="high">
+<section class="hero hero--v2" id="top">
+  <!-- Portada — imagen generada con Higgsfield (Recraft V4.1 Pro) y un bucle de 8 segundos (Seedance 2.0), ver _tools/gen_video.py. El vídeo solo se carga en pantallas anchas sin movimiento reducido ni ahorro de datos (app.js); el resto ve la imagen. -->
+  <img class="hero__bg" src="img/hero/home-a.jpg" srcset="img/hero/home-a-sm.jpg 1000w, img/hero/home-a.jpg 2000w" sizes="100vw" alt="" width="2000" height="1125" fetchpriority="high">
+  <video class="hero__video" muted loop playsinline preload="none" aria-hidden="true" data-src="img/hero/home-loop.mp4" data-src-small="img/hero/home-loop-720.mp4"></video>
   <div class="hero__shade" aria-hidden="true"></div>
 
   <div class="shell hero__grid">
-    <div>
-      <p class="mark hero__mark">Agencia de traducción en Malta · Traducciones certificadas · Más de 120 idiomas</p>
-
+    <div class="hero__copy">
+      <p class="mark hero__mark">Agencia de traducción en Malta · Traducciones certificadas</p>
       <h1 class="display">Servicios de <span class="accent">traducción certificada</span> en Malta</h1>
-
-      <p class="hero__langs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M2.8 12h18.4M12 2.8c2.6 2.6 3.9 5.6 3.9 9.2s-1.3 6.6-3.9 9.2c-2.6-2.6-3.9-5.6-3.9-9.2S9.4 5.4 12 2.8z"/></svg><span><b>Más de 120 idiomas</b><span>Incluidos italiano, francés, alemán, portugués, maltés y más. <a href="#language-list">Ver idiomas</a></span></span></p>
-
-      <div class="divider" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l1.7 8.3L20.5 3.5l-4.8 6.8L24 12l-8.3 1.7 4.8 6.8-6.8-4.8L12 24l-1.7-8.3-6.8 4.8 4.8-6.8L0 12l8.3-1.7L3.5 3.5l6.8 4.8z"/></svg></div>
-
-      <p class="lede hero__lede">Servicios de traducción profesional para documentos oficiales, jurídicos, académicos y profesionales, con solicitud y entrega online.</p>
-      <p class="hero__creds">Traductor reconocido por MFEA</p>
-
+      <p class="lede hero__lede">Documentos oficiales, jurídicos, académicos y de empresa traducidos por profesionales acreditados: firmados, fechados, sellados y listos para presentar. Pide online y recibe una cotización fija en pocas horas.</p>
       <div class="hero__cta">
-        <a class="btn btn--gold" href="#quote">Solicitar una cotización<span class="btn__arrow" aria-hidden="true"></span></a>
-        <a class="btn btn--line-light" href="#services">Ver servicios</a>
+        <a class="btn btn--gold" href="#quote">Cotización gratis<span class="btn__arrow" aria-hidden="true"></span></a>
+        <a class="btn btn--line-light btn--wa" href="https://wa.me/35679066398?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20para%20una%20traducci%C3%B3n." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.25-.13-1.47-.73-1.7-.81-.23-.09-.4-.13-.56.12-.17.25-.64.8-.79.97-.14.17-.29.19-.54.06a6.7 6.7 0 0 1-3.35-2.93c-.25-.43.25-.4.72-1.33.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.41-.56-.42h-.47a.9.9 0 0 0-.66.31c-.22.25-.86.85-.86 2.06s.89 2.39 1.01 2.56c.13.16 1.75 2.67 4.24 3.74 1.58.68 2.2.74 2.99.62.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.11-.23-.17-.48-.3Z"/></svg>Escríbenos por WhatsApp</a>
       </div>
-
-      <dl class="record">
-        <div class="record__cell"><dt>Traducciones certificadas</dt><dd>Para trámites oficiales y uso profesional</dd></div>
-        <div class="record__cell"><dt>14 idiomas principales</dt><dd>Inglés, español, italiano, francés, alemán y más</dd></div>
-        <div class="record__cell"><dt>Más de 120 idiomas</dt><dd>A través de nuestra red profesional de traductores</dd></div>
-        <div class="record__cell"><dt>24–48 horas</dt><dd>Servicio urgente disponible según el proyecto</dd></div>
-      </dl>
+      <ul class="proof" aria-label="Por qué nos eligen"><li><a href="https://www.google.com/maps/place/SP+Translations+services+(traducci%C3%B3n+oficial)/@35.8998782,14.3838353,12z/data=!4m12!1m2!2m1!1stranslation+service!3m8!1s0x130e4fae000b0c03:0x52430e3581f8e42e!8m2!3d35.9557382!4d14.4220846!9m1!1b1!15sChN0cmFuc2xhdGlvbiBzZXJ2aWNlkgEKdHJhbnNsYXRvcuABAA!16s%2Fg%2F11nw7b4r68" target="_blank" rel="noopener"><span class="proof__stars" aria-hidden="true">★★★★★</span><b>5,0</b> en Google</a></li><li><b>Desde 30 €</b> por página</li><li>Entrega en <b>24–48 h</b></li><li><a href="#language-list"><b>+120</b> idiomas</a></li></ul>
     </div>
 
-    <!-- Retrato del director. Para sustituirlo: 900 × 1125 (4:5), por debajo de 200 KB,
-         guardado junto a este archivo. El diseño lo pasa a blanco y negro automáticamente. -->
-    <figure class="portrait">
-      <div class="portrait__frame">
-        <img src="santiago.jpg"
-             alt="Santiago Pedraza Castillo, director y traductor reconocido por MFEA"
-             width="900" height="1125">
+    <aside class="qcard">
+      <p class="qcard__h">Tu cotización fija, en pocas horas</p>
+      <ol class="qcard__steps"><li><b>Envía un escaneo o una foto</b><span>Formulario online, email o WhatsApp</span></li><li><b>Recibe una cotización fija</b><span>Normalmente en pocas horas laborables, sin compromiso</span></li><li><b>Recibe tu traducción</b><span>Firmada, fechada y sellada, en 24–48 horas</span></li></ol>
+      <a class="btn btn--gold btn--wide" href="#quote">Empezar mi cotización<span class="btn__arrow" aria-hidden="true"></span></a>
+      <div class="qcard__who">
+        <img src="santiago.jpg" alt="Santiago Pedraza Castillo, director y traductor reconocido por MFEA" width="900" height="1125">
+        <div>
+          <b>Santiago Pedraza Castillo</b>
+          <span>Director · Traductor reconocido por MFEA</span>
+          <span>Máster en Traducción y Terminología · Universidad de Malta</span>
+          <span class="qcard__links"><a href="/traductores">Conoce a nuestros traductores</a><a class="qcard__li" href="https://www.linkedin.com/in/santiago-pedraza-castillo-633403186/" target="_blank" rel="noopener me" aria-label="Santiago Pedraza Castillo en LinkedIn (se abre en una pestaña nueva)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.66 4.8 6.13V21h-4v-5c0-1.2-.02-2.73-1.66-2.73-1.67 0-1.92 1.3-1.92 2.64V21h-4V9.75Z"/></svg></a></span>
+        </div>
       </div>
-      <figcaption>
-        <b>Santiago Pedraza Castillo</b>
-        <span>Director · Traductor reconocido por MFEA</span>
-        <span>Máster en Traducción y Terminología · Universidad de Malta</span>
-        <a class="link portrait__link" href="/traductores">Conoce a nuestros traductores<span class="btn__arrow" aria-hidden="true"></span></a>
-        <a class="li-link li-link--dark" href="https://www.linkedin.com/in/santiago-pedraza-castillo-633403186/" target="_blank" rel="noopener me" aria-label="Santiago Pedraza Castillo en LinkedIn (se abre en una pestaña nueva)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.66 4.8 6.13V21h-4v-5c0-1.2-.02-2.73-1.66-2.73-1.67 0-1.92 1.3-1.92 2.64V21h-4V9.75Z"/></svg><span>Perfil de LinkedIn</span></a>
-      </figcaption>
-    </figure>
+    </aside>
   </div>
 </section>
 
@@ -1013,11 +998,10 @@
         <p class="langs__foot">Y <strong>más de 120 idiomas</strong> a través de nuestra red profesional de traductores. Consúltanos por cualquier combinación de idiomas. <a href="/idiomas">Ver todos nuestros idiomas →</a></p>
       </div>
 
-      <!-- Service images — licencia Unsplash (Lewis Keegan, Mark Cruz, Štefan Štefančík,
-           Vitaly Gariev, redcharlie, Eugene Chystiakov). Sustitúyalas por las suyas a 960 × 640. -->
+      <!-- Imágenes de servicios — generadas con Higgsfield (Recraft V4.1 Pro), 1440 × 960 mostradas a 960 × 640. -->
       <div class="svc-grid">
         <article class="svc rise">
-          <figure class="svc__img"><img src="img/service-certified.jpg" alt="Documento firmado con un sello oficial" width="960" height="640" loading="lazy"></figure>
+          <figure class="svc__img"><img src="img/service-certified.jpg" alt="Un certificado oficial y su traducción junto a un sello de latón" width="960" height="640" loading="lazy"></figure>
           <div class="svc__body">
             <span class="mark svc__num">01</span>
             <h3 class="h3">Traducción certificada y oficial</h3>
@@ -1033,7 +1017,7 @@
         </article>
 
         <article class="svc rise">
-          <figure class="svc__img"><img src="img/service-audiovisual.jpg" alt="Editor con auriculares trabajando en una línea de tiempo de vídeo" width="960" height="640" loading="lazy"></figure>
+          <figure class="svc__img"><img src="img/service-audiovisual.jpg" alt="Un puesto de subtitulado con auriculares y micrófono" width="960" height="640" loading="lazy"></figure>
           <div class="svc__body">
             <span class="mark svc__num">02</span>
             <h3 class="h3">Traducción audiovisual</h3>
@@ -1048,7 +1032,7 @@
         </article>
 
         <article class="svc rise">
-          <figure class="svc__img"><img src="img/service-localisation.jpg" alt="Manos escribiendo en un portátil con una página web" width="960" height="640" loading="lazy"></figure>
+          <figure class="svc__img"><img src="img/service-localisation.jpg" alt="Un portátil y un móvil con una web multilingüe" width="960" height="640" loading="lazy"></figure>
           <div class="svc__body">
             <span class="mark svc__num">03</span>
             <h3 class="h3">Traducción de páginas web y localización</h3>
@@ -1065,7 +1049,7 @@
         </article>
 
         <article class="svc rise">
-          <figure class="svc__img"><img src="img/service-interpreting.jpg" alt="Profesionales en una reunión de negocios" width="960" height="640" loading="lazy"></figure>
+          <figure class="svc__img"><img src="img/service-interpreting.jpg" alt="Auriculares y micrófono de intérprete frente a una sala de conferencias" width="960" height="640" loading="lazy"></figure>
           <div class="svc__body">
             <span class="mark svc__num">04</span>
             <h3 class="h3">Interpretación</h3>
@@ -1080,7 +1064,7 @@
         </article>
 
         <article class="svc rise">
-          <figure class="svc__img"><img src="img/service-museum.jpg" alt="Visitantes observando un cuadro en la sala de un museo" width="960" height="640" loading="lazy"></figure>
+          <figure class="svc__img"><img src="img/service-museum.jpg" alt="Una escultura de bronce y una cartela en la sala de un museo" width="960" height="640" loading="lazy"></figure>
           <div class="svc__body">
             <span class="mark svc__num">05</span>
             <h3 class="h3">Traducción para museos y patrimonio cultural</h3>
@@ -1097,7 +1081,7 @@
         </article>
 
         <article class="svc rise">
-          <figure class="svc__img"><img src="img/service-writing.jpg" alt="Mano escribiendo en un cuaderno con una pluma" width="960" height="640" loading="lazy"></figure>
+          <figure class="svc__img"><img src="img/service-writing.jpg" alt="Un escritorio con cuaderno, pluma y portátil" width="960" height="640" loading="lazy"></figure>
           <div class="svc__body">
             <span class="mark svc__num">06</span>
             <h3 class="h3">Redacción de contenidos</h3>
@@ -1940,7 +1924,7 @@
 </div>
 
 <script src="consent.js?v=20261018a"></script>
-<script src="app.js?v=20261120a"></script>
+<script src="app.js?v=20261120b"></script>
 <script src="search.js?v=20261018c"></script>
 </body>
 </html>
