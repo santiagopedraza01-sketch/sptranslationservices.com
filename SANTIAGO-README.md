@@ -393,3 +393,21 @@ Opening the URL in a browser shows "SP Translations form endpoint is running."
 
 Edit and save, then **Deploy → Manage deployments → pencil icon → Version: New version →
 Deploy**. That keeps the same URL; a *new deployment* would create a different one.
+
+
+## Google indexing (Ralfy Index)
+
+Every push to `main` runs the GitHub Action **Submit pages to Ralfy Index**
+(`.github/workflows/ralfy-index.yml`). It does not change how the site is published: GitHub Pages
+still deploys from the root of `main`. The Action waits for that deployment to finish, then submits
+the pages added or changed in the push (new blog posts, edited pages) to https://ralfyindex.com, which
+asks Google to index them. Redirect stubs and hidden pages are skipped; one URL uses one credit.
+
+**Set up once (repository owner):** in Ralfy Index open *Dashboard → API key* and copy the key. On
+GitHub open the repository → **Settings → Secrets and variables → Actions → New repository secret**,
+name it `RALFY_API_KEY` and paste the key. Optional: add a *variable* `RALFY_INSTANT` = `1` to use
+Ralfy's instant mode (faster, uses more credits).
+
+**Submit everything or a list by hand:** GitHub → **Actions → Submit pages to Ralfy Index → Run
+workflow**, mode `all` (every sitemap URL) or `urls` (paste URLs). Each run's log lists what was
+submitted and the credits left.

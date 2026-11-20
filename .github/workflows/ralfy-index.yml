@@ -1,0 +1,64 @@
+# Submits new and updated pages to Ralfy Index for Google indexing after each push to main.
+# This does not publish the site: GitHub Pages still deploys from the root of main as before.
+# It waits for that Pages build to finish, then runs _tools/ralfy_submit.py on the pages changed in
+# the push. Needs the repository secret RALFY_API_KEY. Optional repository variable RALFY_INSTANT=1
+# switches to Ralfy's instant mode. "Run workflow" (manual) can submit all sitemap URLs or a list.
+name: Submit pages to Ralfy Index
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "changed = pages changed in the last commit · all = every sitemap URL · urls = the list below"
+        default: changed
+        type: choice
+        options: [changed, all, urls]
+      urls:
+        description: "Space-separated URLs (mode = urls)"
+        required: false
+
+permissions:
+  contents: read
+  pages: read
+
+concurrency:
+  group: ralfy-index
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Wait for GitHub Pages to publish this commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 60); do
+            read -r status commit < <(gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" --jq '.status + " " + .commit' 2>/dev/null || echo "unknown none")
+            echo "Pages build: ${status} ${commit:0:7} (waiting for ${GITHUB_SHA:0:7})"
+            if [ "$status" = "built" ] && git merge-base --is-ancestor "$GITHUB_SHA" "$commit" 2>/dev/null; then exit 0; fi
+            if [ "$status" = "errored" ] && [ "$commit" = "$GITHUB_SHA" ]; then echo "::error::Pages build failed"; exit 1; fi
+            sleep 20
+          done
+          echo "::warning::Pages build not confirmed after 20 minutes; submitting live pages only"
+
+      - name: Submit to Ralfy Index
+        env:
+          RALFY_API_KEY: ${{ secrets.RALFY_API_KEY }}
+          RALFY_INSTANT: ${{ vars.RALFY_INSTANT }}
+          BEFORE: ${{ github.event.before }}
+          MODE: ${{ github.event.inputs.mode || 'changed' }}
+          URLS: ${{ github.event.inputs.urls }}
+        run: |
+          case "$MODE" in
+            all)  python3 _tools/ralfy_submit.py --all ;;
+            urls) python3 _tools/ralfy_submit.py --urls $URLS ;;
+            *)    python3 _tools/ralfy_submit.py --range "${BEFORE:-}" "$GITHUB_SHA" ;;
+          esac
