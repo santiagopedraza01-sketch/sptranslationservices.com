@@ -1517,3 +1517,14 @@ hr{border:0;border-top:1px solid var(--rule);margin:0}
 .colophon__social{flex-wrap:wrap;row-gap:12px}
 .fees--biz .fee__basis{display:block;min-height:2.9em}
 @media (max-width:900px){ .fees--biz .fee__basis{min-height:0} }
+
+/* Social icon buttons (footer on every page, and the home hero) */
+.social{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.social__btn{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(242,239,233,.22);color:var(--on-dark-soft);background:transparent;padding:0 !important;background-image:none !important;transition:color .25s var(--ease),border-color .25s var(--ease),background-color .25s var(--ease),transform .25s var(--ease)}
+.social__btn svg{width:18px;height:18px}
+.social__btn:hover,.social__btn:focus-visible{color:var(--ink);background-color:var(--brass-light);border-color:var(--brass-light);transform:translateY(-2px)}
+.colophon__social.social{gap:10px}
+.hero__social{margin-top:22px;gap:8px}
+.hero__social > span{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--on-dark-mute);margin-right:6px}
+.hero__social .social__btn{width:36px;height:36px;background-color:rgba(13,22,34,.35)}
+.hero__social .social__btn svg{width:16px;height:16px}
