@@ -53,7 +53,8 @@ def posts(lang):
         main = s[s.index('<main'):s.index('</main>')]
         pub = (re.search(r'"datePublished": "([^"]+)"', s) or [None, '2026-01-01'])[1][:10]
         mod = (re.search(r'"dateModified": "([^"]+)"', s) or [None, pub])[1][:10]
-        cat = next((c for k, c in CATEGORIES[lang] if k in url), CATEGORIES[lang][-1][1])
+        sec = re.search(r'"articleSection": "([^"]+)"', s)     # posts built by build_post.py name their category
+        cat = sec.group(1) if sec else next((c for k, c in CATEGORIES[lang] if k in url), CATEGORIES[lang][-1][1])
         out.append(dict(url=url, path=url.replace(BASE, ''), title=text(re.search(r'<h1[^>]*>(.*?)</h1>', main, re.S).group(1)),
                         desc=html.unescape(re.search(r'<meta name="description" content="([^"]*)"', s).group(1)),
                         pub=pub, mod=mod, cat=cat, mins=max(2, round(len(text(main).split()) / 220))))
