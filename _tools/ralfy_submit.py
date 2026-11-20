@@ -87,7 +87,7 @@ if __name__ == '__main__':
         print('::warning::RALFY_API_KEY is not set, so nothing was submitted. Add it under Settings → Secrets and variables → Actions.')
         sys.exit(0)
     sha = (os.environ.get('GITHUB_SHA') or subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True).stdout)[:7]
-    name = f'sptranslationservices.com {time.strftime("%Y-%m-%d %H:%M", time.gmtime())} {sha}'.strip()
+    name = f'sptranslations_{time.strftime("%Y%m%d_%H%M", time.gmtime())}_{sha.strip()}'   # Ralfy accepts letters, digits, _ only
     res = call('/project', {'apikey': key, 'projectName': name, 'urls': ok, 'instantIndex': 1 if instant else 0})
     print('Ralfy Index:', json.dumps({k: v for k, v in res.items() if k != 'apikey'}))
     bal = call('/balance', {'apikey': key})
