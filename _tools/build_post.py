@@ -17,7 +17,9 @@ A source file holds one post, in one or both languages:
     "body": "<p>…</p><h2 id=\"…\">…</h2>…",   # article HTML; every <h2> needs an id (used for the contents list)
     "faqs": [["Question?", "Answer (plain text or simple HTML)."], …],
     "sources": [["Label", "https://…"], …],  # official / primary sources checked for the facts
-    "related": [["/certified-translations-malta", "Title", "One-line summary"], …]
+    "related": [["/certified-translations-malta", "Title", "One-line summary"], …],
+    "hero_image": {"src": "/img/blog/<slug>.jpg", "small": "/img/blog/<slug>-sm.jpg"}   # optional;
+                   # added by _tools/gen_image.py (Gemini), shown faded behind the headline
   }
 }
 Posts are written in the site's own HTML classes: .prose (headings, lists, tables), .callout,
@@ -102,8 +104,13 @@ def build(src):
         if p.get('faqs'):
             graph.append({"@type": "FAQPage", "@id": url + '#faq', "isPartOf": {"@id": url + '#webpage'}, "mainEntity": [
                 {"@type": "Question", "name": text(q), "acceptedAnswer": {"@type": "Answer", "text": text(a)}} for q, a in p['faqs']]})
+        hero = p.get('hero_image')
+        img_abs = BASE + hero['src'] if hero else f'{BASE}/img/og-image.jpg'
+        if hero: graph[1]['image'] = {"@type": "ImageObject", "url": img_abs, "width": 2000, "height": 1125}
         ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, indent=2, ensure_ascii=False)
         esc = html.escape
+        hero_html = (f'\n  <img class="pagehead__bg" src="{hero["src"]}" srcset="{hero["small"]} 1000w, {hero["src"]} 2000w" '
+                     f'sizes="(max-width:900px) 100vw, 70vw" alt="" width="2000" height="1125" fetchpriority="high">') if hero else ''
 
         page = f'''<!DOCTYPE html>
 <html lang="{lang}">
@@ -121,7 +128,7 @@ def build(src):
 <meta property="og:title" content="{esc(p['title'])}">
 <meta property="og:description" content="{esc(p['description'])}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{BASE}/img/og-image.jpg">
+<meta property="og:image" content="{img_abs}">
 <meta property="og:locale" content="{t['locale']}">
 <meta property="article:published_time" content="{p['published']}">
 <meta property="article:modified_time" content="{p['updated']}">
@@ -137,7 +144,7 @@ def build(src):
 <link rel="stylesheet" href="/{css}">
 </head>{header}<main id="main">
 
-<section class="pagehead" id="top">
+<section class="pagehead{' pagehead--photo' if hero else ''}" id="top">{hero_html}
   <div class="shell pagehead__inner">
     <div>
       <p class="crumb"><a href="{t['home']}">{t['home_name']}</a> <span aria-hidden="true">·</span> <a href="{t['blog']}">Blog</a> <span aria-hidden="true">·</span> {esc(p['category'])}</p>
