@@ -425,6 +425,17 @@
     });
   });
 
+  /* ── Filter chips (blog): <div data-filter-group> buttons with data-filter, items with data-cat ── */
+  $$('[data-filter-group]').forEach(function(g){
+    var list=g.parentNode.querySelector('[data-filter-list]'); if(!list) return;
+    g.addEventListener('click',function(e){
+      var b=e.target.closest('[data-filter]'); if(!b) return;
+      var f=b.getAttribute('data-filter');
+      $$('[data-filter]',g).forEach(function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',String(on)); });
+      $$('[data-cat]',list).forEach(function(it){ it.hidden=f!=='all'&&it.getAttribute('data-cat')!==f; });
+    });
+  });
+
   /* ── WhatsApp card: opens once on a first visit, then stays dismissed ── */
   var wa=$('#waCard'), waDismiss=$('#waDismiss'), WA_KEY='wa-card-dismissed';
   if(wa){

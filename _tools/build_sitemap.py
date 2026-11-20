@@ -3,7 +3,7 @@
 Run from the site root:  python3 _tools/build_sitemap.py
 - sitemap.xml        index of the sitemaps below (robots.txt points here)
 - page-sitemap.xml   home, service, company and legal pages
-- post-sitemap.xml   guides
+- post-sitemap.xml   blog posts (the guides, and any blog/<slug>/ pages)
 Each URL's <lastmod> is the time of the last git commit that touched the page
 (or now, if it has uncommitted changes). Entries are listed in the order the
 pages were first published, oldest first, with the two home pages at the top. main-sitemap.xsl renders them as a table in a
@@ -51,10 +51,10 @@ def urlset(entries):
     out.append('</urlset>')
     return '\n'.join(out) + '\n'
 
-pages = sorted(f for f in glob.glob('*.html') if f != 'testimonials-admin.html'
+pages = sorted(f for f in glob.glob('*.html') + glob.glob('blog/**/index.html', recursive=True) if f != 'testimonials-admin.html'
                and 'name="robots" content="noindex' not in open(f, encoding='utf-8').read())   # skips the /en redirect
 info = [page_info(f) for f in pages]
-is_guide = lambda e: re.search(r'/(guide|guia)-', e['loc'])
+is_guide = lambda e: re.search(r'/(guide|guia)-|/blog/(es/)?[^/]+/$', e['loc']) and not e['loc'].endswith(('/blog/es/',))   # posts; the /blog/ hubs stay in page-sitemap
 homes = [f'{BASE}/', f'{BASE}/es']
 order = lambda e: (e['loc'] not in homes, homes.index(e['loc']) if e['loc'] in homes else 0, e['born'], e['loc'])
 groups = {'page-sitemap.xml': sorted([e for e in info if not is_guide(e)], key=order),

@@ -17,7 +17,7 @@ def clean(s):
     return re.sub(r'\s+', ' ', html.unescape(s)).strip()
 
 entries = []
-for f in sorted(glob.glob('*.html')):
+for f in sorted(glob.glob('*.html')) + sorted(glob.glob('blog/**/index.html', recursive=True)):
     if f in SKIP: continue
     s = open(f, encoding='utf-8').read()
     if 'name="robots" content="noindex' in s: continue      # the /en redirect
